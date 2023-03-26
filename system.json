@@ -1,7 +1,7 @@
 {
-  "name": "hvpunofficial",
+  "id": "hvpunofficial",
   "title": "Herosi vs Potwory RPG",
-  "description": "Unofiicial modification of system for playing Polish RPG, Midguard",
+  "description": "Unoficial modification of system for playing Polish RPG based on Midguard",
   "authors": [
     {
       "name": "Cyberpig2020",
@@ -10,9 +10,12 @@
   ],
   "url": "https://github.com/cyberpig2020/hvpunofficial",
   "flags": {},
-  "version": "1.1",
-  "minimumCoreVersion": "9.0",
-  "compatibleCoreVersion": "9.0",
+  "version": "1.1.1",
+  "compatibility": {
+    "minimum": 9,
+    "verified": 10,
+    "maximum": 12
+  },
   "scripts": [],
   "esmodules": ["midguardrpg.js"],
   "styles": ["midguardrpg.css"],
@@ -24,7 +27,7 @@
     }
   ],
   "packs": [],
-  "system": [],
+  "systems": [],
   "dependencies": [],
   "socket": false,
   "manifest": "https://github.com/cyberpig2020/hvpunofficial/blob/main/system.json",
