@@ -30,7 +30,7 @@
   "systems": [],
   "dependencies": [],
   "socket": false,
-  "manifest": "https://github.com/cyberpig2020/hvpunofficial/blob/main/system.json",
-  "download": "https://github.com/cyberpig2020/hvpunofficial/blob/main/download/system.zip",
+  "manifest": "https://raw.githubusercontent.com/cyberpig2020/hvpunofficial/main/system.json",
+  "download": "https://raw.githubusercontent.com/cyberpig2020/hvpunofficial/main/download/system.zip",
   "protected": false
 }
