@@ -1,6 +1,6 @@
-export const midguardrpg = {};
+export const hpvunofficial = {};
 
-midguardrpg.weaponTypes = {
+hpvunofficial.weaponTypes = {
   none: "",
   light: "MIDGUARD.WeaponTypesLight",
   onehanded: "MIDGUARD.WeaponTypesOnehanded",
@@ -13,22 +13,22 @@ midguardrpg.weaponTypes = {
 async function loadHandleBarTemplates() {
   // register templates parts
   const templatePaths = [
-    "systems/midguardrpg/templates/sheets/character/character-combat.hbs",
-    "systems/midguardrpg/templates/sheets/character/character-parameters.hbs",
-    "systems/midguardrpg/templates/sheets/character/character-atutImplTrait.hbs",
-    "systems/midguardrpg/templates/sheets/character/character-entropic.hbs",
-    "systems/midguardrpg/templates/sheets/character/character-equipment.hbs",
-    "systems/midguardrpg/templates/sheets/character/character-notes.hbs",
-    "systems/midguardrpg/templates/sheets/character/character-navigation.hbs",
-    "systems/midguardrpg/templates/sheets/character/character-header.hbs",
-    "systems/midguardrpg/templates/sheets/npc/npc-combat.hbs",
-    "systems/midguardrpg/templates/sheets/npc/npc-parameters.hbs",
-    "systems/midguardrpg/templates/sheets/npc/npc-atutImplTrait.hbs",
-    "systems/midguardrpg/templates/sheets/npc/npc-entropic.hbs",
-    "systems/midguardrpg/templates/sheets/npc/npc-equipment.hbs",
-    "systems/midguardrpg/templates/sheets/npc/npc-notes.hbs",
-    "systems/midguardrpg/templates/sheets/npc/npc-navigation.hbs",
-    "systems/midguardrpg/templates/sheets/npc/npc-header.hbs",
+    "systems/hpvunofficial/templates/sheets/character/character-combat.hbs",
+    "systems/hpvunofficial/templates/sheets/character/character-parameters.hbs",
+    "systems/hpvunofficial/templates/sheets/character/character-atutImplTrait.hbs",
+    "systems/hpvunofficial/templates/sheets/character/character-entropic.hbs",
+    "systems/hpvunofficial/templates/sheets/character/character-equipment.hbs",
+    "systems/hpvunofficial/templates/sheets/character/character-notes.hbs",
+    "systems/hpvunofficial/templates/sheets/character/character-navigation.hbs",
+    "systems/hpvunofficial/templates/sheets/character/character-header.hbs",
+    "systems/hpvunofficial/templates/sheets/npc/npc-combat.hbs",
+    "systems/hpvunofficial/templates/sheets/npc/npc-parameters.hbs",
+    "systems/hpvunofficial/templates/sheets/npc/npc-atutImplTrait.hbs",
+    "systems/hpvunofficial/templates/sheets/npc/npc-entropic.hbs",
+    "systems/hpvunofficial/templates/sheets/npc/npc-equipment.hbs",
+    "systems/hpvunofficial/templates/sheets/npc/npc-notes.hbs",
+    "systems/hpvunofficial/templates/sheets/npc/npc-navigation.hbs",
+    "systems/hpvunofficial/templates/sheets/npc/npc-header.hbs",
   ];
   return loadTemplates(templatePaths);
 }

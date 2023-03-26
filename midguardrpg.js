@@ -25,18 +25,18 @@ Handlebars.registerHelper("sum", function () {
 
 /* Hooks */
 Hooks.once("init", function () {
-  console.log("midguardrpg | Inicjalizacja Midguard RPG");
+  console.log("hpvunofficial | Inicjalizacja Midguard RPG mod");
 
-  CONFIG.midguardrpg = midguardrpg;
+  CONFIG.hpvunofficial = hpvunofficial;
   CONFIG.defaultFontFamily = "MyriadPro";
 
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("midguardrpg", midguardrpgItemSheet, {
+  Items.registerSheet("hpvunofficial", midguardrpgItemSheet, {
     makeDefault: true,
   });
 
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("midguardrpg", midguardrpgCharacterSheet, {
+  Actors.registerSheet("hpvunofficial", midguardrpgCharacterSheet, {
     makeDefault: true,
   });
 });

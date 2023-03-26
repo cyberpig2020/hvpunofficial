@@ -3,7 +3,7 @@ export default class midguardrpgCharacterSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       width: 1100,
       height: 800,
-      classes: ["midguardrpg", "sheet", "character"],
+      classes: ["hpvunofficial", "sheet", "character"],
       tabs: [
         {
           navSelector: ".sheet-tabs",
@@ -14,11 +14,11 @@ export default class midguardrpgCharacterSheet extends ActorSheet {
     });
   }
   get template() {
-    return `systems/midguardrpg/templates/sheets/${this.actor.data.type}-sheet.hbs`;
+    return `systems/hpvunofficial/templates/sheets/${this.actor.data.type}-sheet.hbs`;
   }
   getData() {
     const data = super.getData();
-    data.config = CONFIG.midguardrpg;
+    data.config = CONFIG.hpvunofficial;
     return data;
   }
 }
