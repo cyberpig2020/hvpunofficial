@@ -3,16 +3,16 @@ export default class midguardrpgItemSheet extends ItemSheet {
     return mergeObject(super.defaultOptions, {
       width: 500,
       height: 450,
-      classes: ["hpvunofficial", "sheet", "item"],
+      classes: ["hvpunofficial", "sheet", "item"],
     });
   }
   get template() {
-    return `systems/hpvunofficial/templates/sheets/${this.item.data.type}-sheet.html`;
+    return `systems/hvpunofficial/templates/sheets/${this.item.data.type}-sheet.html`;
   }
   getData() {
     const data = super.getData();
 
-    data.config = CONFIG.hpvunofficial;
+    data.config = CONFIG.hvpunofficial;
 
     return data;
   }

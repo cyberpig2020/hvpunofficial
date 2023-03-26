@@ -1,4 +1,4 @@
-import { hpvunofficial } from "./module/config.js";
+import { hvpunofficial } from "./module/config.js";
 import midguardrpgItemSheet from "./module/sheets/midguardrpgItemSheet.js";
 import midguardrpgCharacterSheet from "./module/sheets/midguardrpgCharacterSheet.js";
 
@@ -25,18 +25,18 @@ Handlebars.registerHelper("sum", function () {
 
 /* Hooks */
 Hooks.once("init", function () {
-  console.log("hpvunofficial | Inicjalizacja Midguard RPG mod");
+  console.log("hvpunofficial | Inicjalizacja Midguard RPG mod");
 
-  CONFIG.hpvunofficial = hpvunofficial;
+  CONFIG.hvpunofficial = hvpunofficial;
   CONFIG.defaultFontFamily = "MyriadPro";
 
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("hpvunofficial", midguardrpgItemSheet, {
+  Items.registerSheet("hvpunofficial", midguardrpgItemSheet, {
     makeDefault: true,
   });
 
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("hpvunofficial", midguardrpgCharacterSheet, {
+  Actors.registerSheet("hvpunofficial", midguardrpgCharacterSheet, {
     makeDefault: true,
   });
 });
