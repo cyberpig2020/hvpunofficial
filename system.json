@@ -1,0 +1,32 @@
+{
+  "id": "hvpunofficial",
+  "title": "Herosi vs Potwory RPG",
+  "description": "Unofiicial modification of system for playing Polish RPG, Midguard",
+  "authors": [
+    {
+      "name": "Cyberpig2020",
+      "email": "cyberpig2020@gmail.com"
+    }
+  ],
+  "url": "https://github.com/cyberpig2020/hvpunofficial/blob/main/",
+  "flags": {},
+  "version": "1.1",
+  "minimumCoreVersion": "9.0",
+  "compatibleCoreVersion": "10.0",
+  "scripts": [],
+  "esmodules": ["midguardrpg.js"],
+  "styles": ["midguardrpg.css"],
+  "languages": [
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json"
+    }
+  ],
+  "packs": [],
+  "system": [],
+  "dependencies": [],
+  "socket": false,
+  "download": "https://github.com/arturkonczalski/Midguard-RPG-Official/releases/latest/download/system.zip",
+  "protected": false
+}
