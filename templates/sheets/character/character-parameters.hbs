@@ -1,0 +1,366 @@
+<div class="left">
+  <table>
+    <tr>
+      <th colspan="3">{{localize "MIDGUARD.MainParametersBodyBuild"}}</th>
+      <th class="lastchild"><input
+          name="data.bodyBuild"
+          type="number"
+          value="{{data.data.bodyBuild}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "MIDGUARD.Value"}}</td>
+      <td>{{localize "MIDGUARD.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsMeleeWeapon"}}</td>
+      <td><input
+          name="data.meleeWeapon.self"
+          type="number"
+          value="{{data.data.meleeWeapon.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum
+          data.data.bodyBuild
+          data.data.meleeWeapon.self
+          content=data.data.meleeWeapon.total
+          target="data.meleeWeapon.total"
+        }}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsMeleeCombat"}}</td>
+      <td><input
+          name="data.meleeCombat.self"
+          type="number"
+          value="{{data.data.meleeCombat.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.bodyBuild data.data.meleeCombat.self}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsEndurance"}}</td>
+      <td><input
+          name="data.endurance.self"
+          type="number"
+          value="{{data.data.endurance.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.bodyBuild data.data.endurance.self}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th colspan="3">{{localize "MIDGUARD.MainParametersDexterity"}}</th>
+      <th class="lastchild"><input
+          name="data.dexterity"
+          type="number"
+          value="{{data.data.dexterity}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "MIDGUARD.Value"}}</td>
+      <td>{{localize "MIDGUARD.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsShortWeapon"}}</td>
+      <td><input
+          name="data.shortWeapon.self"
+          type="number"
+          value="{{data.data.shortWeapon.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.dexterity data.data.shortWeapon.self}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsInfiltration"}}</td>
+      <td><input
+          name="data.infiltration.self"
+          type="number"
+          value="{{data.data.infiltration.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.dexterity data.data.infiltration.self}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsReflex"}}</td>
+      <td><input
+          name="data.reflex.self"
+          type="number"
+          value="{{data.data.reflex.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.dexterity data.data.reflex.self}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th colspan="3">{{localize "MIDGUARD.MainParametersPerception"}}</th>
+      <th class="lastchild"><input
+          name="data.perception"
+          type="number"
+          value="{{data.data.perception}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "MIDGUARD.Value"}}</td>
+      <td>{{localize "MIDGUARD.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsLongWeapon"}}</td>
+      <td><input
+          name="data.longWeapon.self"
+          type="number"
+          value="{{data.data.longWeapon.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.perception data.data.longWeapon.self}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.Driving"}}</td>
+      <td><input
+          name="data.driving.self"
+          type="number"
+          value="{{data.data.driving.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.perception data.data.driving.self}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsAcuteSenses"}}</td>
+      <td><input
+          name="data.acuteSenses.self"
+          type="number"
+          value="{{data.data.acuteSenses.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.perception data.data.acuteSenses.self}}</td>
+    </tr>
+  </table>
+</div>
+<div class="center">
+  <table>
+    <tr>
+      <th colspan="3">{{localize "MIDGUARD.MainParametersIntelligence"}}</th>
+      <th class="lastchild"><input
+          name="data.intelligence"
+          type="number"
+          value="{{data.data.intelligence}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "MIDGUARD.Value"}}</td>
+      <td>{{localize "MIDGUARD.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsTechnology"}}</td>
+      <td><input
+          name="data.technology.self"
+          type="number"
+          value="{{data.data.technology.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.intelligence data.data.technology.self}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsKnowledgeGeneral"}}</td>
+      <td><input
+          name="data.knowledgeSecret.self"
+          type="number"
+          value="{{data.data.knowledgeGeneral.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.intelligence data.data.knowledgeGeneral.self}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsKnowledgeSecret"}}</td>
+      <td><input
+          name="data.knowledgeSecret.self"
+          type="number"
+          value="{{data.data.knowledgeSecret.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.intelligence data.data.knowledgeSecret.self}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th colspan="3">{{localize "MIDGUARD.MainParametersCool"}}</th>
+      <th class="lastchild"><input
+          name="data.cool"
+          type="number"
+          value="{{data.data.cool}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "MIDGUARD.Value"}}</td>
+      <td>{{localize "MIDGUARD.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsHacking"}}</td>
+      <td><input
+          name="data.hacking.self"
+          type="number"
+          value="{{data.data.hacking.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.cool data.data.hacking.self}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsConnections"}}</td>
+      <td><input
+          name="data.connections.self"
+          type="number"
+          value="{{data.data.connections.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.cool data.data.connections.self}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsTricks"}}</td>
+      <td><input
+          name="data.tricks.self"
+          type="number"
+          value="{{data.data.tricks.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.cool data.data.tricks.self}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th colspan="3">{{localize "MIDGUARD.MainParametersVerve"}}</th>
+      <th    class="lastchild"><input
+          name="data.verve"
+          type="number"
+          value="{{data.data.verve}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "MIDGUARD.Value"}}</td>
+      <td>{{localize "MIDGUARD.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsCharm"}}</td>
+      <td><input
+          name="data.charm.self"
+          type="number"
+          value="{{data.data.charm.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.verve data.data.charm.self}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsPower"}}</td>
+      <td><input
+          name="data.power.self"
+          type="number"
+          value="{{data.data.power.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.verve data.data.power.self}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "MIDGUARD.SkillsWillpower"}}</td>
+      <td><input
+          name="data.willpower.self"
+          type="number"
+          value="{{data.data.willpower.self}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum data.data.verve data.data.willpower.self}}</td>
+    </tr>
+  </table>
+</div>
+<div class="right">
+  <table>
+    <tr>
+      <th></th>
+      <th>Max</th>
+      <th class="exception">Obecnie</th>
+    </tr>
+    <tr>
+      <th>{{localize "MIDGUARD.SecondaryParametersPotential"}}</th>
+      <td>{{data.data.verve}}</td>
+      <td><input
+          name="data.potential.value"
+          type="number"
+          value="{{data.data.potential.value}}"
+          placeholder="0"
+        /></td>
+    </tr>
+    <tr>
+      <th>{{localize "MIDGUARD.SecondaryParametersShifts"}}</th>
+      <td>{{data.data.potential}}</td>
+      <td><input
+          name="data.shifts.value"
+          type="number"
+          value="{{data.data.shifts.value}}"
+          placeholder="0"
+        /></td>
+    </tr>
+    <tr>
+      <th>{{localize "MIDGUARD.SecondaryParametersVitality"}}</th>
+      <td>{{timesFivePlusFifteen data.data.bodyBuild}}</td>
+      <td><input
+          name="data.vitality.value"
+          type="number"
+          value="{{data.data.vitality.value}}"
+          placeholder="0"
+        /></td>
+    </tr>
+    <tr>
+      <th>{{localize "MIDGUARD.SecondaryParametersConcentration"}}</th>
+      <td>{{sum data.data.verve data.data.cool}}</td>
+      <td><input
+          name="data.concentration.value"
+          type="number"
+          value="{{data.data.concentration.value}}"
+          placeholder="0"
+        /></td>
+    </tr>
+    <tr>
+      <th>{{localize "MIDGUARD.SecondaryParametersEther"}}</th>
+      <td>{{timesFive data.data.intelligence}}</td>
+      <td><input
+          name="data.ether.value"
+          type="number"
+          value="{{data.data.ether.value}}"
+          placeholder="0"
+        /></td>
+    </tr>
+    <tr>
+      <th>{{localize "MIDGUARD.SecondaryParametersAppearance"}}</th>
+      <td>{{sum data.data.bodyBuild data.data.verve}}</td>
+      <td><input
+          name="data.appearance.value"
+          type="number"
+          value="{{data.data.appearance.value}}"
+          placeholder="0"
+        /></td>
+    </tr>
+    <tr>
+      <th>{{localize "MIDGUARD.SecondaryParametersAthletic"}}</th>
+      <td>{{sum data.data.bodyBuild data.data.dexterity}}</td>
+      <td><input
+          name="data.athletic.value"
+          type="number"
+          value="{{data.data.athletic.value}}"
+          placeholder="0"
+        /></td>
+    </tr>
+
+  </table>
+</div>
+<div style="clear:both;"></div>

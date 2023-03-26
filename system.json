@@ -27,6 +27,7 @@
   "system": [],
   "dependencies": [],
   "socket": false,
-  "download": "https://github.com/arturkonczalski/Midguard-RPG-Official/releases/latest/download/system.zip",
+  "manifest": "https://github.com/cyberpig2020/hvpunofficial/blob/main/system.json",
+  "download": "https://github.com/cyberpig2020/hvpunofficial/blob/main/download/system.zip",
   "protected": false
 }
