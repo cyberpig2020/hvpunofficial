@@ -1,4 +1,4 @@
-import { midguardrpg } from "./module/config.js";
+import { hpvunofficial } from "./module/config.js";
 import midguardrpgItemSheet from "./module/sheets/midguardrpgItemSheet.js";
 import midguardrpgCharacterSheet from "./module/sheets/midguardrpgCharacterSheet.js";
 
