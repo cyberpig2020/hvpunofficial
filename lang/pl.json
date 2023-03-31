@@ -3,6 +3,7 @@
   "MIDGUARD.name": "Nazwa",
   "MIDGUARD.items": "Przedmioty",
   "MIDGUARD.parameters": "Parametry",
+  "MIDGUARD.parameter": "Parametr",
   "MIDGUARD.mainParameters": "Parametry Główne",
   "MIDGUARD.secondaryParameters": "Parametry Pomocniczne",
   "MIDGUARD.Atuts": "Atuty",
@@ -14,6 +15,7 @@
   "MIDGUARD.equipment": "Ekwipunek",
   "MIDGUARD.history": "Historia",
   "MIDGUARD.notes": "Notatki",
+  "MIDGUARD.fatum": "Fatum",
   "MIDGUARD.CharacterName": "Imię Weterana",
   "MIDGUARD.CharacterRace": "Rasa",
   "MIDGUARD.CharacterClass": "Klasa Weterana",
@@ -32,6 +34,7 @@
   "MIDGUARD.CharacterPotential": "Potencjał",
   "MIDGUARD.Value": "Wartość",
   "MIDGUARD.Sum": "Suma",
+  "MIDGUARD.TestLvl": "Poziom trudności",
 
   "MIDGUARD.MainParametersBodyBuild": "Budowa ciała",
   "MIDGUARD.MainParametersDexterity": "Zręczność",
@@ -51,6 +54,7 @@
   "MIDGUARD.SecondaryParametersNeurostability": "Neurostabilność",
   "MIDGUARD.SecondaryParametersEther": "Eter",
 
+  "MIDGUARD.Skill": "Umiejętność",
   "MIDGUARD.SkillsMeleeWeapon": "Broń biała",
   "MIDGUARD.SkillsMeleeCombat": "Walka wręcz",
   "MIDGUARD.SkillsEndurance": "Wytrzymałość",
