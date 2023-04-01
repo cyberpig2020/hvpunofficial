@@ -29,7 +29,7 @@
   "packs": [],
   "relationships": {
     "systems": [],
-    "requires": [],
+    "requires": []
     },
   "socket": false,
   "manifest": "https://raw.githubusercontent.com/cyberpig2020/hvpunofficial/main/system.json",
