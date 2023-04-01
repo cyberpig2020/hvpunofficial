@@ -51,6 +51,10 @@ body {
   width: 200px;
   height: 250px;
 }
+.profile-img {
+    display: inline-block;
+}
+
 .midguardrpg.sheet.character form {
   background: #ffffff;
   border: 4px #6a044b solid;
@@ -731,4 +735,108 @@ body {
 }
 .midguardrpg.sheet.item .editor {
   height: 100%;
+}
+
+
+.midguard-dialog .resource {
+  margin: 0 2px 5px;
+  padding: 0 5px 0 0;
+  background-color: #729eb2;
+}
+
+.midguard-dialog .resource.tile {
+  background-color: #6ea898;
+}
+
+.midguard-dialog .resource.green {
+  background-color: #b4bb5b;
+}
+
+.midguard-dialog .resource.red {
+  background-color: #e37e6c;
+}
+
+.midguard-dialog .resource .title-label {
+  padding: 5px;
+  font-family: "Lobster", cursive;
+  color: white;
+}
+
+.midguard-dialog .resource input[type="number"] {
+  text-align: center;
+  background-color: beige;
+}
+
+.midguard-dialog ul {
+  list-style: none;
+  padding: 5px 20px;
+  margin: 0 2px 5px;
+  background-color: #c8d0d4;
+}
+
+.midguard-dialog ul li {
+  text-decoration: none;
+  text-align: center;
+}
+
+.midguard-dialog ul li .dice-icon {
+  cursor: pointer;
+  width: 32px;
+  line-height: 32px;
+  display: inline-block;
+  margin-right: 1px;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  background-image: url(../assets/chat/d20-white.svg);
+}
+
+.midguard-dialog ul li .dice-icon.marked {
+  color: white;
+  background-image: url(../assets/chat/d20-blue.svg);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-group-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.flex-group-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.flexshrink {
+  flex: 0;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flexlarge {
+  flex: 2;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+.flex3 {
+  flex: 3;
 }

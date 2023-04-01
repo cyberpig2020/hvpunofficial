@@ -10,12 +10,19 @@
 <table class="parameters">
     <tr>
       <th colspan="2">{{localize "MIDGUARD.CharacterArchetype"}}</th>
-      <th colspan="7" class="lastchild"><input
+      <th colspan="7" class="lastchild">
+          <select id="data.archetype">
+              {{#each data.data.archetype}}
+                  <option value="{{this}}">{{localize "HVPUNOFFICIAL.Archetype"this}}</option>
+              {{/each}}
+          </select>
+
+          <!-- <input
           name="data.archetype"
           type="text"
           value="{{data.data.archetype}}"
-          placeholder="0"
-        /></th>
+          placeholder=""
+        /></th> -->
     </tr>
     <tr>
       <td colspan="2">{{localize "MIDGUARD.CharacterAge"}}</td>

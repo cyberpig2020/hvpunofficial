@@ -129,5 +129,12 @@
   "MIDGUARD.WeaponTypesThrow": "M",
   "MIDGUARD.WeaponTypesTwohanded": "DW",
   "MIDGUARD.WeaponTypesLightThrow": "L/M",
-  "MIDGUARD.WeaponTypesOnehandedThrow": "J/M"
+  "MIDGUARD.WeaponTypesOnehandedThrow": "J/M",
+
+  "HVPUNOFFICIAL.ArchetypeSupersoldier": "Superżołnierz",
+  "HVPUNOFFICIAL.ArchetypeEsoteric": "Ezoteryk",
+  "HVPUNOFFICIAL.ArchetypeChimera": "Chimera",
+  "HVPUNOFFICIAL.ArchetypeCyborg": "Cyborg",
+  "HVPUNOFFICIAL.ArchetypeSymbiont": "Symbiont"
+
 }

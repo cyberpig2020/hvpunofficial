@@ -164,7 +164,7 @@
         "class": "",
         "race": "",
         "rank": "",
-        "archetype": "",
+        "archetype": ["Chimera", "Cyborg", "Esoteric",  "Symbiont", "Supersoldier"],
         "mysticlanguage": "",
         "motivation": "",
         "gender": "",
