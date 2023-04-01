@@ -575,7 +575,8 @@
         "shield",
         "energyShield",
         "items",
-        "vehicle"
+        "vehicle",
+        "skills"
       ],
       "templates": {
         "itemDescription": {

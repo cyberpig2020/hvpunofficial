@@ -186,6 +186,23 @@ body {
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
+.midguardrpg.sheet.character .details .experience input[type="number"] {
+  height: fit-content;
+  padding: 0;
+  margin: 1;
+  width: 56px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  text-align: center;
+  border: 0;
+  background: none;
+  border-bottom: 2px #6a044b solid;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
 .midguardrpg.sheet.character .details .rowforth .slash {
   color: #6a044b;
   font-weight: bold;

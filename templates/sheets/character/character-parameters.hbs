@@ -313,10 +313,11 @@
     <tr>
       <th>{{localize "MIDGUARD.SecondaryParametersVitality"}}</th>
       <td>{{timesFivePlusFifteen data.data.bodyBuild}}</td>
+
       <td><input
           name="data.vitality.value"
           type="number"
-          value="{{data.data.vitality.value}}"
+          value="{{system.vitality.self}}"
           placeholder="0"
         /></td>
     </tr>

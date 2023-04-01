@@ -12,9 +12,15 @@
       <th colspan="2">{{localize "MIDGUARD.CharacterArchetype"}}</th>
       <th colspan="7" class="lastchild">
           <select id="data.archetype">
-              {{#each data.data.archetype}}
+              <!-- {{#each data.data.archetype}}
                   <option value="{{this}}">{{localize "HVPUNOFFICIAL.Archetype"this}}</option>
-              {{/each}}
+              {{/each}} -->
+              <option value="">Wybierz</option>
+              <option value="{{data.data.archetype.[0]}}">{{localize "HVPUNOFFICIAL.ArchetypeChimera"}}</option>
+              <option value="{{data.data.archetype.[1]}}">{{localize "HVPUNOFFICIAL.ArchetypeCyborg"}}</option>
+              <option value="{{data.data.archetype.[2]}}">{{localize "HVPUNOFFICIAL.ArchetypeEsoteric"}}</option>
+              <option value="{{data.data.archetype.[3]}}">{{localize "HVPUNOFFICIAL.ArchetypeSupersoldier"}}</option>
+              <option value="{{data.data.archetype.[4]}}">{{localize "HVPUNOFFICIAL.ArchetypeSymbiont"}}</option>
           </select>
 
           <!-- <input
@@ -40,71 +46,7 @@
         </td>
     <!-- wzrost,waga, pierdoly -->
     </tr>
-      <tr>
-        <td>
-            <label class="resource-label labeldetails">{{localize
-              "MIDGUARD.CharacterPotential"
-            }}</label>
-          </td>
-        <td>
-            <input
-              type="number"
-              name="data.potential.value"
-              value="{{data.data.potential.value}}"
-              data-dtype="Number"
-            />
-          </td>
 
-          <td>
-            <input
-              type="number"
-              name="data.potential.max"
-              value="{{data.data.potential.max}}"
-              data-dtype="Number"
-            />
-          </td>
-          <td>
-
-          <label class="resource-label labeldetails">{{localize
-              "MIDGUARD.CharacterMoves"
-            }}</label>
-          </td>
-
-      <td>
-            <input
-              type="number"
-              name="data.moves.value"
-              value="{{data.data.moves.value}}"
-              data-dtype="Number"
-            />
-          </td>
-
-          <td>
-            <input
-              type="number"
-              name="data.moves.max"
-              value="{{data.data.moves.max}}"
-              data-dtype="Number"
-            />
-          </td>
-
-       <td>
-          <label class="resource-label labeldetails">{{localize
-              "MIDGUARD.SecondaryParametersVitality"
-            }}</label>
-        </td>
-        <td>
-            <input
-              type="number"
-              name="data.vitality.value"
-              value="{{data.data.vitality.value}}"
-              data-dtype="Number"
-            />
-          </td>
-          <td>
-            {{timesFivePlusFifteen data.data.bodyBuild placeholder="0"}}
-          </td>
-      </tr>
     <tr>
 
       <td colspan="2">
@@ -112,6 +54,7 @@
       </td>
       <td colspan="2">
         <input
+          class="experience"
           type="number"
           name="data.exp.total"
           value="{{data.data.exp.total}}"
@@ -125,6 +68,7 @@
       </td>
       <td colspan="3">
         <input
+          class="experience"
           type="number"
           name="data.exp.spent"
           value="{{data.data.exp.spent}}"
