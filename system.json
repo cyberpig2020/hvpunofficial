@@ -10,7 +10,7 @@
   ],
   "url": "https://github.com/cyberpig2020/hvpunofficial",
   "flags": {},
-  "version": "1.1.18",
+  "version": "1.1.19",
   "compatibility": {
     "minimum": 9,
     "verified": 10,
@@ -27,8 +27,10 @@
     }
   ],
   "packs": [],
-  "systems": [],
-  "dependencies": [],
+  "relationships": {
+    "systems": [],
+    "requires": [],
+    },
   "socket": false,
   "manifest": "https://raw.githubusercontent.com/cyberpig2020/hvpunofficial/main/system.json",
   "download": "https://raw.githubusercontent.com/cyberpig2020/hvpunofficial/main/download/system.zip",
