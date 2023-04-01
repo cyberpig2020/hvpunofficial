@@ -186,11 +186,12 @@ body {
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-.midguardrpg.sheet.character .details .experience input[type="number"] {
+.midguardrpg.sheet.character .details .experience td, input[type="number"] {
   height: fit-content;
   padding: 0;
   margin: 1;
-  width: 56px;
+  min-width: 56px;
+  width: fit-content;
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
