@@ -3,8 +3,8 @@
     {{localize "MIDGUARD.notes"}}
   </label>
   {{editor
-    content=system.notes
-    target="notes"
+    content=data.data.notes
+    target=".data.notes"
     button=true
     owner=owner
     editable=editable
@@ -15,8 +15,8 @@
     {{localize "MIDGUARD.history"}}
   </label>
   {{editor
-    content=system.history
-    target="system.history"
+    content=data.data.history
+    target="data.history"
     button=true
     owner=owner
     editable=editable

@@ -11,10 +11,8 @@
     <tr>
       <th colspan="2">{{localize "MIDGUARD.CharacterArchetype"}}</th>
       <th colspan="7" class="lastchild">
-          <input list="archetypes" name="data.archetype">
-              <!-- {{#each data.data.archetype}}
-                  <option value="{{this}}">{{localize "HVPUNOFFICIAL.Archetype"this}}</option>
-              {{/each}} -->
+           <input type="text" list="archetypes" name="data.archetype">
+
             <datalist id="archetypes">
               <option value="{{localize "HVPUNOFFICIAL.ArchetypeChimera"}}">
               <option value="{{localize "HVPUNOFFICIAL.ArchetypeCyborg"}}">
@@ -22,7 +20,10 @@
               <option value="{{localize "HVPUNOFFICIAL.ArchetypeSupersoldier"}}">
               <option value="{{localize "HVPUNOFFICIAL.ArchetypeSymbiont"}}">
             </datalist>
-          </input>
+
+          <!-- {{#each data.data.archetype}}
+                  <option value="{{this}}">{{localize "HVPUNOFFICIAL.Archetype"this}}</option>
+              {{/each}} -->
 
           <!-- <input
           name="data.archetype"
