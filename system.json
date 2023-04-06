@@ -9,16 +9,17 @@
     }
   ],
   "url": "https://github.com/cyberpig2020/hvpunofficial",
+  "primaryTokenAttribute": "vitality",
   "flags": {},
   "version": "1.1.26",
   "compatibility": {
-    "minimum": 9,
+    "minimum": 10,
     "verified": 10,
     "maximum": 12
   },
   "scripts": [],
-  "esmodules": ["midguardrpg.js"],
-  "styles": ["midguardrpg.css"],
+  "esmodules": ["module/hvpunofficial.mjs"],
+  "styles": ["css/hvpunofficial.css"],
   "languages": [
     {
       "lang": "pl",

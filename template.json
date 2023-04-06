@@ -18,122 +18,154 @@
         "secondaryParameters": {
           "vitality": {
             "value": 0,
-            "max": 0
+            "max": 0,
+            "bonus": 0
           },
           "potential": {
             "value": 0,
-            "max": 0
+            "max": 0,
+            "bonus": 0
           },
           "shifts": {
             "value": 0,
-            "max": 0
+            "max": 0,
+            "bonus": 0
           },
           "ether": {
             "value": 0,
-            "max": 0
+            "max": 0,
+            "bonus": 0
           },
           "power": {
             "value": 0,
-            "max": 0
+            "max": 0,
+            "bonus": 0
           },
           "concentration": {
             "value": 0,
-            "max": 0
+            "max": 0,
+            "bonus": 0
           },
           "athletic": {
-            "value": 0
+            "value": 0,
+            "max": 0,
+            "bonus": 0
           },
           "appearance": {
-            "value": 0
+            "value": 0,
+            "max": 0,
+            "bonus": 0
           },
           "neurostability": {
             "value": 0,
-            "max": 0
+            "max": 0,
+            "bonus": 0
           }
         },
         "skills": {
           "meleeWeapon": {
-            "self": 0,
+            "mainParameter": "bodyBuild",
+            "value": 0,
             "total": 0
           },
           "meleeCombat": {
-            "self": 0,
+            "mainParameter": "bodyBuild",
+            "value": 0,
             "total": 0
           },
           "endurance": {
-            "self": 0,
+            "mainParameter": "bodyBuild",
+            "value": 0,
             "total": 0
           },
           "shortWeapon": {
-            "self": 0,
+            "mainParameter": "dexterity",
+            "value": 0,
             "total": 0
           },
           "driving": {
-            "self": 0,
+            "mainParameter": "perception",
+            "value": 0,
             "total": 0
           },
           "reflex": {
-            "self": 0,
+            "mainParameter": "dexterity",
+            "value": 0,
             "total": 0
           },
           "longWeapon": {
-            "self": 0,
+            "mainParameter": "perception",
+            "value": 0,
             "total": 0
           },
           "pilotage": {
-            "self": 0,
+            "mainParameter": "perception",
+            "value": 0,
             "total": 0
           },
           "acuteSenses": {
-            "self": 0,
+            "mainParameter": "perception",
+            "value": 0,
             "total": 0
           },
           "connections": {
-            "self": 0,
+            "mainParameter": "cool",
+            "value": 0,
             "total": 0
           },
           "technology": {
-            "self": 0,
+            "mainParameter": "intelligence",
+            "value": 0,
             "total": 0
           },
           "knowledge": {
-            "self": 0,
+            "mainParameter": "intelligence",
+            "value": 0,
             "total": 0
           },
           "knowledgeGeneral": {
-            "self": 0,
+            "mainParameter": "intelligence",
+            "value": 0,
             "total": 0
           },
           "knowledgeSecret": {
-            "self": 0,
+            "mainParameter": "intelligence",
+            "value": 0,
             "total": 0
           },
           "hacking": {
-            "self": 0,
+            "mainParameter": "cool",
+            "value": 0,
             "total": 0
           },
           "infiltration": {
-            "self": 0,
+            "mainParameter": "dexterity",
+            "value": 0,
             "total": 0
           },
           "tricks": {
-            "self": 0,
+            "mainParameter": "cool",
+            "value": 0,
             "total": 0
           },
           "charm": {
-            "self": 0,
+            "mainParameter": "verve",
+            "value": 0,
             "total": 0
           },
           "hekseri": {
-            "self": 0,
+            "mainParameter": "MIDGUARD",
+            "value": 0,
             "total": 0
           },
           "power": {
-            "self": 0,
+            "mainParameter": "verve",
+            "value": 0,
             "total": 0
           },
           "willpower": {
-            "self": 0,
+            "mainParameter": "verve",
+            "value": 0,
             "total": 0
           }
         },

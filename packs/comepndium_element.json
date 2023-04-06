@@ -1,0 +1,10 @@
+  {"name":"Barter",
+  "type":"skill",
+  "img":"systems/fallout/assets/ico/thumb-up.webp",
+  "data":{"description":"","value":0,"tag":false,"defaultAttribute":"cha","summary":""},
+  "effects":[],
+  "folder":null,
+  "sort":0,
+  "permission":{"default":2,"QV7gG1H0U5vz6eU7":3},
+  "flags":{},
+  "_id":"vf1Qszkq1om2Xgmn"}
