@@ -7,8 +7,10 @@
   "MIDGUARD.mainParameters": "Parametry Główne",
   "MIDGUARD.secondaryParameters": "Parametry Pomocniczne",
   "MIDGUARD.Atuts": "Atuty",
+  "MIDGUARD.Atut": "Atut",
   "MIDGUARD.Implants": "Wszczepy",
   "MIDGUARD.Traits": "Zalety",
+  "MIDGUARD.Trait": "Zaleta",
   "MIDGUARD.entropicPowers": "Moce Entropiczne",
   "MIDGUARD.equipmentAndNotes": "Wyposażenie, Notatki i Historia",
   "MIDGUARD.combat": "Walka",
@@ -135,6 +137,13 @@
   "HVPUNOFFICIAL.ArchetypeEsoteric": "Ezoteryk",
   "HVPUNOFFICIAL.ArchetypeChimera": "Chimera",
   "HVPUNOFFICIAL.ArchetypeCyborg": "Cyborg",
-  "HVPUNOFFICIAL.ArchetypeSymbiont": "Symbiont"
+  "HVPUNOFFICIAL.ArchetypeSymbiont": "Symbiont",
 
+  "HVPUNOFFICIAL.Spells": "Zaklęcia",
+  "HVPUNOFFICIAL.Spell": "Zaklęcie",
+  "HVPUNOFFICIAL.SpellCost": "Koszt",
+  "HVPUNOFFICIAL.SpellRequirements": "Wymagania",
+  "HVPUNOFFICIAL.SpellRange": "Zasięg",
+  "HVPUNOFFICIAL.SpellLevel": "Poziom trudności",
+  "HVPUNOFFICIAL.SpellDescription": "Działanie"
 }

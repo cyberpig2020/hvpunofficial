@@ -604,6 +604,25 @@
         "accuracy": 0,
         "attacks": 0,
         "specialRules": ""
+      },
+      "atut": {
+        "templates": ["itemDescription"],
+        "level": ""
+      },
+      "speciality": {
+        "templates": ["itemDescription"],
+        "requires": "",
+        "activation": ""
+      },
+      "trait": {
+        "templates": ["itemDescription"]
+      },
+
+      "spell": {
+        "templates": ["itemDescription"],
+        "cost": 0,
+        "range": "",
+        "level": ""
       }
     }
   }
