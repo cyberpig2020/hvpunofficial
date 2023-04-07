@@ -11,7 +11,7 @@
   "url": "https://github.com/cyberpig2020/hvpunofficial",
   "primaryTokenAttribute": "vitality",
   "flags": {},
-  "version": "1.1.26",
+  "version": "1.10.26",
   "compatibility": {
     "minimum": 10,
     "verified": 10,
@@ -29,7 +29,7 @@
   ],
   "packs": [],
   "socket": false,
-  "manifest": "https://raw.githubusercontent.com/cyberpig2020/hvpunofficial/main/system.json",
-  "download": "https://raw.githubusercontent.com/cyberpig2020/hvpunofficial/main/download/system.zip",
+  "manifest": "https://raw.githubusercontent.com/cyberpig2020/hvpunofficial/v10/system.json",
+  "download": "https://raw.githubusercontent.com/cyberpig2020/hvpunofficial/v10/download/system.zip",
   "protected": false
 }
