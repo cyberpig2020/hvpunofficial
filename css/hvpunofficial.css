@@ -270,6 +270,12 @@
 .hvpunofficial .item-form {
   font-family: "Baron Neue", sans-serif;
 }
+
+.hvpunofficial .text-opaque {
+  
+  color: white;
+  background: #6a044b;
+}
 .hvpunofficial .sheet-header {
   -webkit-box-flex: 0;
   -ms-flex: 0 auto;
