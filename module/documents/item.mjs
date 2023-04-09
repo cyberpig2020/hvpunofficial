@@ -2,7 +2,7 @@
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
  */
-export class HvunofficialItem extends Item {
+export class HvpunofficialItem extends Item {
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
