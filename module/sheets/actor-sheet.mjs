@@ -68,8 +68,8 @@ export class HvpunofficialActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     // Handle ability scores.
-    for (let [k, v] of Object.entries(context.system.abilities)) {
-      v.label = game.i18n.localize(CONFIG.BOILERPLATE.abilities[k]) ?? k;
+    for (let [k, v] of Object.entries(context.system.mainParameters)) {
+      v.label = game.i18n.localize(CONFIG.BOILERPLATE.mainParameters[k]) ?? k;
     }
   }
 
@@ -215,7 +215,7 @@ export class HvpunofficialActorSheet extends ActorSheet {
 
     // Handle rolls that supply the formula directly.
     if (dataset.roll) {
-      let label = dataset.label ? `[ability] ${dataset.label}` : '';
+      let label = dataset.label ? `[param] ${dataset.label}` : '';
       let roll = new Roll(dataset.roll, this.actor.getRollData());
       roll.toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
