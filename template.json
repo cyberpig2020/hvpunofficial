@@ -6,6 +6,11 @@
         "notes": "",
         "history": "",
         "parameters": [],
+        "attributes": {
+        "level": {
+          "value": 1
+          }
+        },
         "mainParameters": {
           "bodyBuild": {
             "value": 0
