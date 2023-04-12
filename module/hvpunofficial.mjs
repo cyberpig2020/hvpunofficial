@@ -30,7 +30,7 @@ Hooks.once('init', async function() {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: "2d20 + @mainParameters.dexterity + #skills.reflex",
+    formula: "2d20 + @mainParameters.dexterity + @skills.reflex",
     decimals: 2
   };
 

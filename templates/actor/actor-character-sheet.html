@@ -66,9 +66,9 @@
           <div class="mainParameters flexcol">
             {{#each system.mainParameters as |param key|}}
             <div class="mainParameter flexrow flex-group-center">
-              <label for="system.mainParameters.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@mainParameters.{{key}}.mod" data-label="{{param.label}}">{{param.label}}</label>
-              <input type="text" name="system.mainParameters.{{key}}.value" value="{{param.value}}" data-dtype="Number"/>
-              <span class="param rollable" data-roll="d20+@mainParameters.{{key}}.value" data-label="{{param.label}}">{{numberFormat param.value decimals=0 sign=true}}</span>
+              <label for="system.mainParameters.{{key}}" class="resource-label rollable flexlarge align-left" data-roll="d20+@mainParameters.{{key}}" data-label="{{param.label}}">{{param.label}}</label>
+              <input type="text" name="system.mainParameters.{{key}}" value="{{param}}" data-dtype="Number"/>
+              <span class="param rollable" data-roll="d20+@mainParameters.{{key}}" data-label="{{param.label}}">{{numberFormat param decimals=0 sign=true}}</span>
             </div>
             {{/each}}
           </div>
