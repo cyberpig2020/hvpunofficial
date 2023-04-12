@@ -7,13 +7,27 @@
         "history": "",
         "parameters": [],
         "mainParameters": {
-          "bodyBuild": 0,
-          "dexterity": 0,
-          "perception": 0,
-          "intelligence": 0,
-          "cool": 0,
-          "entropy": 0,
-          "verve": 0
+          "bodyBuild": {
+            "value": 0
+          },
+          "dexterity": {
+            "value": 0
+          },
+          "perception": {
+            "value": 0
+          },
+          "intelligence": {
+            "value": 0
+          },
+          "cool": {
+            "value": 0
+          },
+          "entropy": {
+            "value": 0
+          },
+          "verve": {
+            "value": 0
+          }
         },
         "secondaryParameters": {
           "vitality": {
