@@ -589,11 +589,12 @@
             "epicCharge": ""
           }
         }
-      },
-      "character": {
+      }
+    },
+    "character": {
         "templates": ["common"]
       },
-      "npc": {
+    "npc": {
         "templates": ["common"]
       }
     },
@@ -657,5 +658,4 @@
         "level": ""
       }
     }
-  }
 }
