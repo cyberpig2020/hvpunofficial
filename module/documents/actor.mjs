@@ -33,6 +33,9 @@ export class HvpunofficialActor extends Actor {
     const systemData = actorData.system;
     const flags = actorData.flags.hvpunofficial || {};
 
+
+    console.log('DEBUG: Preparing character')
+    console.log(actorData)
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     this._prepareCharacterData(actorData);
@@ -43,6 +46,9 @@ export class HvpunofficialActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
+    console.log('DEBUG: actor data type and system')
+    console.log(actorData.type)
+    console.log(actorData.system)
     if (actorData.type !== 'character') return;
 
     // Make modifications to data here. For example:

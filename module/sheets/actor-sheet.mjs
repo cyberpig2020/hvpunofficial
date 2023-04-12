@@ -36,6 +36,8 @@ export class HvpunofficialActorSheet extends ActorSheet {
     const actorData = this.actor.toObject(false);
 
     // Add the actor's data to context.data for easier access, as well as flags.
+    console.log('DEBUG: context actor data type and system')
+    console.log(actorData.system)
     context.system = actorData.system;
     context.flags = actorData.flags;
 
@@ -68,6 +70,9 @@ export class HvpunofficialActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     // Handle ability scores.
+    console.log('DEBUG: context main aparmeters')
+    console.log(context)
+    console.log(context.system.mainParameters)
     for (let [k, v] of Object.entries(context.system.mainParameters)) {
       v.label = game.i18n.localize(CONFIG.BOILERPLATE.mainParameters[k]) ?? k;
     }
