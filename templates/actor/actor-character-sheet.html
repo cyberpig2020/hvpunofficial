@@ -14,30 +14,53 @@
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. --}}
         <div class="resource flex-group-center">
-          <label for="system.health.value" class="resource-label">Health</label>
+          <label for="system.secondaryParameters.vitality.value" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.SecondaryParametersVitality"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
+          <input type="text" name="system.secondaryParameters.vitality.value" value="{{system.secondaryParameters.vitality.value}}" data-dtype="Number"/>
           <span> / </span>
-          <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
+          <input type="text" name="system.secondaryParameters.vitality.max" value="{{system.secondaryParameters.vitality.max}}" data-dtype="Number"/>
           </div>
         </div>
 
         <div class="resource flex-group-center">
-          <label for="system.power.value" class="resource-label">Power</label>
+          <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>
+          <input type="text" name="system.secondaryParameters.potential.value" value="{{system.secondaryParameters.potential.value}}" data-dtype="Number"/>
           <span> / </span>
-          <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
+          <input type="text" name="system.secondaryParameters.potential.max" value="{{system.secondaryParameters.potential.max}}" data-dtype="Number"/>
           </div>
         </div>
 
         <div class="resource flex-group-center">
-          <label for="system.attributes.level.value" class="resource-label">Level</label>
+          <label for="system.secondaryParameters.shifts.value" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.SecondaryParametersShifts"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
+          <input type="text" name="system.secondaryParameters.shifts.value" value="{{system.secondaryParameters.shifts.value}}" data-dtype="Number"/>
+          <span> / </span>
+          <input type="text" name="system.secondaryParameters.shifts.max" value="{{system.secondaryParameters.shifts.max}}" data-dtype="Number"/>
           </div>
         </div>
 
+
+      </div>
+      <div class="resources grid grid-3col">
+        <div class="resource flex-group-center">
+          <label for="system.exp.current" class="resource-label text-opaque">{{localize ""HVPUNOFFICIAL.CharacterExpCurrent""}}</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          <input type="text" name="system.system.exp.current" value="{{system.exp.current}}" data-dtype="Number"/>
+          </div>
+        </div>
+        <div class="resource flex-group-center">
+          <label for="system.exp.spent" class="resource-label text-opaque">{{localize ""HVPUNOFFICIAL.CharacterExpSpent""}}</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          <input type="text" name="system.system.exp.spent" value="{{system.exp.spent}}" data-dtype="Number"/>
+          </div>
+        </div>
+        <div class="resource flex-group-center">
+          <label for="system.exp.total" class="resource-label text-opaque">{{localize ""HVPUNOFFICIAL.CharacterExpTotal""}}</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          <input type="text" name="system.system.exp.total" value="{{sum system.exp.spent system.exp.current}}" data-dtype="Number"/>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -64,6 +87,7 @@
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  --}}
           <div class="mainParameters flexcol">
+            {{!--
             {{#each system.mainParameters as |param key|}}
             <div class="mainParameter flexrow flex-group-center">
               <label for="system.mainParameters.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@mainParameters.{{key}}.value" data-label="{{param.label}}">{{param.label}}</label>
@@ -71,6 +95,7 @@
               <span class="param rollable" data-roll="d20+@mainParameters.{{key}}.value" data-label="{{param.label}}">{{numberFormat param.value decimals=0 sign=true}}</span>
             </div>
             {{/each}}
+            --}}
           </div>
         </aside>
 

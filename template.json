@@ -190,7 +190,8 @@
         },
         "exp": {
           "total": 0,
-          "spent": 0
+          "spent": 0,
+          "current": 0
         },
         "moves": {
           "value": 0,

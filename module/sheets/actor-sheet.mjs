@@ -19,7 +19,7 @@ export class HvpunofficialActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/hvpunofficial/templates/actor/actor-${this.actor.type}-sheet.html`;
+    return `systems/hvpunofficial/templates/actor/actor-${this.actor.type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */
