@@ -7,10 +7,11 @@
   return loadTemplates([
 
     // Actor partials.
-    "systems/hvpunofficial/templates/actor/parts/actor-parameters.hbs",
+
     "systems/hvpunofficial/templates/actor/parts/actor-features.html",
     "systems/hvpunofficial/templates/actor/parts/actor-items.html",
     "systems/hvpunofficial/templates/actor/parts/actor-spells.html",
     "systems/hvpunofficial/templates/actor/parts/actor-effects.html",
+    "systems/hvpunofficial/templates/actor/parts/actor-parameters.hbs"
   ]);
 };
