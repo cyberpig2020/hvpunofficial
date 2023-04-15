@@ -42,6 +42,7 @@
 
 
       </div>
+
       <div class="resources grid grid-3col">
         <div class="resource flex-group-center">
           <label for="system.exp.current" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.CharacterExpCurrent"}}</label>
@@ -81,13 +82,14 @@
 
     {{!-- Owned Features Tab --}}
     <div class="tab features" data-group="primary" data-tab="features">
-      <section class="grid grid-3col">
-        <aside class="sidebar">
+
+
 
           {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  --}}
-          <div class="mainParameters flexcol">
+       <div class="mainParameters flexcol">
+         <section class="paramters grid grid-3col">
             {{!--
             {{#each system.mainParameters as |param key|}}
             <div class="mainParameter flexrow flex-group-center">
@@ -98,8 +100,7 @@
             {{/each}}
             --}}
               {{!-- Paramteres --}}
-              <div class="resources grid grid-3col">
-                  <div class="1st_column">
+         <section class="1st_column">
                   {{!-- Body build skills --}}
                 <div class="resources grid grid-3col">
                   <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
@@ -160,10 +161,10 @@
                     <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
                   </div>
                 </div>
-                      </div>
+                      </section>
 
-                      </div>
-                  <div class="grid-start-2">
+
+         <section class="grid-start-2">
                   {{!-- Perception skills --}}
                 <div class="resources grid grid-3col">
                   <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
@@ -284,10 +285,13 @@
                     <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
                   </div>
                 </div>
-                      </div>
-              <div class="grid-start-3">
-                    {{!-- Second params --}}
-                <div class="resources grid grid-4col">
+         </section>
+
+
+         {{!-- Second params --}}
+
+        <section class="grid-start-3">
+         <div class="resources grid grid-4col">
                   <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Max"}}</label>
                   <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
                     <label class="resource-label grid-start-4 text-opaque">{{localize "HVPUNOFFICIAL.Bonus"}}</label>
@@ -397,13 +401,14 @@
                   </div>
 
                 </div>
-              </div>
+         </section>
+    </section>
           </div>
           </div>
-        </aside>
+
 
         {{!-- For the main features list, span the right two columns --}}
-        <section class="main grid-span-2">
+        <section class="main grid-span-3">
           {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
           {{> "systems/hvpunofficial/templates/actor/parts/actor-features.html"}}
         </section>
