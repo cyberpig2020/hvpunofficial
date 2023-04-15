@@ -68,6 +68,7 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item" data-tab="parameters">{{ localize "HVPUNOFFICIAL.parameters"}}</a>
     <a class="item" data-tab="features">Features</a>
     <a class="item" data-tab="description">Description</a>
     <a class="item" data-tab="items">Items</a>
@@ -408,6 +409,9 @@
         </section>
 
       </section>
+    </div>
+    <div class="tab parameters" data-group="primary" data-tab="parameters">
+          {{> systems/hvpunofficial/templates/actors/character-parameters.hbs}}
     </div>
 
     {{!-- Biography Tab --}}

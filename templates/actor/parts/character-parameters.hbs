@@ -1,0 +1,409 @@
+<div class="left">
+  <table>
+    <tr>
+      <th colspan="3">{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</th>
+      <th class="lastchild"><input
+          name="system.mainParameters.bodyBuild.value"
+          type="number"
+          value="{{system.mainParameters.bodyBuild.value}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "HVPUNOFFICIAL.Value"}}</td>
+      <td>{{localize "HVPUNOFFICIAL.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</td>
+      <td><input
+          name="system.skills.meleeWeapon.value"
+          type="number"
+          value="{{system.skills.meleeWeapon.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum
+          system.mainParameters.bodyBuild.value
+          system.skills.meleeWeapon.value
+          content=system.skills.meleeWeapon.total
+          target="system.skills.meleeWeapon.total"
+        }}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</td>
+      <td><input
+          name="system.skills.meleeCombat.value"
+          type="number"
+          value="{{system.skills.meleeCombat.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.bodyBuild.value system.skills.meleeCombat.value}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</td>
+      <td><input
+          name="system.skills.endurance.value"
+          type="number"
+          value="{{system.skills.endurance.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.bodyBuild.value system.skills.endurance.value}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th colspan="3">{{localize "HVPUNOFFICIAL.MainParametersDexterity"}}</th>
+      <th class="lastchild"><input
+          name="system.mainParameters.dexterity.value"
+          type="number"
+          value="{{system.mainParameters.dexterity.value}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "HVPUNOFFICIAL.Value"}}</td>
+      <td>{{localize "HVPUNOFFICIAL.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsShortWeapon"}}</td>
+      <td><input
+          name="system.skills.shortWeapon.value"
+          type="number"
+          value="{{system.skills.shortWeapon.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.dexterity.value system.skills.shortWeapon.value}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsInfiltration"}}</td>
+      <td><input
+          name="system.skills.infiltration.value"
+          type="number"
+          value="{{system.skills.infiltration.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.dexterity.value system.skills.infiltration.value}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsReflex"}}</td>
+      <td><input
+          name="system.skills.reflex.value"
+          type="number"
+          value="{{system.skills.reflex.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.dexterity.value system.skills.reflex.value}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th colspan="3">{{localize "HVPUNOFFICIAL.MainParametersPerception"}}</th>
+      <th class="lastchild"><input
+          name="system.mainParameters.perception.value"
+          type="number"
+          value="{{system.mainParameters.perception.value}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "HVPUNOFFICIAL.Value"}}</td>
+      <td>{{localize "HVPUNOFFICIAL.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsLongWeapon"}}</td>
+      <td><input
+          name="system.skills.longWeapon.value"
+          type="number"
+          value="{{system.skills.longWeapon.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.perception.value system.skills.longWeapon.value}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsDriving"}}</td>
+      <td><input
+          name="system.skills.driving.value"
+          type="number"
+          value="{{system.skills.driving.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.perception.value system.skills.driving.value}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsAcuteSenses"}}</td>
+      <td><input
+          name="system.skills.acuteSenses.value"
+          type="number"
+          value="{{system.skills.acuteSenses.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.perception.value system.skills.acuteSenses.value}}</td>
+    </tr>
+  </table>
+</div>
+<div class="center">
+  <table>
+    <tr>
+      <th colspan="3">{{localize "HVPUNOFFICIAL.MainParametersIntelligence"}}</th>
+      <th class="lastchild"><input
+          name="system.mainParameters.intelligence.value"
+          type="number"
+          value="{{system.mainParameters.intelligence.value}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "HVPUNOFFICIAL.Value"}}</td>
+      <td>{{localize "HVPUNOFFICIAL.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsTechnology"}}</td>
+      <td><input
+          name="system.skills.technology.value"
+          type="number"
+          value="{{system.skills.technology.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.intelligence.value system.skills.technology.value}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsKnowledgeGeneral"}}</td>
+      <td><input
+          name="system.skills.knowledgeGeneral.value"
+          type="number"
+          value="{{system.skills.knowledgeGeneral.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.intelligence.value system.skills.knowledgeGeneral.value}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsKnowledgeSecret"}}</td>
+      <td><input
+          name="system.skills.knowledgeSecret.value"
+          type="number"
+          value="{{system.skills.knowledgeSecret.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.intelligence.value system.skills.knowledgeSecret.value}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th colspan="3">{{localize "HVPUNOFFICIAL.MainParametersCool"}}</th>
+      <th class="lastchild"><input
+          name="system.mainParameters.cool.value"
+          type="number"
+          value="{{system.mainParameters.cool.value}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "HVPUNOFFICIAL.Value"}}</td>
+      <td>{{localize "HVPUNOFFICIAL.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsHacking"}}</td>
+      <td><input
+          name="system.skills.hacking.value"
+          type="number"
+          value="{{system.skills.hacking.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.cool.value system.skills.hacking.value}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsConnections"}}</td>
+      <td><input
+          name="system.skills.connections.value"
+          type="number"
+          value="{{system.skills.connections.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.cool.value system.skills.connections.value}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsTricks"}}</td>
+      <td><input
+          name="system.skills.tricks.value"
+          type="number"
+          value="{{system.skills.tricks.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.cool.value system.skills.tricks.value}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th colspan="3">{{localize "HVPUNOFFICIAL.MainParametersVerve"}}</th>
+      <th    class="lastchild"><input
+          name="system.mainParameters.verve.value"
+          type="number"
+          value="{{system.mainParameters.verve.value}}"
+          placeholder="0"
+        /></th>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>{{localize "HVPUNOFFICIAL.Value"}}</td>
+      <td>{{localize "HVPUNOFFICIAL.Sum"}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsCharm"}}</td>
+      <td><input
+          name="system.skills.charm.value"
+          type="number"
+          value="{{system.skills.charm.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.verve.value system.skills.charm.value}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsPower"}}</td>
+      <td><input
+          name="system.skills.power.value"
+          type="number"
+          value="{{system.skills.power.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.verve.value system.skills.power.value}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">{{localize "HVPUNOFFICIAL.SkillsWillpower"}}</td>
+      <td><input
+          name="system.skills.willpower.value"
+          type="number"
+          value="{{system.skills.willpower.value}}"
+          placeholder="0"
+        /></td>
+      <td>{{sum system.mainParameters.verve.value system.skills.willpower.value}}</td>
+    </tr>
+  </table>
+</div>
+<div class="right">
+  <table>
+    <tr>
+        <th></th>
+      <th>{{localize "HVPUNOFFICIAL.Max"}}</th>
+      <th>{{localize "HVPUNOFFICIAL.Bonus"}}</th>
+      <th>{{localize "HVPUNOFFICIAL.Current"}}</th>
+    </tr>
+    <tr>
+      <th>{{localize "HVPUNOFFICIAL.CharacterPotential"}}</th>
+      <td>{{sum system.mainParameters.verve.value system.secondaryParameters.potential.bonus}}</td>
+        <td><input
+          name="system.secondaryParameters.potential.bonus"
+          type="number"
+          value="{{system.secondaryParameters.potential.bonus}}"
+          placeholder="0"
+        /></td>
+      <td><input
+          name="system.secondaryParameters.potential.value"
+          type="number"
+          value="{{system.secondaryParameters.potential.value}}"
+          placeholder="-"
+        /></td>
+
+    </tr>
+    <tr>
+      <th>{{localize "HVPUNOFFICIAL.CharacterShifts"}}</th>
+      <td>{{sum system.mainParameters.verve.value system.secondaryParameters.shifts.bonus}}</td>
+        <td><input
+          name="system.secondaryParameters.shifts.bonus"
+          type="number"
+          value="{{system.secondaryParameters.shifts.bonus}}"
+          placeholder="0"
+        /></td>
+      <td><input
+          name="system.secondaryParameters.shifts.value"
+          type="number"
+          value="{{system.secondaryParameters.shifts.value}}"
+          placeholder="-"
+        /></td>
+    </tr>
+    <tr>
+      <th>{{localize "HVPUNOFFICIAL.SecondaryParametersVitality"}}</th>
+      <td>{{multiplyPlus system.mainParameters.bodyBuild.value 5 15 system.secondaryParameters.vitality.bonus}}</td>
+      <td><input
+          name="system.secondaryParameters.vitality.bonus"
+          type="number"
+          value="{{system.secondaryParameters.vitality.bonus}}"
+          placeholder="0"
+        /></td>
+      <td><input
+          name="system.secondaryParameters.vitality.value"
+          type="number"
+          value="{{system.secondaryParameters.vitality.value}}"
+          placeholder="-"
+        /></td>
+    </tr>
+    <tr>
+      <th>{{localize "HVPUNOFFICIAL.SecondaryParametersConcentration"}}</th>
+      <td>{{sum system.mainParameters.verve.value system.mainParameters.cool.value system.secondaryParameters.concentration.bonus}}</td>
+        <td><input
+          name="system.secondaryParameters.concentration.bonus"
+          type="number"
+          value="{{system.secondaryParameters.concentration.bonus}}"
+          placeholder="0"
+        /></td>
+      <td><input
+          name="system.secondaryParameters.concentration.value"
+          type="number"
+          value="{{system.secondaryParameters.concentration.value}}"
+          placeholder="-"
+        /></td>
+    </tr>
+    <tr>
+      <th>{{localize "HVPUNOFFICIAL.SecondaryParametersEther"}}</th>
+      <td>{{multiplyPlus 5 system.mainParameters.intelligence.value system.secondaryParameters.ether.bonus}}</td>
+        <td><input
+          name="system.secondaryParameters.ether.bonus"
+          type="number"
+          value="{{system.secondaryParameters.ether.bonus}}"
+          placeholder="0"
+        /></td>
+      <td><input
+          name="system.secondaryParameters.ether.value"
+          type="number"
+          value="{{system.secondaryParameters.ether.value}}"
+          placeholder="-"
+        /></td>
+    </tr>
+    <tr>
+      <th>{{localize "HVPUNOFFICIAL.SecondaryParametersAppearance"}}</th>
+      <td>{{sum system.mainParameters.bodyBuild.value system.mainParameters.verve.value system.secondaryParameters.appearance.bonus}}</td>
+        <td><input
+          name="system.secondaryParameters.appearance.bonus"
+          type="number"
+          value="{{system.secondaryParameters.appearance.bonus}}"
+          placeholder="0"
+        /></td>
+      <td><input
+          name="system.secondaryParameters.appearance.value"
+          type="number"
+          value="{{system.secondaryParameters.appearance.value}}"
+          placeholder="-"
+        /></td>
+    </tr>
+    <tr>
+      <th>{{localize "HVPUNOFFICIAL.SecondaryParametersAthletic"}}</th>
+      <td>{{sum system.mainParameters.bodyBuild.value system.mainParameters.dexterity.value system.secondaryParameters.athletic.bonus}}</td>
+        <td><input
+          name="system.secondaryParameters.athletic.bonus"
+          type="number"
+          value="{{system.secondaryParameters.athletic.bonus}}"
+          placeholder="0"
+        /></td>
+      <td><input
+          name="system.secondaryParameters.athletic.value"
+          type="number"
+          value="{{system.secondaryParameters.athletic.value}}"
+          placeholder="-"
+        /></td>
+    </tr>
+
+  </table>
+</div>

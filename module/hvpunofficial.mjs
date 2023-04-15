@@ -72,7 +72,7 @@ Handlebars.registerHelper("timesFivePlusTen", function (value1) {
   return sum;
 });
 
-Handlebars.registerHelper("multiplyPlus", function (val1, val2=5, val3=0) {
+Handlebars.registerHelper("multiplyPlus", function (val1, val2=5, val3=0, val4=0) {
   if (!isNumber(val1)) {
     throw new TypeError('expected the first argument to be a number');
   }
@@ -82,7 +82,10 @@ Handlebars.registerHelper("multiplyPlus", function (val1, val2=5, val3=0) {
   if (!isNumber(val3)) {
     throw new TypeError('expected the second argument to be a number');
   }
-  let result = Number(val1) * Number(val2) + Number(val3);
+  if (!isNumber(val3)) {
+    throw new TypeError('expected the second argument to be a number');
+  }
+  let result = Number(val1) * Number(val2) + Number(val3) + Number(val4);
   return result;
 });
 
