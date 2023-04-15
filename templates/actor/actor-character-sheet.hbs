@@ -98,6 +98,7 @@
             --}}
               {{!-- Paramteres --}}
               <div class="resources grid grid-3col">
+                  <div class="1st_column">
                   {{!-- Body build skills --}}
                 <div class="resources grid grid-3col">
                   <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
@@ -105,7 +106,7 @@
                     <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
                   </div>
                   <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Sum"}}</label>
                   <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
@@ -113,7 +114,7 @@
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
                   </div>
-                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsCombatWeapon"}}</label>
+                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
                   </div>
@@ -135,7 +136,7 @@
                     <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
                   </div>
                   <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Sum"}}</label>
                   <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
@@ -143,7 +144,7 @@
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
                   </div>
-                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsCombatWeapon"}}</label>
+                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
                   </div>
@@ -158,6 +159,132 @@
                     <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
                   </div>
                 </div>
+                      </div>
+
+                      </div>
+                  <div class="2nd_column">
+                  {{!-- Perception skills --}}
+                <div class="resources grid grid-3col">
+                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                </div>
+                  {{!-- Intelligence skills --}}
+                <div class="resources grid grid-3col">
+                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                </div>
+                  {{!-- Cool skills --}}
+                <div class="resources grid grid-3col">
+                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                </div>
+                  {{!-- Verve skills --}}
+                <div class="resources grid grid-3col">
+                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
+                  </div>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                  </div>
+                </div>
+                      </div>
+              <div class="3rd_column">
                     {{!-- Second params --}}
                 <div class="resources grid grid-4col">
                   <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Max"}}</label>
@@ -268,126 +395,6 @@
                            data-dtype="Number"/>
                   </div>
 
-                </div>
-                  {{!-- Perception skills --}}
-                <div class="resources grid grid-3col">
-                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsCombatWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                </div>
-                  {{!-- Intelligence skills --}}
-                <div class="resources grid grid-3col">
-                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsCombatWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                </div>
-                  {{!-- Cool skills --}}
-                <div class="resources grid grid-3col">
-                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsCombatWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                </div>
-                  {{!-- Verve skills --}}
-                <div class="resources grid grid-3col">
-                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsCombatWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
                 </div>
               </div>
           </div>
