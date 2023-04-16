@@ -22,12 +22,7 @@
           value="{{system.skills.meleeWeapon.value}}"
           placeholder="0"
         /></td>
-      <td>{{sum
-          system.mainParameters.bodyBuild.value
-          system.skills.meleeWeapon.value
-          content=system.skills.meleeWeapon.total
-          target="system.skills.meleeWeapon.total"
-        }}</td>
+      <td>{{sum system.mainParameters.bodyBuild.value system.skills.meleeWeapon.value }}</td>
     </tr>
     <tr>
       <td colspan="2" class="rollable">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</td>
