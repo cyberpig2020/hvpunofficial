@@ -11,7 +11,13 @@
           "value": 1
           }
         },
-        "archetypesList": ["chimera", "cyborg", "esoteric", "supersoldier", "symbiont"],
+        "archetypesList": {
+          "chimera": {"label": ""},
+          "cyborg": {"label": ""},
+          "esoteric": {"label": ""},
+          "supersoldier": {"label": ""},
+          "symbiont": {"label": ""}
+          },
         "mainParameters": {
           "bodyBuild": {
             "value": 0
