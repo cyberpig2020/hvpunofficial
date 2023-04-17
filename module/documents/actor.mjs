@@ -80,7 +80,11 @@ export class HvpunofficialActor extends Actor {
     console.log('DEBUG: before _prepareCharacterData secondaryParameters');
     console.log(actorData.system.secondaryParameters);
     for (let [key, skill] of Object.entries(systemData.skills)) {
-        skill.modified_value = skill.value + mainParameters.[skill.mainParameter].value;
+        console.log(skill);
+        let paramname = skill.mainParameter
+        console.log(paramname);
+        skill.modified_value = skill.value + systemData.mainParameters[paramname].value;
+        console.log(skill);
     }
     console.log('DEBUG: before _prepareCharacterData system');
     console.log(actorData.system);

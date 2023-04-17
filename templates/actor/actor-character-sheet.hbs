@@ -8,6 +8,33 @@
       {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
       use both the "grid" and "grid-Ncol" class where "N" can be any number
       from 1 to 12 and will create that number of columns.  --}}
+        <div class="resources grid grid-3col">
+
+        {{!-- "flex-group-center" is also defined in the _grid.scss file
+        and it will add a small amount of padding, a border, and will
+        center all of its child elements content and text. --}}
+        <div class="resource flex-group-center">
+          <label for="system.archetype" class="resource-label text-opaque grid-span-2">{{localize "HVPUNOFFICIAL.CharacterArchetype"}}</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          <input type="text" name="system.archetype" list="archetypes" value="{{system.archetype}}" data-dtype="text"/>
+          <datalist id="archetypes">
+              <option value="{{localize "HVPUNOFFICIAL.ArchetypeChimera"}}">
+              <option value="{{localize "HVPUNOFFICIAL.ArchetypeCyborg"}}">
+              <option value="{{localize "HVPUNOFFICIAL.ArchetypeEsoteric"}}">
+              <option value="{{localize "HVPUNOFFICIAL.ArchetypeSupersoldier"}}">
+              <option value="{{localize "HVPUNOFFICIAL.ArchetypeSymbiont"}}">
+              {{!--
+                {{#each system.archetypesList}}
+                    <option value="{{this}}">CONFIG.BOILERPLATE.archetypes[this] </option>
+                {{/each}}
+              --}}
+            </datalist>
+
+          <!-- {{#each system.archetypes}}
+                  <option value="{{this}}">{{localize "HVPUNOFFICIAL.Archetype"this}}</option>
+              {{/each}} -->
+          </div>
+        </div>
       <div class="resources grid grid-3col">
 
         {{!-- "flex-group-center" is also defined in the _grid.scss file

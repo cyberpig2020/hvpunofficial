@@ -11,6 +11,7 @@
           "value": 1
           }
         },
+        "archetypesList": ["chimera", "cyborg", "esoteric", "supersoldier", "symbiont"],
         "mainParameters": {
           "bodyBuild": {
             "value": 0
@@ -189,9 +190,8 @@
           }
         },
         "exp": {
-          "total": 0,
-          "spent": 0,
-          "current": 0
+          "free": 0,
+          "spent": 0
         },
         "moves": {
           "value": 0,

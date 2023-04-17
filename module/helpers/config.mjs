@@ -13,6 +13,14 @@ export const BOILERPLATE = {};
     "verve": "HVPUNOFFICIAL.MainParametersVerve"
 };
 
+BOILERPLATE.archetypes = {
+    "chimera": "HVPUNOFFICIAL.ArchetypeChimera",
+    'cyborg': "HVPUNOFFICIAL.ArchetypeCyborg",
+    'esoteric': "HVPUNOFFICIAL.ArchetypeEsoteric",
+    'supersoldier': "HVPUNOFFICIAL.ArchetypeSupersoldier",
+    'symbiont': "HVPUNOFFICIAL.ArchetypeSymbiont"
+}
+
 //BOILERPLATE.abilityAbbreviations = {
 //  "str": "BOILERPLATE.AbilityStrAbbr",
 //  "dex": "BOILERPLATE.AbilityDexAbbr",
