@@ -86,7 +86,7 @@ Handlebars.registerHelper("timesFive", function (value1) {
 Handlebars.registerHelper("sum", function () {
   let sum = 0;
   for (let argument in arguments) {
-    if (Number.isInteger(arguments[argument])) sum = sum + arguments[argument];
+    if (Number.isInteger(arguments[argument])) sum = sum + Number(arguments[argument]);
   }
   return sum;
 });

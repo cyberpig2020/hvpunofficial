@@ -339,7 +339,15 @@
 }
 .hvpunofficial .resource-label {
   font-weight: bold;
+  min-width: fit-content;
 }
+
+.hvpunofficial .parameter .resource-label {
+  font-weight: bold;
+  min-width: 50px;
+  width: fit-content;
+}
+
 .hvpunofficial .items-header {
   height: 28px;
   margin: 2px 0;

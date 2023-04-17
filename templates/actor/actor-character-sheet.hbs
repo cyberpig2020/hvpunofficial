@@ -43,7 +43,7 @@
 
       </div>
 
-      <div class="resources grid grid-3col">
+      <div class="resources grid grid-6col">
         <div class="resource flex-group-center">
           <label for="system.exp.current" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.CharacterExpCurrent"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
@@ -89,7 +89,7 @@
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  --}}
        <div class="mainParameters flexcol">
-         <section class="paramters grid grid-3col">
+         <section class="parameters grid grid-3col">
             {{!--
             {{#each system.mainParameters as |param key|}}
             <div class="mainParameter flexrow flex-group-center">
@@ -114,7 +114,7 @@
                     <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
                   </div>
                   <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
+                    <input type="text" name="system.skills.meleeWeapon.total" value="{{system.skills.meleeWeapon.modified_value}}" data-dtype="Number"/>
                   </div>
                     <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
@@ -299,7 +299,7 @@
                   <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >{{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.secondaryParameters.potential.max"
-                           value="{{sum system.secondaryParameters.potential.max system.secondaryParameters.potential.bonus system.secondaryParameters.potential.value}}"
+                           value="{{system.secondaryParameters.potential.max}}"
                            data-dtype="Number"/>
                       <input type="text" name="system.secondaryParameters.potential.bonus"
                            value="{{system.secondaryParameters.potential.bonus}}"
@@ -364,7 +364,7 @@
 
                     <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.secondaryParameters.potential.max"
-                           value="{{sum system.secondaryParameters.potential.max system.secondaryParameters.potential.bonus system.secondaryParameters.potential.value}}"
+                           value="{{system.secondaryParameters.potential.max}}"
                            data-dtype="Number"/>
                       <input type="text" name="system.secondaryParameters.potential.bonus"
                            value="{{system.secondaryParameters.potential.bonus}}"
@@ -377,7 +377,7 @@
 
                     <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.secondaryParameters.potential.max"
-                           value="{{sum system.secondaryParameters.potential.max system.secondaryParameters.potential.bonus system.secondaryParameters.potential.value}}"
+                           value="{{system.secondaryParameters.potential.max}}"
                            data-dtype="Number"/>
                       <input type="text" name="system.secondaryParameters.potential.bonus"
                            value="{{system.secondaryParameters.potential.bonus}}"
@@ -390,7 +390,7 @@
 
                     <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.secondaryParameters.potential.max"
-                           value="{{sum system.secondaryParameters.potential.max system.secondaryParameters.potential.bonus system.secondaryParameters.potential.value}}"
+                           value="{{system.secondaryParameters.potential.max}}"
                            data-dtype="Number"/>
                       <input type="text" name="system.secondaryParameters.potential.bonus"
                            value="{{system.secondaryParameters.potential.bonus}}"
