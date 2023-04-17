@@ -54,7 +54,7 @@ export class HvpunofficialActor extends Actor {
     const systemData = actorData.system;
     //count maximums
 
-    systemData.secondaryParams.potetntial.max = systemData.mainParameters.verve.value
+    systemData.secondaryParams.potential.max = systemData.mainParameters.verve.value
                                               + systemData.secondaryParameters.potential.bonus;
     systemData.secondaryParams.shifts.max = systemData.mainParameters.verve.value
                                           + systemData.secondaryParameters.shifts.bonus;
