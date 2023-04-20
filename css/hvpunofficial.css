@@ -500,6 +500,22 @@
   display: inline-block;
   vertical-align: top;
 }
+
+.hvpunofficial .parameters input[type="number"] {
+  text-align: center;
+  border: 0;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+}
+
+
+.hvpunofficial .parameters input[type="number"]:focus {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
 .hvpunofficial .parameters table {
   padding: 5px;
   border: 2px var(--theme-color) solid;
@@ -545,6 +561,8 @@
   height: 25px;
   font-size: 14px;
 }
+
+
 .hvpunofficial .parameters table td input[type="number"]:focus {
   border: 0;
   outline: 0;
