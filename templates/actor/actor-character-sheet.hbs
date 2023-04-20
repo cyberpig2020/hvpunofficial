@@ -128,8 +128,12 @@
             --}}
               {{!-- Paramteres --}}
          <section class="1st_column">
+             {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="dexterity"
+                     skill1="shortWeapon"
+                     skill2="driving"
+                     skill3="reflex" }}
                   {{!-- Body build skills --}}
-                <div class="resources grid grid-3col">
+             <!--   <div class="resources grid grid-3col">
                   <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
@@ -157,9 +161,9 @@
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
                   </div>
-                </div>
-                  {{!-- Dexterity skills --}}
-                <div class="resources grid grid-3col">
+                </div> -->
+                <!--  {{!-- Dexterity skills --}} -->
+            <!--    <div class="resources grid grid-3col">
                   <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
@@ -187,12 +191,12 @@
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
                   </div>
-                </div>
-                      </section>
+                </div> -->
+         </section>
 
 
          <section class="grid-start-2">
-                  {{!-- Perception skills --}}
+               {{!-- Perception skills --}}
                 <div class="resources grid grid-3col">
                   <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
