@@ -21,6 +21,30 @@ BOILERPLATE.archetypes = {
     'symbiont': "HVPUNOFFICIAL.ArchetypeSymbiont"
 }
 
+
+BOILERPLATE.skills = {
+  'meleeWeapon': "HVPUNOFFICIAL.SkillsMeleeWeapon",
+  'meleeCombat': "HVPUNOFFICIAL.SkillsMeleeCombat",
+  'endurance': "HVPUNOFFICIAL.SkillsEndurance",
+  'shortWeapon': "HVPUNOFFICIAL.SkillsShortWeapon",
+  'driving': "HVPUNOFFICIAL.SkillsDriving",
+  'reflex': "HVPUNOFFICIAL.SkillsReflex",
+  'longWeapon': "HVPUNOFFICIAL.SkillsLongWeapon",
+  'pilotage': "HVPUNOFFICIAL.SkillsPilotage",
+  'acuteSenses': "HVPUNOFFICIAL.SkillsAcuteSenses",
+  'connections': "HVPUNOFFICIAL.SkillsConnections",
+  'technology': "HVPUNOFFICIAL.SkillsTechnology",
+  'knowledge': "HVPUNOFFICIAL.SkillsKnowledge",
+  'knowledgeGeneral': "HVPUNOFFICIAL.SkillsKnowledgeGeneral",
+  'knowledgeSecret': "HVPUNOFFICIAL.SkillsKnowledgeSecret",
+  'hacking': "HVPUNOFFICIAL.SkillsHacking",
+  'infiltration': "HVPUNOFFICIAL.SkillsInfiltration",
+  'tricks': "HVPUNOFFICIAL.SkillsTricks",
+  'charm': "HVPUNOFFICIAL.SkillsCharm",
+  'power': "HVPUNOFFICIAL.SkillsPower",
+  'willpower': "HVPUNOFFICIAL.SkillsWillpower",
+};
+
 //BOILERPLATE.abilityAbbreviations = {
 //  "str": "BOILERPLATE.AbilityStrAbbr",
 //  "dex": "BOILERPLATE.AbilityDexAbbr",

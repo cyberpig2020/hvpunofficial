@@ -12,7 +12,7 @@
 
                   {{!-- Body build skills --}}
                 <div class="resources grid grid-3col">
-                  <label for="system.mainParameters.{{paramname}}.value" class="resource-label text-opaque grid-span-2" >{{localize BOILERPLATE.mainParameters.[paramname]}}</label>
+                  <label for="system.mainParameters.{{paramname}}.value" class="resource-label text-opaque grid-span-2" >{{ system.mainParameters.[paramname].label }}</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.mainParameters.{{paramname}}.value" value="{{paramname}}.value" data-dtype="Number"/>
                   </div>
@@ -27,26 +27,25 @@
                         <input type="text" name="system.skills.{{key}}.total" value="{{system.skills.[key].modified_value}}" data-dtype="Number"/>
                       </div>
                     {{/each--}}
-                    <label for="system.skills.{{skill1}}.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
+                    <label for="system.skills.{{skill1}}.value" class="resource-label">{{system.skills.[skill1].label}}</label>
                         <div class="resource-content flexrow flex-center flex-between">
                         <input type="text" name="system.skills.{{skill1}}.value" value="{{system.skills.[skill1].value}}" data-dtype="Number"/>
                        </div>
                       <div class="resource-content flexrow flex-center flex-between">
                         <input type="text" name="system.skills.{{skill1}}.total" value="{{system.skills.[skill1].modified_value}}" data-dtype="Number"/>
                       </div>
-                    <label for="system.skills.{{skill2}}.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
+                    <label for="system.skills.{{skill2}}.value" class="resource-label">{{system.skills.[skill2].label}}</label>
                         <div class="resource-content flexrow flex-center flex-between">
                         <input type="text" name="system.skills.{{skill2}}.value" value="{{system.skills.[skill2].value}}" data-dtype="Number"/>
                        </div>
                       <div class="resource-content flexrow flex-center flex-between">
                         <input type="text" name="system.skills.{{skill2}}.total" value="{{system.skills.[skill2].modified_value}}" data-dtype="Number"/>
                       </div>
-                    <label for="system.skills.{{skill3}}.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
+                    <label for="system.skills.{{skill3}}.value" class="resource-label">{{system.skills.[skill3].label}}</label>
                         <div class="resource-content flexrow flex-center flex-between">
                         <input type="text" name="system.skills.{{skill3}}.value" value="{{system.skills.[skill3].value}}" data-dtype="Number"/>
                        </div>
                       <div class="resource-content flexrow flex-center flex-between">
                         <input type="text" name="system.skills.{{skill3}}.total" value="{{system.skills.[skill3].modified_value}}" data-dtype="Number"/>
                       </div>
-
                 </div>

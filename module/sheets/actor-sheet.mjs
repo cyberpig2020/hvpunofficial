@@ -79,6 +79,9 @@ export class HvpunofficialActorSheet extends ActorSheet {
     for (let [k, v] of Object.entries(context.system.archetypesList)) {
       v.label = game.i18n.localize(CONFIG.BOILERPLATE.archetypes[k]) ?? k;
     }
+    for (let [k, v] of Object.entries(context.system.skills)) {
+      v.label = game.i18n.localize(CONFIG.BOILERPLATE.skills[k]) ?? k;
+    }
   }
 
   /**
