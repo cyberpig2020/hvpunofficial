@@ -53,25 +53,25 @@ export class HvpunofficialActor extends Actor {
     // Make modifications to data here. For example:
     const systemData = actorData.system;
     //count maximums
+    //convert undefined or null to 0.
+    systemData.secondaryParams.potential.max = Number(systemData.mainParameters.verve.value)
+                                              + Number(systemData.secondaryParameters.potential.bonus);
+    systemData.secondaryParams.shifts.max = Number(systemData.mainParameters.verve.value)
+                                          + Number(systemData.secondaryParameters.shifts.bonus);
+    systemData.secondaryParameters.athletic.max = Number(systemData.mainParameters.bodyBuild.value)
+                                                + Number(systemData.mainParameters.dexterity.value)
+                                                + Number(systemData.secondaryParameters.athletic.bonus);
+    systemData.secondaryParameters.appearance.max = Number(systemData.mainParameters.bodyBuild.value)
+                                                    + Number(systemData.mainParameters.verve.value)
+                                                    + Number(systemData.secondaryParameters.appearance.bonus);
+    systemData.secondaryParameters.ether.max = 5 * Number(systemData.mainParameters.intelligence.value)
+                                             + Number(systemData.secondaryParameters.ether.bonus);
+    systemData.secondaryParameters.concentration.max = Number(systemData.mainParameters.verve.value)
+                                                     + Number(systemData.mainParameters.cool.value)
+                                                     + Number(systemData.secondaryParameters.concentration.bonus);
 
-    systemData.secondaryParams.potential.max = systemData.mainParameters.verve.value
-                                              + systemData.secondaryParameters.potential.bonus;
-    systemData.secondaryParams.shifts.max = systemData.mainParameters.verve.value
-                                          + systemData.secondaryParameters.shifts.bonus;
-    systemData.secondaryParameters.athletic.max = systemData.mainParameters.bodyBuild.value
-                                                + systemData.mainParameters.dexterity.value
-                                                + systemData.secondaryParameters.athletic.bonus;
-    systemData.secondaryParameters.appearance.max = systemData.mainParameters.bodyBuild.value
-                                                    + systemData.mainParameters.verve.value
-                                                    + systemData.secondaryParameters.appearance.bonus;
-    systemData.secondaryParameters.ether.max = 5 * systemData.mainParameters.intelligence.value
-                                             + systemData.secondaryParameters.ether.bonus;
-    systemData.secondaryParameters.concentration.max = systemData.mainParameters.verve.value
-                                                     + systemData.mainParameters.cool.value
-                                                     + systemData.secondaryParameters.concentration.bonus;
-
-    systemData.secondaryParameters.vitality.max = systemData.mainParameters.bodyBuild.value * 5 + 15
-                                                + systemData.secondaryParameters.vitality.bonus
+    systemData.secondaryParameters.vitality.max = Number(systemData.mainParameters.bodyBuild.value) * 5 + 15
+                                                + Number(systemData.secondaryParameters.vitality.bonus)
     // Loop through ability scores, and add their modifiers to our sheet output.
     //for (let [key, ability] of Object.entries(systemData.abilities)) {
       // Calculate the modifier using d20 rules.
@@ -83,7 +83,7 @@ export class HvpunofficialActor extends Actor {
         console.log(skill);
         let paramname = skill.mainParameter
         console.log(paramname);
-        skill.modified_value = skill.value + systemData.mainParameters[paramname].value;
+        skill.modified_value = Number(skill.value) + Number(systemData.mainParameters[paramname].value);
         console.log(skill);
     }
     console.log('DEBUG: before _prepareCharacterData system');
