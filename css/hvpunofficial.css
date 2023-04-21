@@ -515,6 +515,19 @@
   outline: 0;
   box-shadow: none;
 }
+.hvpunofficial .parameters .paramskillbox {
+  background: var(--theme-color);
+  text-transform: uppercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 2px var(--theme-color) solid;
+}
+
 
 .hvpunofficial .parameters table {
   padding: 5px;

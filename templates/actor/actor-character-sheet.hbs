@@ -18,6 +18,7 @@
           <div class="resource-content flexrow flex-center flex-between">
           <input type="text" name="system.archetype" list="archetypes" value="{{system.archetype}}" data-dtype="text"/>
           <datalist id="archetypes">
+              <!--
               <option value="{{localize "HVPUNOFFICIAL.ArchetypeChimera"}}">
               <option value="{{localize "HVPUNOFFICIAL.ArchetypeCyborg"}}">
               <option value="{{localize "HVPUNOFFICIAL.ArchetypeEsoteric"}}">
@@ -28,15 +29,17 @@
                     <option value="{{this}}">CONFIG.BOILERPLATE.archetypes[this] </option>
                 {{/each}}
               --}}
-            </datalist>
 
-          <!-- {{#each system.archetypes}}
-                  <option value="{{this}}">{{localize "HVPUNOFFICIAL.Archetype"this}}</option>
-              {{/each}} -->
+            -->
+
+          {{#each system.archetypes}}
+              <option value="{{this}}">{{this.label}}</option>
+          {{/each}}
+          </datalist>
           </div>
         </div>
-      <div class="resources grid grid-3col">
 
+      <div class="resources grid grid-3col">
         {{!-- "flex-group-center" is also defined in the _grid.scss file
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. --}}
@@ -74,7 +77,7 @@
         <div class="resource flex-group-center">
           <label for="system.exp.current" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.CharacterExpCurrent"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.system.exp.current" value="{{system.exp.current}}" data-dtype="Number"/>
+          <input type="text" name="system.system.exp.current" value="{{system.exp.free}}" data-dtype="Number"/>
           </div>
         </div>
         <div class="resource flex-group-center">
@@ -86,7 +89,7 @@
         <div class="resource flex-group-center">
           <label for="system.exp.total" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.CharacterExpTotal"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.system.exp.total" value="{{sum system.exp.spent system.exp.current}}" data-dtype="Number"/>
+          <input type="text" name="system.system.exp.total" value="{{sum system.exp.spent system.exp.free}}" data-dtype="Number"/>
           </div>
         </div>
       </div>
@@ -128,10 +131,10 @@
             --}}
               {{!-- Paramteres --}}
          <section class="1st_column">
-             {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="dexterity"
-                     skill1="shortWeapon"
-                     skill2="driving"
-                     skill3="reflex" }}
+             {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="bodyBuild"
+                     skill1="meleeWeapon"
+                     skill2="meleeCombat"
+                     skill3="endurance" }}
                   {{!-- Body build skills --}}
              <!--   <div class="resources grid grid-3col">
                   <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
@@ -163,6 +166,10 @@
                   </div>
                 </div> -->
                 <!--  {{!-- Dexterity skills --}} -->
+             {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="dexterity"
+                     skill1="shortWeapon"
+                     skill2="driving"
+                     skill3="reflex" }}
             <!--    <div class="resources grid grid-3col">
                   <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
@@ -192,246 +199,147 @@
                     <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
                   </div>
                 </div> -->
+             {{!-- Perception skills --}}
+             {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="perception"
+                     skill1="longWeapon"
+                     skill2="pilotage"
+                     skill3="acuteSenses" }}
          </section>
 
 
          <section class="grid-start-2">
-               {{!-- Perception skills --}}
-                <div class="resources grid grid-3col">
-                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                </div>
+
+
                   {{!-- Intelligence skills --}}
-                <div class="resources grid grid-3col">
-                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                </div>
+                {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="intelligence"
+                     skill1="technology"
+                     skill2="knowledgeGeneral"
+                     skill3="knowledgeSecret" }}
                   {{!-- Cool skills --}}
-                <div class="resources grid grid-3col">
-                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                </div>
+                {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="cool"
+                     skill1="hacking"
+                     skill2="connections"
+                     skill3="tricks" }}
                   {{!-- Verve skills --}}
-                <div class="resources grid grid-3col">
-                  <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.mainParameters.bodyBuild.value" value="{{system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label for="system.skills.meleeWeapon.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeWeapon"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.value" value="{{system.skills.meleeWeapon.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeWeapon.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.meleeCombat.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsMeleeCombat"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.value" value="{{system.skills.meleeCombat.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.meleeCombat.total" value="{{sum system.skills.meleeCombat.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                    <label for="system.skills.endurance.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.value" value="{{system.skills.endurance.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.skills.endurance.total" value="{{sum system.skills.meleeWeapon.value system.mainParameters.bodyBuild.value}}" data-dtype="Number"/>
-                  </div>
-                </div>
+                {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="verve"
+                     skill1="charm"
+                     skill2="power"
+                     skill3="willpower" }}
          </section>
 
 
          {{!-- Second params --}}
 
         <section class="grid-start-3">
-         <div class="resources grid grid-4col">
-                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Max"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                    <label class="resource-label grid-start-4 text-opaque">{{localize "HVPUNOFFICIAL.Bonus"}}</label>
+            <div class="resources grid grid-4col">
+                <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Max"}}</label>
+                <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                <label class="resource-label grid-start-4 text-opaque">{{localize "HVPUNOFFICIAL.Bonus"}}</label>
 
-                  <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >{{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.secondaryParameters.potential.max"
+                <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >
+                      {{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
+                <div class="resource-content flexrow flex-center flex-between">
+                <input type="text" name="system.secondaryParameters.potential.max"
                            value="{{system.secondaryParameters.potential.max}}"
                            data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.bonus"
+                <input type="text" name="system.secondaryParameters.potential.bonus"
                            value="{{system.secondaryParameters.potential.bonus}}"
                            data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.value"
+                <input type="text" name="system.secondaryParameters.potential.value"
                            value="{{system.secondaryParameters.potential.value}}"
                            data-dtype="Number"/>
-                  </div>
-                    <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >{{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
-
-                    <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.secondaryParameters.potential.max"
-                           value="{{sum system.secondaryParameters.potential.max system.secondaryParameters.potential.bonus system.secondaryParameters.potential.value}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.bonus"
-                           value="{{system.secondaryParameters.potential.bonus}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.value"
-                           value="{{system.secondaryParameters.potential.value}}"
-                           data-dtype="Number"/>
-                  </div>
-                    <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >{{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
-
-                    <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.secondaryParameters.potential.max"
-                           value="{{sum system.secondaryParameters.potential.max system.secondaryParameters.potential.bonus system.secondaryParameters.potential.value}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.bonus"
-                           value="{{system.secondaryParameters.potential.bonus}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.value"
-                           value="{{system.secondaryParameters.potential.value}}"
-                           data-dtype="Number"/>
-                  </div>
-                    <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >{{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
-
-                    <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.secondaryParameters.potential.max"
-                           value="{{sum system.secondaryParameters.potential.max system.secondaryParameters.potential.bonus system.secondaryParameters.potential.value}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.bonus"
-                           value="{{system.secondaryParameters.potential.bonus}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.value"
-                           value="{{system.secondaryParameters.potential.value}}"
-                           data-dtype="Number"/>
-                  </div>
-                    <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >{{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
-
-                    <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.secondaryParameters.potential.max"
-                           value="{{sum system.secondaryParameters.potential.max system.secondaryParameters.potential.bonus system.secondaryParameters.potential.value}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.bonus"
-                           value="{{system.secondaryParameters.potential.bonus}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.value"
-                           value="{{system.secondaryParameters.potential.value}}"
-                           data-dtype="Number"/>
-                  </div>
-                    <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >{{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
-
-                    <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.secondaryParameters.potential.max"
-                           value="{{system.secondaryParameters.potential.max}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.bonus"
-                           value="{{system.secondaryParameters.potential.bonus}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.value"
-                           value="{{system.secondaryParameters.potential.value}}"
-                           data-dtype="Number"/>
-                  </div>
-                    <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >{{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
-
-                    <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.secondaryParameters.potential.max"
-                           value="{{system.secondaryParameters.potential.max}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.bonus"
-                           value="{{system.secondaryParameters.potential.bonus}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.value"
-                           value="{{system.secondaryParameters.potential.value}}"
-                           data-dtype="Number"/>
-                  </div>
-                    <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >{{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
-
-                    <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="system.secondaryParameters.potential.max"
-                           value="{{system.secondaryParameters.potential.max}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.bonus"
-                           value="{{system.secondaryParameters.potential.bonus}}"
-                           data-dtype="Number"/>
-                      <input type="text" name="system.secondaryParameters.potential.value"
-                           value="{{system.secondaryParameters.potential.value}}"
-                           data-dtype="Number"/>
-                  </div>
-
                 </div>
+
+                <label for="system.secondaryParameters.shifts.value" class="resource-label text-opaque" >
+                        {{localize "HVPUNOFFICIAL.SecondaryParametersShifts"}}</label>
+
+                <div class="resource-content flexrow flex-center flex-between">
+                <input type="text" name="system.secondaryParameters.shifts.max"
+                           value="{{system.secondaryParameters.shifts.max}}"
+                           data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.shifts.bonus"
+                           value="{{system.secondaryParameters.shifts.bonus}}"
+                           data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.shifts.value"
+                           value="{{system.secondaryParameters.potential.value}}"
+                           data-dtype="Number"/>
+                </div>
+                <label for="system.secondaryParameters.vitality.value" class="resource-label text-opaque" >
+                        {{localize "HVPUNOFFICIAL.SecondaryParametersVitality"}}</label>
+
+                <div class="resource-content flexrow flex-center flex-between">
+                <input type="text" name="system.secondaryParameters.vitality.max"
+                           value="{{system.secondaryParameters.vitality.max}}"
+                           data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.vitality.bonus"
+                           value="{{system.secondaryParameters.vitality.bonus}}"
+                           data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.vitality.value"
+                           value="{{system.secondaryParameters.vitality.value}}"
+                           data-dtype="Number"/>
+                </div>
+                <label for="system.secondaryParameters.concentration.value" class="resource-label text-opaque">
+                        {{localize "HVPUNOFFICIAL.SecondaryParametersConcentration"}}</label>
+
+                <div class="resource-content flexrow flex-center flex-between">
+                <input type="text" name="system.secondaryParameters.concentration.max"
+                           value="{{system.secondaryParameters.concentration.max}}"
+                           data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.concentration.bonus"
+                           value="{{system.secondaryParameters.concentration.bonus}}"
+                           data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.concentration.value"
+                           value="{{system.secondaryParameters.concentration.value}}"
+                           placeholder="{{system.secondaryParameters.concetration.max}}"
+                           data-dtype="Number"/>
+                </div>
+
+                <label for="system.secondaryParameters.ether.value" class="resource-label text-opaque">
+                      {{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
+
+                <div class="resource-content flexrow flex-center flex-between">
+                <input type="text" name="system.secondaryParameters.ether.max"
+                       value="{{system.secondaryParameters.ether.max}}"
+                       data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.ether.bonus"
+                           value="{{system.secondaryParameters.ether.bonus}}"
+                           data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.ether.value"
+                           value="{{system.secondaryParameters.ether.value}}"
+                           placeholder="{{system.secondaryParameters.ether.max}}"
+                           data-dtype="Number"/>
+                </div>
+                <label for="system.secondaryParameters.appearance.value" class="resource-label text-opaque" >
+                      {{localize "HVPUNOFFICIAL.SecondaryParametersAppearance"}}</label>
+
+                <div class="resource-content flexrow flex-center flex-between">
+                <input type="text" name="system.secondaryParameters.appearance.max"
+                           value="{{system.secondaryParameters.appearance.max}}"
+                           data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.appearance.bonus"
+                           value="{{system.secondaryParameters.appearance.bonus}}"
+                           data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.appearance.value"
+                           value="{{system.secondaryParameters.appearance.value}}"
+                           data-dtype="Number"/>
+                </div>
+
+                <label for="system.secondaryParameters.athletic.value" class="resource-label text-opaque" >
+                      {{localize "HVPUNOFFICIAL.SecondaryParametersAthletic"}}</label>
+
+                <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="system.secondaryParameters.athletic.max"
+                           value="{{system.secondaryParameters.athletic.max}}"
+                           data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.athletic.bonus"
+                           value="{{system.secondaryParameters.athletic.bonus}}"
+                           data-dtype="Number"/>
+                <input type="text" name="system.secondaryParameters.athletic.value"
+                           value="{{system.secondaryParameters.athletic.value}}"
+                           data-dtype="Number"/>
+                </div>
+            </div>
+
          </section>
     </section>
           </div>
