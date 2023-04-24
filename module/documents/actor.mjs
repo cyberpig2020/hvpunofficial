@@ -48,10 +48,15 @@ export class HvpunofficialActor extends Actor {
   _prepareCharacterData(actorData) {
     console.log('DEBUG: before _prepareCharacterData system');
     console.log(actorData.system);
+
+
     if (actorData.type !== 'character') return;
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;
+
+    console.log('DEBUG: systemData.secondaryParameters.potential');
+    console.log(systemData.secondaryParameters.potential);
     //count maximums
     //convert undefined or null to 0.
     systemData.secondaryParams.potential.max = Number(systemData.mainParameters.verve.value) ?? 0
