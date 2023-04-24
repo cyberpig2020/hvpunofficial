@@ -11,6 +11,13 @@
               {{!-- Paramteres --}}
 
                   {{!-- Body build skills --}}
+                 <script>
+                     console.log('build UI');
+                     console.log(system.mainParameters.bodBuild.label);
+                     console.log(system.skills.reflex.label);
+                     console.log(system.mainParameters);
+                </script>
+
                 <div class="resources grid grid-3col paramskillbox">
                   <label for="system.mainParameters.{{paramname}}.value" class="resource-label text-opaque grid-span-2 rollable" >
                       {{ system.mainParameters.[paramname].label }}</label>
