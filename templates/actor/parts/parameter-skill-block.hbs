@@ -14,13 +14,16 @@
 
 
                 <div class="resources grid grid-3col paramskillbox">
-                  <label for="system.mainParameters.{{paramname}}.value" class="resource-label text-opaque grid-span-2 rollable" >
-                      {{ system.mainParameters.[paramname] }}</label>
                   <div class="resource-content flexrow flex-center flex-between">
+                    <label for="system.mainParameters.{{paramname}}.value" class="resource-label text-opaque grid-span-2 rollable" >
+                      {{ system.mainParameters.[paramname] }}</label>
                     <input type="text" name="system.mainParameters.{{paramname}}.value" value="{{paramname}}.value" data-dtype="Number"/>
                   </div>
-                  <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                  <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Sum"}}</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <div></div>
+                    <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                    <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Sum"}}</label>
+                  </div>
                     {{!--#each skills as |skill key|}}
                       <label for="system.skills.{{key}}.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
                         <div class="resource-content flexrow flex-center flex-between">
@@ -30,25 +33,32 @@
                         <input type="text" name="system.skills.{{key}}.total" value="{{system.skills.[key].modified_value}}" data-dtype="Number"/>
                       </div>
                     {{/each--}}
-                    <label for="system.skills.{{skill1}}.value" class="resource-label rollable">{{system.skills.[skill1].label}}</label>
-                        <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="system.skills.{{skill1}}.value" value="{{system.skills.[skill1].value}}" data-dtype="Number"/>
-                       </div>
-                      <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="system.skills.{{skill1}}.total" value="{{system.skills.[skill1].modified_value}}" data-dtype="Number"/>
-                      </div>
-                    <label for="system.skills.{{skill2}}.value" class="resource-label rollable">{{system.skills.[skill2].label}}</label>
-                        <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="system.skills.{{skill2}}.value" value="{{system.skills.[skill2].value}}" data-dtype="Number"/>
-                       </div>
-                      <div class="resource-content flexrow flex-center flex-between">
+                    <div class="resource-content flexrow flex-center flex-between">
+                      <label for="system.skills.{{skill1}}.value" class="resource-label rollable">{{system.skills.[skill1].label}}</label>
+                      <input type="number" name="system.skills.{{skill1}}.value" value="{{system.skills.[skill1].value}}" data-dtype="Number"/>
+                      <input type="number" name="system.skills.{{skill1}}.modified_value"
+                             value="{{system.skills.[skill1].modified_value}}"
+                             data-dtype="Number"
+                             readonly/>
+                    </div>
+                    <div class="resource-content flexrow flex-center flex-between">
+                      <label for="system.skills.{{skill2}}.value" class="resource-label rollable">{{system.skills.[skill2].label}}</label>
+                      <input type="text" name="system.skills.{{skill2}}.value" value="{{system.skills.[skill2].value}}" data-dtype="Number"/>
+
+                      <input type="number" name="system.skills.{{skill12}}.modified_value"
+                             value="{{system.skills.[skill2].modified_value}}"
+                             data-dtype="Number"
+                             readonly/>
+                    </div>
+                    <div class="resource-content flexrow flex-center flex-between">
                         <input type="text" name="system.skills.{{skill2}}.total" value="{{system.skills.[skill2].modified_value}}" data-dtype="Number"/>
                       </div>
-                    <label for="system.skills.{{skill3}}.value" class="resource-label rollable">{{system.skills.[skill3].label}}</label>
-                        <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="system.skills.{{skill3}}.value" value="{{system.skills.[skill3].value}}" data-dtype="Number"/>
-                       </div>
-                      <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" name="system.skills.{{skill3}}.total" value="{{system.skills.[skill3].modified_value}}" data-dtype="Number"/>
-                      </div>
+                      <label for="system.skills.{{skill3}}.value" class="resource-label rollable">{{system.skills.[skill3].label}}</label>
+                      <input type="text" name="system.skills.{{skill3}}.value" value="{{system.skills.[skill3].value}}" data-dtype="Number"/>
+                      <input type="number" name="system.skills.{{skill3}}.modified_value"
+                             value="{{system.skills.[skill3].modified_value}}"
+                             data-dtype="Number"
+                             readonly/>
+
+                    </div>
                 </div>
