@@ -92,7 +92,7 @@ export class HvpunofficialActor extends Actor {
         console.log(paramname);
         skill.name_key=key
         skill.modified_value = Number(skill.value) ?? 0 + Number(systemData.mainParameters[paramname].value) ?? 0;
-        console.log(skill..name_key);
+        console.log(skill.name_key);
     }
     console.log('DEBUG: before _prepareCharacterData system');
     console.log(actorData.system);
