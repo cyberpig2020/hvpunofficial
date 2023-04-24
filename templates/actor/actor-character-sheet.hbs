@@ -131,8 +131,10 @@
             --}}
               {{!-- Paramteres --}}
          <section class="1st_column">
-             {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname=system.mainParameteres.bodyBuild
-                     skillOneobj=system.skills.meleeWeapon
+             {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs"
+                     paramname="bodyBuild"
+                     paramObj=system.mainParameteres.bodyBuild
+                     skillOneObj=system.skills.meleeWeapon
                      skillTwoObj=system.skills.meleeCombat
                      skillThreeObj=system.skills.endurance }}
                   {{!-- Body build skills --}}
@@ -166,10 +168,12 @@
                   </div>
                 </div> -->
                 <!--  {{!-- Dexterity skills --}} -->
-             {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="dexterity"
-                     skill1="shortWeapon"
-                     skill2="driving"
-                     skill3="reflex" }}
+             {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs"
+                     paramname="dexterity"
+                     paramObj=system.mainParameteres.dexterity
+                     skillOneObj=system.skills.shortWeapon
+                     skillTwoObj=system.skills.driving
+                     skillThreeObj=system.skills.reflex }}
             <!--    <div class="resources grid grid-3col">
                   <label for="system.mainParameters.bodyBuild.value" class="resource-label text-opaque grid-span-2" >{{localize "HVPUNOFFICIAL.MainParametersBodyBuild"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
@@ -200,10 +204,12 @@
                   </div>
                 </div> -->
              {{!-- Perception skills --}}
-             {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="perception"
-                     skill1="longWeapon"
-                     skill2="pilotage"
-                     skill3="acuteSenses" }}
+             {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs"
+                     paramname="perception"
+                     paramObj=system.mainParameteres.perception
+                     skillOneObj=system.skills.longWeapon
+                     skillTwoObj=system.skills.pilotage
+                     skillThreeObj=system.skills.acuteSenses }}
          </section>
 
 
@@ -211,20 +217,26 @@
 
 
                   {{!-- Intelligence skills --}}
-                {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="intelligence"
-                     skill1="technology"
-                     skill2="knowledgeGeneral"
-                     skill3="knowledgeSecret" }}
+                {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs"
+                     paramname="intelligence"
+                     paramObj=system.mainParameteres.intelligence
+                     skillOneObj=system.skills.technology
+                     skillTwoObj=system.skills.knowledgeGeneral
+                     skillThreeObj=system.skills.knowledgeSecret }}
                   {{!-- Cool skills --}}
-                {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="cool"
-                     skill1="hacking"
-                     skill2="connections"
-                     skill3="tricks" }}
+                {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs"
+                     paramname="cool"
+                     paramObj=system.mainParameteres.cool
+                     skillOneObj=system.skills.hacking
+                     skillTwoObj=system.skills.connections
+                     skillThreeObj=system.skills.tricks }}
                   {{!-- Verve skills --}}
-                {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs" paramname="verve"
-                     skill1="charm"
-                     skill2="power"
-                     skill3="willpower" }}
+                {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs"
+                     paramname="verve"
+                     paramObj=system.mainParameteres.verve
+                     skillOneObj=system.skills.charm
+                     skillTwoObj=system.skills.power
+                     skillThreeObj=system.skills.willpower }}
          </section>
 
 
