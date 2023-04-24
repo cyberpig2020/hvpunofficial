@@ -14,34 +14,34 @@
 
 
                 <div class="resources grid grid-3col paramskillbox">
-                  <div class="resource-content flexrow flex-center flex-between">
+                  <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                     <label for="system.mainParameters.{{paramname}}.value" class="resource-label text-opaque grid-span-2 rollable" >
                       {{ paramObj.label }}</label>
                     <input type="text" name="system.mainParameters.{{paramname}}.value" value="{{paramObj.value}}" data-dtype="Number"/>
-                  </div>
-                  <div class="resource-content flexrow flex-center flex-between">
+                  <!-- </div> -->
+                  <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                     <div></div>
                     <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
                     <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Sum"}}</label>
-                  </div>
+                  <!-- </div> -->
                     {{!--#each skills as |skill key|}}
                       <label for="system.skills.{{key}}.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
-                        <div class="resource-content flexrow flex-center flex-between">
+                        <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                         <input type="text" name="system.skills.{{key}}.value" value="{{system.skills.[key].value}}" data-dtype="Number"/>
                        </div>
-                      <div class="resource-content flexrow flex-center flex-between">
+                      <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                         <input type="text" name="system.skills.{{key}}.total" value="{{system.skills.[key].modified_value}}" data-dtype="Number"/>
                       </div>
                     {{/each--}}
-                    <div class="resource-content flexrow flex-center flex-between">
+                    <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                       <label for="system.skills.{{skilloneObj.key_name}}.value" class="resource-label rollable">{{skillOneObj.label}}</label>
                       <input type="number" name="system.skills.{{skilloneObj.key_name}}.value" value="{{skillOneObj.value}}" data-dtype="Number"/>
                       <input type="number" name="system.skills.{{skilloneObj.key_name}}.total"
                              value="{{skillOneObj.modified_value}}"
                              data-dtype="Number"
                              readonly/>
-                    </div>
-                    <div class="resource-content flexrow flex-center flex-between">
+                    <!-- </div> -->
+                    <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                       <label for="system.skills.{{skillTwoObj.key_name}}.value" class="resource-label rollable">{{skillTwoObj.label}}</label>
                       <input type="text" name="system.skills.{{skillTwoObj.key_name}}.value" value="{{skillTwoObj.value}}" data-dtype="Number"/>
 
@@ -49,13 +49,13 @@
                              value="{{skillTwoObj.modified_value}}"
                              data-dtype="Number"
                              readonly/>
-                    </div>
-                    <div class="resource-content flexrow flex-center flex-between">
+                    <!-- </div> -->
+                    <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                       <label for="system.skills.{{skillThreeObj.key_name}}.value" class="resource-label rollable">{{skillThreeObj.label}}</label>
                       <input type="text" name="system.skills.{{skillThreeObj.key_name}}.value" value="{{skillThreeObj.value}}" data-dtype="Number"/>
                       <input type="number" name="system.skills.{{skillThreeObj.key_name}}.total"
                              value="{{skillThreeObj.modified_value}}"
                              data-dtype="Number"
                              readonly/>
-                    </div>
+                    <!-- </div> -->
                 </div>
