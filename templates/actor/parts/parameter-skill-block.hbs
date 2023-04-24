@@ -16,8 +16,8 @@
                 <div class="resources grid grid-3col paramskillbox">
                   <div class="resource-content flexrow flex-center flex-between">
                     <label for="system.mainParameters.{{paramname}}.value" class="resource-label text-opaque grid-span-2 rollable" >
-                      {{ system.mainParameters.[paramname] }}</label>
-                    <input type="text" name="system.mainParameters.{{paramname}}.value" value="{{paramname}}.value" data-dtype="Number"/>
+                      {{ paramObj.label }}</label>
+                    <input type="text" name="system.mainParameters.{{paramname}}.value" value="{{paramObj.label.value}}" data-dtype="Number"/>
                   </div>
                   <div class="resource-content flexrow flex-center flex-between">
                     <div></div>
@@ -34,27 +34,27 @@
                       </div>
                     {{/each--}}
                     <div class="resource-content flexrow flex-center flex-between">
-                      <label for="system.skills.{{skill1}}.value" class="resource-label rollable">{{system.skills.[skill1].label}}</label>
-                      <input type="number" name="system.skills.{{skill1}}.value" value="{{system.skills.[skill1].value}}" data-dtype="Number"/>
-                      <input type="number" name="system.skills.{{skill1}}.modified_value"
-                             value="{{system.skills.[skill1].modified_value}}"
+                      <label for="system.skills.{{skillOneName}}.value" class="resource-label rollable">{{skillOneObj.label}}</label>
+                      <input type="number" name="system.skills.{{skillOneName}}.value" value="{{skillOneObj.value}}" data-dtype="Number"/>
+                      <input type="number" name="system.skills.{{skillOneName}}.total"
+                             value="{{skillOneObj.modified_value}}"
                              data-dtype="Number"
                              readonly/>
                     </div>
                     <div class="resource-content flexrow flex-center flex-between">
-                      <label for="system.skills.{{skill2}}.value" class="resource-label rollable">{{system.skills.[skill2].label}}</label>
-                      <input type="text" name="system.skills.{{skill2}}.value" value="{{system.skills.[skill2].value}}" data-dtype="Number"/>
+                      <label for="system.skills.{{skillTwoName}}.value" class="resource-label rollable">{{skillTwoObj.label}}</label>
+                      <input type="text" name="system.skills.{{skillTwoName}}.value" value="{{skillTwoObj.value}}" data-dtype="Number"/>
 
-                      <input type="number" name="system.skills.{{skill12}}.modified_value"
-                             value="{{system.skills.[skill2].modified_value}}"
+                      <input type="number" name="system.skills.{{skillTwoName}}.total"
+                             value="{{skillTwoObj.modified_value}}"
                              data-dtype="Number"
                              readonly/>
                     </div>
                     <div class="resource-content flexrow flex-center flex-between">
-                      <label for="system.skills.{{skill3}}.value" class="resource-label rollable">{{system.skills.[skill3].label}}</label>
-                      <input type="text" name="system.skills.{{skill3}}.value" value="{{system.skills.[skill3].value}}" data-dtype="Number"/>
-                      <input type="number" name="system.skills.{{skill3}}.modified_value"
-                             value="{{system.skills.[skill3].modified_value}}"
+                      <label for="system.skills.{{skillThreeName}}.value" class="resource-label rollable">{{skillThreeobj.label}}</label>
+                      <input type="text" name="system.skills.{{skillThreeName}}.value" value="{{skillThreeobj.value}}" data-dtype="Number"/>
+                      <input type="number" name="system.skills.{{skillThreeName}}.total"
+                             value="{{skillThreeobj.modified_value}}"
                              data-dtype="Number"
                              readonly/>
 
