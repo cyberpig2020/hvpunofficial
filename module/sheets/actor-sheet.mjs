@@ -77,6 +77,7 @@ export class HvpunofficialActorSheet extends ActorSheet {
       v.label = game.i18n.localize(CONFIG.BOILERPLATE.mainParameters[k]) ?? k;
     }
     for (let [k, v] of Object.entries(context.system.archetypesList)) {
+      v.key = k
       v.label = game.i18n.localize(CONFIG.BOILERPLATE.archetypes[k]) ?? k;
     }
     console.log('DEBUG: actor-shhet _prepareCharacterData  archetypesList');
