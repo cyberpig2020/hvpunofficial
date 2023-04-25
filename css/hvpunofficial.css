@@ -542,7 +542,8 @@
   font-family: "Baron Neue";
   font-weight: bold;
   font-size: 16px;
-  color: #ffffff;
+  color: black;
+  background-color: white;
   height: 30px;
   padding-left: 5px;
   padding-right: 5px;
