@@ -14,6 +14,7 @@ export const BOILERPLATE = {};
 };
 
 BOILERPLATE.archetypes = {
+    //TODO: move list of archetypes to config only without templete json
     "chimera": "HVPUNOFFICIAL.ArchetypeChimera",
     'cyborg': "HVPUNOFFICIAL.ArchetypeCyborg",
     'esoteric': "HVPUNOFFICIAL.ArchetypeEsoteric",
