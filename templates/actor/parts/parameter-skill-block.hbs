@@ -17,7 +17,7 @@
                   <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                     <label for="system.mainParameters.{{paramname}}.value" class="resource-label text-opaque grid-span-2 rollable" >
                       {{ paramObj.label }}</label>
-                    <input type="text" name="system.mainParameters.{{paramname}}.value" value="{{paramObj.value}}" data-dtype="Number"/>
+                    <input type="number" name="system.mainParameters.{{paramname}}.value" value="{{paramObj.value}}" data-dtype="Number"/>
                   <!-- </div> -->
                   <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                     <div></div>
@@ -43,7 +43,7 @@
                     <!-- </div> -->
                     <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                       <label for="system.skills.{{skillTwoObj.key_name}}.value" class="resource-label rollable">{{skillTwoObj.label}}</label>
-                      <input type="text" name="system.skills.{{skillTwoObj.key_name}}.value" value="{{skillTwoObj.value}}" data-dtype="Number"/>
+                      <input type="number" name="system.skills.{{skillTwoObj.key_name}}.value" value="{{skillTwoObj.value}}" data-dtype="Number"/>
 
                       <input type="number" name="system.skills.{{skillTwoObj.key_name}}.total"
                              value="{{skillTwoObj.modified_value}}"
@@ -52,7 +52,7 @@
                     <!-- </div> -->
                     <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                       <label for="system.skills.{{skillThreeObj.key_name}}.value" class="resource-label rollable">{{skillThreeObj.label}}</label>
-                      <input type="text" name="system.skills.{{skillThreeObj.key_name}}.value" value="{{skillThreeObj.value}}" data-dtype="Number"/>
+                      <input type="number" name="system.skills.{{skillThreeObj.key_name}}.value" value="{{skillThreeObj.value}}" data-dtype="Number"/>
                       <input type="number" name="system.skills.{{skillThreeObj.key_name}}.total"
                              value="{{skillThreeObj.modified_value}}"
                              data-dtype="Number"
