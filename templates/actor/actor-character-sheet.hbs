@@ -44,29 +44,60 @@
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. --}}
         <div class="resource flex-group-center">
-          <label for="system.secondaryParameters.vitality.value" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.SecondaryParametersVitality"}}</label>
+          <label for="system.secondaryParameters.vitality.value" class="resource-label text-opaque">
+              {{localize "HVPUNOFFICIAL.SecondaryParametersVitality"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="number" name="system.secondaryParameters.vitality.value" value="{{system.secondaryParameters.vitality.value}}" data-dtype="Number"/>
+          <input type="number"
+                 name="system.secondaryParameters.vitality.value"
+                 value="{{system.secondaryParameters.vitality.value}}"
+                 data-dtype="Number"
+                 placeholder="0"
+          />
           <span> / </span>
-          <input type="number" name="system.secondaryParameters.vitality.max" value="{{system.secondaryParameters.vitality.max}}" data-dtype="Number"/>
+          <input type="number"
+                 name="system.secondaryParameters.vitality.max"
+                 value="{{system.secondaryParameters.vitality.max}}"
+                 data-dtype="Number"
+                 placeholder="0"
+          />
           </div>
         </div>
 
         <div class="resource flex-group-center">
-          <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
+          <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque">
+              {{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="number" name="system.secondaryParameters.potential.value" value="{{system.secondaryParameters.potential.value}}" data-dtype="Number"/>
+          <input type="number"
+                 name="system.secondaryParameters.potential.value"
+                 value="{{system.secondaryParameters.potential.value}}"
+                 data-dtype="Number"
+                 placeholder="0"
+          />
           <span> / </span>
-          <input type="number" name="system.secondaryParameters.potential.max" value="{{system.secondaryParameters.potential.max}}" data-dtype="Number"/>
+          <input type="number"
+                 name="system.secondaryParameters.potential.max"
+                 value="{{system.secondaryParameters.potential.max}}"
+                 data-dtype="Number"
+                 placeholder="0"
+          />
           </div>
         </div>
 
         <div class="resource flex-group-center">
-          <label for="system.secondaryParameters.shifts.value" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.SecondaryParametersShifts"}}</label>
+          <label for="system.secondaryParameters.shifts.value" class="resource-label text-opaque">
+              {{localize "HVPUNOFFICIAL.SecondaryParametersShifts"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="number" name="system.secondaryParameters.shifts.value" value="{{system.secondaryParameters.shifts.value}}" data-dtype="Number"/>
+          <input type="number"
+                 name="system.secondaryParameters.shifts.value"
+                 value="{{system.secondaryParameters.shifts.value}}"
+                 data-dtype="Number"/>
           <span> / </span>
-          <input type="number" name="system.secondaryParameters.shifts.max" value="{{system.secondaryParameters.shifts.max}}" data-dtype="Number"/>
+          <input type="number"
+                 name="system.secondaryParameters.shifts.max"
+                 value="{{system.secondaryParameters.shifts.max}}"
+                 data-dtype="Number"
+                 placeholder="0"
+          />
           </div>
         </div>
 
@@ -77,19 +108,34 @@
         <div class="resource flex-group-center">
           <label for="system.exp.current" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.CharacterExpCurrent"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="number" name="system.system.exp.current" value="{{system.exp.free}}" data-dtype="Number"/>
+          <input type="number"
+                 name="system.system.exp.current"
+                 value="{{system.exp.free}}"
+                 data-dtype="Number"
+                 placeholder="0"
+          />
           </div>
         </div>
         <div class="resource flex-group-center">
-          <label for="system.exp.spent" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.CharacterExpSpent"}}</label>
+          <label for="system.exp.spent" class="resource-label text-opaque">
+              {{localize "HVPUNOFFICIAL.CharacterExpSpent"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="number" name="system.system.exp.spent" value="{{system.exp.spent}}" data-dtype="Number"/>
+          <input type="number"
+                 name="system.system.exp.spent"
+                 value="{{system.exp.spent}}"
+                 data-dtype="Number"
+                 placeholder="0"
+          />
           </div>
         </div>
         <div class="resource flex-group-center">
-          <label for="system.exp.total" class="resource-label text-opaque">{{localize "HVPUNOFFICIAL.CharacterExpTotal"}}</label>
+          <label for="system.exp.total" class="resource-label text-opaque">
+              {{localize "HVPUNOFFICIAL.CharacterExpTotal"}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="number" name="system.system.exp.total" value="{{sum system.exp.spent system.exp.free}}" data-dtype="Number"/>
+          <input type="number"
+                 name="system.system.exp.total"
+                 value="{{sum system.exp.spent system.exp.free}}"
+                 data-dtype="Number"/>
           </div>
         </div>
       </div>

@@ -35,27 +35,35 @@
                     {{/each--}}
                     <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                       <label for="system.skills.{{skillOneObj.key_name}}.value" class="resource-label rollable">{{skillOneObj.label}}</label>
-                      <input type="number" name="system.skills.{{skillOneObj.key_name}}.value" value="{{skillOneObj.value}}" data-dtype="Number"/>
+                      <input type="number" name="system.skills.{{skillOneObj.key_name}}.value"
+                             value="{{skillOneObj.value}}" data-dtype="Number" placeholder="0"/>
                       <input type="number" name="system.skills.{{skillOneObj.key_name}}.total"
                              value="{{skillOneObj.modified_value}}"
                              data-dtype="Number"
+                             placeholder="0"
                              readonly/>
                     <!-- </div> -->
                     <!-- <div class="resource-content flexrow flex-center flex-between"> -->
-                      <label for="system.skills.{{skillTwoObj.key_name}}.value" class="resource-label rollable">{{skillTwoObj.label}}</label>
-                      <input type="number" name="system.skills.{{skillTwoObj.key_name}}.value" value="{{skillTwoObj.value}}" data-dtype="Number"/>
+                      <label for="system.skills.{{skillTwoObj.key_name}}.value" class="resource-label rollable">
+                          {{skillTwoObj.label}}</label>
+                      <input type="number" name="system.skills.{{skillTwoObj.key_name}}.value"
+                             value="{{skillTwoObj.value}}" data-dtype="Number" placeholder="0"/>
 
                       <input type="number" name="system.skills.{{skillTwoObj.key_name}}.total"
                              value="{{skillTwoObj.modified_value}}"
                              data-dtype="Number"
+                             placeholder="0"
                              readonly/>
                     <!-- </div> -->
                     <!-- <div class="resource-content flexrow flex-center flex-between"> -->
-                      <label for="system.skills.{{skillThreeObj.key_name}}.value" class="resource-label rollable">{{skillThreeObj.label}}</label>
-                      <input type="number" name="system.skills.{{skillThreeObj.key_name}}.value" value="{{skillThreeObj.value}}" data-dtype="Number"/>
+                      <label for="system.skills.{{skillThreeObj.key_name}}.value" class="resource-label rollable">
+                          {{skillThreeObj.label}}</label>
+                      <input type="number" name="system.skills.{{skillThreeObj.key_name}}.value"
+                             value="{{skillThreeObj.value}}" data-dtype="Number" placeholder="0"/>
                       <input type="number" name="system.skills.{{skillThreeObj.key_name}}.total"
                              value="{{skillThreeObj.modified_value}}"
                              data-dtype="Number"
+                             placeholder="0"
                              readonly/>
                     <!-- </div> -->
                 </div>
