@@ -266,7 +266,7 @@
   /*  Items Lists                              */
   /* ----------------------------------------- */
   /* Example style for Boilerplate (can be removed if not needed) */
-
+    background-color: lightgray;
   --theme-color: #6a044b;
 }
 .hvpunofficial .item-form {
