@@ -58,8 +58,14 @@ export class HvpunofficialActor extends Actor {
     //convert undefined or null to 0.
     systemData.secondaryParameters.potential.max = Number(systemData.mainParameters.verve.value) ?? 0
                                               + Number(systemData.secondaryParameters.potential.bonus) ?? 0;
+    console.log('DEBUG: _prepareCharacterData potential.max');
+    console.log(Number(systemData.mainParameters.verve.value) ?? 0);
+    console.log(Number(systemData.secondaryParameters.potential.bonus) ?? 0);
+    console.log(systemData.secondaryParameters.potential.max);
     systemData.secondaryParameters.shifts.max = Number(systemData.mainParameters.verve.value) ?? 0
                                           + Number(systemData.secondaryParameters.shifts.bonus) ?? 0;
+    console.log('DEBUG: _prepareCharacterData shifts.max');
+    console.log(systemData.secondaryParameters.shifts.max);
     systemData.secondaryParameters.athletic.max = Number(systemData.mainParameters.bodyBuild.value) ?? 0
                                                 + Number(systemData.mainParameters.dexterity.value) ?? 0
                                                 + Number(systemData.secondaryParameters.athletic.bonus) ?? 0;
@@ -68,6 +74,8 @@ export class HvpunofficialActor extends Actor {
                                                     + Number(systemData.secondaryParameters.appearance.bonus) ?? 0;
     systemData.secondaryParameters.ether.max = 5 * Number(systemData.mainParameters.intelligence.value) ?? 0
                                              + Number(systemData.secondaryParameters.ether.bonus) ?? 0;
+    console.log('DEBUG: _prepareCharacterData ether.max');
+    console.log(systemData.secondaryParameters.ether.max);
     systemData.secondaryParameters.concentration.max = Number(systemData.mainParameters.verve.value) ?? 0
                                                      + Number(systemData.mainParameters.cool.value) ?? 0
                                                      + Number(systemData.secondaryParameters.concentration.bonus) ?? 0;
@@ -79,19 +87,20 @@ export class HvpunofficialActor extends Actor {
       // Calculate the modifier using d20 rules.
       //ability.mod = Math.floor((ability.value - 10) / 2);
     //}
-    console.log('DEBUG: before _prepareCharacterData secondaryParameters');
-    console.log(actorData.system.secondaryParameters);
+    //console.log('DEBUG: before _prepareCharacterData secondaryParameters');
+    //console.log(actorData.system.secondaryParameters);
 
-    console.log('DEBUG: Skills modify');
-    console.log(systemData.skills)
+    console.log('DEBUG: Skills before modify');
+    console.log(systemData.skills);
     for (let [key, skill] of Object.entries(systemData.skills)) {
-        console.log('DEBUG: Skills loop control');
-        console.log(skill);
-        let paramname = skill.mainParameter
+        //console.log('DEBUG: Skills loop control');
+        //console.log(skill);
+        let paramname = skill.mainParameter;
         skill.modified_value = Number(skill.value) ?? 0 + Number(systemData.mainParameters[paramname].value) ?? 0;
-
+        console.log(systemData.mainParameters[paramname]);
+        console.log(Number(systemData.mainParameters[paramname].value) ?? 0);
     }
-    console.log('DEBUG: Skills modify');
+    console.log('DEBUG: Skills after modify');
     console.log(systemData.skills)
 
     console.log('DEBUG: actor after _prepareCharacterData system');

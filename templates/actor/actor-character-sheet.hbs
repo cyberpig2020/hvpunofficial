@@ -176,7 +176,7 @@
             {{/each}}
             --}}
               {{!-- Paramteres --}}
-         <section class="1st_column skills-column">
+         <section class="1st_column flexcol">
              {{> "systems/hvpunofficial/templates/actor/parts/parameter-skill-block.hbs"
                      paramname="bodyBuild"
                      paramObj=system.mainParameteres.bodyBuild
@@ -259,7 +259,7 @@
          </section>
 
 
-         <section class="2nd_column grid-start-2 skills-column">
+         <section class="2nd_column grid-start-2 flexcol">
 
 
                   {{!-- Intelligence skills --}}
@@ -288,15 +288,16 @@
 
          {{!-- Second params --}}
 
-        <section class="grid-start-3">
+        <section class="grid-start-3 flexcol">
             <div class="resources grid grid-4col">
                 <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Max"}}</label>
                 <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
                 <label class="resource-label grid-start-4 text-opaque">{{localize "HVPUNOFFICIAL.Bonus"}}</label>
 
+                <div class="resource-content flexrow flex-center flex-between">
                 <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >
                       {{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
-                <div class="resource-content flexrow flex-center flex-between">
+
                 <input type="number" name="system.secondaryParameters.potential.max"
                            value="{{system.secondaryParameters.potential.max}}"
                            data-dtype="Number"/>
@@ -308,10 +309,11 @@
                            data-dtype="Number"/>
                 </div>
 
+                <div class="resource-content flexrow flex-center flex-between">
                 <label for="system.secondaryParameters.shifts.value" class="resource-label text-opaque" >
                         {{localize "HVPUNOFFICIAL.SecondaryParametersShifts"}}</label>
 
-                <div class="resource-content flexrow flex-center flex-between">
+
                 <input type="number" name="system.secondaryParameters.shifts.max"
                            value="{{system.secondaryParameters.shifts.max}}"
                            data-dtype="Number"/>
@@ -322,10 +324,11 @@
                            value="{{system.secondaryParameters.potential.value}}"
                            data-dtype="Number"/>
                 </div>
+                <div class="resource-content flexrow flex-center flex-between">
                 <label for="system.secondaryParameters.vitality.value" class="resource-label text-opaque" >
                         {{localize "HVPUNOFFICIAL.SecondaryParametersVitality"}}</label>
 
-                <div class="resource-content flexrow flex-center flex-between">
+
                 <input type="number" name="system.secondaryParameters.vitality.max"
                            value="{{system.secondaryParameters.vitality.max}}"
                            data-dtype="Number"/>
@@ -336,10 +339,11 @@
                            value="{{system.secondaryParameters.vitality.value}}"
                            data-dtype="Number"/>
                 </div>
+                <div class="resource-content flexrow flex-center flex-between">
                 <label for="system.secondaryParameters.concentration.value" class="resource-label text-opaque">
                         {{localize "HVPUNOFFICIAL.SecondaryParametersConcentration"}}</label>
 
-                <div class="resource-content flexrow flex-center flex-between">
+
                 <input type="number" name="system.secondaryParameters.concentration.max"
                            value="{{system.secondaryParameters.concentration.max}}"
                            data-dtype="Number"/>
@@ -351,11 +355,11 @@
                            placeholder="{{system.secondaryParameters.concetration.max}}"
                            data-dtype="Number"/>
                 </div>
-
+                <div class="resource-content flexrow flex-center flex-between">
                 <label for="system.secondaryParameters.ether.value" class="resource-label text-opaque">
                       {{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
 
-                <div class="resource-content flexrow flex-center flex-between">
+
                 <input type="number" name="system.secondaryParameters.ether.max"
                        value="{{system.secondaryParameters.ether.max}}"
                        data-dtype="Number"/>
@@ -367,10 +371,10 @@
                            placeholder="{{system.secondaryParameters.ether.max}}"
                            data-dtype="Number"/>
                 </div>
-                <label for="system.secondaryParameters.appearance.value" class="resource-label text-opaque" >
-                      {{localize "HVPUNOFFICIAL.SecondaryParametersAppearance"}}</label>
 
                 <div class="resource-content flexrow flex-center flex-between">
+                <label for="system.secondaryParameters.appearance.value" class="resource-label text-opaque" >
+                      {{localize "HVPUNOFFICIAL.SecondaryParametersAppearance"}}</label>
                 <input type="number" name="system.secondaryParameters.appearance.max"
                            value="{{system.secondaryParameters.appearance.max}}"
                            data-dtype="Number"/>
@@ -382,10 +386,11 @@
                            data-dtype="Number"/>
                 </div>
 
+                <div class="resource-content flexrow flex-center flex-between">
                 <label for="system.secondaryParameters.athletic.value" class="resource-label text-opaque" >
                       {{localize "HVPUNOFFICIAL.SecondaryParametersAthletic"}}</label>
 
-                <div class="resource-content flexrow flex-center flex-between">
+
                     <input type="number" name="system.secondaryParameters.athletic.max"
                            value="{{system.secondaryParameters.athletic.max}}"
                            data-dtype="Number"/>
