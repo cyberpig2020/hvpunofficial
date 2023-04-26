@@ -18,22 +18,9 @@
           <div class="resource-content flexrow flex-center flex-between">
           <input type="text" name="system.archetype" list="archetypes" value="{{system.archetype}}" data-dtype="text"/>
           <datalist id="archetypes">
-              <!--
-              <option value="{{localize "HVPUNOFFICIAL.ArchetypeChimera"}}">
-              <option value="{{localize "HVPUNOFFICIAL.ArchetypeCyborg"}}">
-              <option value="{{localize "HVPUNOFFICIAL.ArchetypeEsoteric"}}">
-              <option value="{{localize "HVPUNOFFICIAL.ArchetypeSupersoldier"}}">
-              <option value="{{localize "HVPUNOFFICIAL.ArchetypeSymbiont"}}">
-              {{!--
-                {{#each system.archetypesList}}
-                    <option value="{{this}}">CONFIG.BOILERPLATE.archetypes[this] </option>
-                {{/each}}
-              --}}
-
-            -->
 
           {{#each system.archetypesList}}
-              <option value="{{this.key}}">{{this.label}}</option>
+              <option value="{{this.label}}" />
           {{/each}}
           </datalist>
           </div>

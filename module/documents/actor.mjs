@@ -97,6 +97,7 @@ export class HvpunofficialActor extends Actor {
         //console.log(skill);
         let paramname = skill.mainParameter;
         skill.modified_value = Number(skill.value) ?? 0 + Number(systemData.mainParameters[paramname].value) ?? 0;
+        console.log(paramname);
         console.log(systemData.mainParameters[paramname]);
         console.log(Number(systemData.mainParameters[paramname].value) ?? 0);
     }
