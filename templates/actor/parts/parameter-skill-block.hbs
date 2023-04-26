@@ -13,17 +13,21 @@
                   {{!-- Body build skills --}}
 
 
-                <div class="resources grid grid-3col paramskillbox">
+                <!-- <div class="resources grid grid-3col paramskillbox"> -->
+                <div class="resources flexcol paramskillbox">
                   <!-- <div class="resource-content flexrow flex-center flex-between"> -->
+                    <div class="resource-content flexrow flex-right">
                     <label for="system.mainParameters.{{paramname}}.value" class="resource-label text-opaque grid-span-2 rollable" >
                       {{ paramObj.label }}</label>
                     <input type="number" name="system.mainParameters.{{paramname}}.value" value="{{paramObj.value}}" data-dtype="Number"/>
+                        </div>
                   <!-- </div> -->
                   <!-- <div class="resource-content flexrow flex-center flex-between"> -->
+                   <div class="resource-content flexrow flex-right flex-between">
                     <div></div>
                     <label class="resource-label grid-start-2 text-opaque align-right">{{localize "HVPUNOFFICIAL.Value"}}</label>
                     <label class="resource-label grid-start-3 text-opaque align-right">{{localize "HVPUNOFFICIAL.Sum"}}</label>
-                  <!-- </div> -->
+                  </div>
                     {{!--#each skills as |skill key|}}
                       <label for="system.skills.{{key}}.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
                         <!-- <div class="resource-content flexrow flex-center flex-between"> -->
@@ -33,7 +37,7 @@
                         <input type="text" name="system.skills.{{key}}.total" value="{{system.skills.[key].modified_value}}" data-dtype="Number"/>
                       </div>
                     {{/each--}}
-                    <!-- <div class="resource-content flexrow flex-center flex-between"> -->
+                    <div class="resource-content flexrow flex-center flex-between">
                       <label for="system.skills.{{skillOneObj.key}}.value" class="resource-label rollable">{{skillOneObj.label}}</label>
                       <input type="number" name="system.skills.{{skillOneObj.key}}.value"
                              value="{{skillOneObj.value}}" data-dtype="Number" placeholder="0"/>
@@ -42,8 +46,8 @@
                              data-dtype="Number"
                              placeholder="0"
                              readonly/>
-                    <!-- </div> -->
-                    <!-- <div class="resource-content flexrow flex-center flex-between"> -->
+                    </div>
+                    <div class="resource-content flexrow flex-center flex-between"> -->
                       <label for="system.skills.{{skillTwoObj.key}}.value" class="resource-label rollable">
                           {{skillTwoObj.label}}</label>
                       <input type="number" name="system.skills.{{skillTwoObj.key}}.value"
@@ -54,8 +58,8 @@
                              data-dtype="Number"
                              placeholder="0"
                              readonly/>
-                    <!-- </div> -->
-                    <!-- <div class="resource-content flexrow flex-center flex-between"> -->
+                    </div>
+                    <div class="resource-content flexrow flex-right flex-between">
                       <label for="system.skills.{{skillThreeObj.key}}.value" class="resource-label rollable">
                           {{skillThreeObj.label}}</label>
                       <input type="number" name="system.skills.{{skillThreeObj.key}}.value"
@@ -65,5 +69,5 @@
                              data-dtype="Number"
                              placeholder="0"
                              readonly/>
-                    <!-- </div> -->
+                    </div>
                 </div>
