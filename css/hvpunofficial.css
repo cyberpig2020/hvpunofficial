@@ -363,6 +363,9 @@
   min-width: fit-content;
 }
 
+.hvpunofficial .parameter .resource-content {
+
+}
 .hvpunofficial .parameter .resource-label {
   font-weight: bold;
   min-width: 50px;
@@ -547,6 +550,8 @@
   height: 30px;
   padding-left: 5px;
   padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: 2px var(--theme-color) solid;
 }
 
