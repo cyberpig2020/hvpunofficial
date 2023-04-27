@@ -58,8 +58,8 @@ export class HvpunofficialActor extends Actor {
 
     //count maximums
     //convert undefined or null to 0.
-    systemData.secondaryParameters.potential.max = Number(systemData.mainParameters.verve.value) ?? 0
-                                              + Number(systemData.secondaryParameters.potential.bonus) ?? 0;
+    systemData.secondaryParameters.potential.max = (Number(systemData.mainParameters.verve.value) ?? 0 +
+                                               Number(systemData.secondaryParameters.potential.bonus) ?? 0);
     console.log('DEBUG: _prepareCharacterData potential.max');
     console.log(Number(systemData.mainParameters.verve.value) ?? 0);
     console.log(Number(systemData.secondaryParameters.potential.bonus) ?? 0);

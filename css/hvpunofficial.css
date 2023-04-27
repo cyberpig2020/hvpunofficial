@@ -527,7 +527,7 @@
 
 .hvpunofficial .parameters input[type="number"] {
   text-align: center;
-  border: 0;
+  border: 1px solid var(--theme-color);
   width: 25px;
   height: 25px;
   font-size: 14px;

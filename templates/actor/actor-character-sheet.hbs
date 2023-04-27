@@ -269,12 +269,15 @@
 
          {{!-- Second params --}}
         <section class="grid-start-3 flexcol">
-            <div class="resources grid grid-4col">
-                <label class="resource-label grid-start-2 text-opaque">{{localize "HVPUNOFFICIAL.Max"}}</label>
-                <label class="resource-label grid-start-3 text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                <label class="resource-label grid-start-4 text-opaque">{{localize "HVPUNOFFICIAL.Bonus"}}</label>
-            </div>
+            {{!-- <div class="resources grid grid-4col"> --}}
             <div class="secondary-paramters flexcol flex-right flex-between">
+              <div class="secondary-paramters flexrow flex-end">
+                <span></span>
+                <label class="resource-label  text-opaque">{{localize "HVPUNOFFICIAL.Max"}}</label>
+                <label class="resource-label  text-opaque">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                <label class="resource-label  text-opaque">{{localize "HVPUNOFFICIAL.Bonus"}}</label>
+              </div>
+
                 <div class="resource-content flexrow flex-center flex-between">
                   <label for="system.secondaryParameters.potential.value" class="resource-label text-opaque" >
                       {{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
@@ -314,7 +317,7 @@
                            value="{{system.secondaryParameters.vitality.value}}"
                            data-dtype="Number"/>
                 </div>
-                <div class="resource-content flexrow flex-center flex-between">
+                <div class="resource-content flexrow flex-end flex-between">
                   <label for="system.secondaryParameters.concentration.value" class="resource-label text-opaque">
                         {{localize "HVPUNOFFICIAL.SecondaryParametersConcentration"}}</label>
                   <input type="number" name="system.secondaryParameters.concentration.max"
@@ -328,9 +331,9 @@
                            placeholder="{{system.secondaryParameters.concetration.max}}"
                            data-dtype="Number"/>
                 </div>
-                <div class="resource-content flexrow flex-center flex-between text-opaque">
+                <div class="resource-content flexrow flex-center flex-between">
                   <label for="system.secondaryParameters.ether.value" class="resource-label text-opaque">
-                      {{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
+                      {{localize "HVPUNOFFICIAL.SecondaryParametersEther"}}</label>
                   <input type="number" name="system.secondaryParameters.ether.max"
                        value="{{system.secondaryParameters.ether.max}}"
                        data-dtype="Number"/>
