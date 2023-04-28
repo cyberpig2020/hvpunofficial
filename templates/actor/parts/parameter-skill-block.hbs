@@ -19,15 +19,15 @@
                     <div class="resource-content flexrow flex-group-right align-right">
                     <label for="system.mainParameters.{{paramname}}.value" class="resource-label text-opaque flexlarge rollable" >
                       {{ paramObj.label }}</label>
-                    <input type="number" name="system.mainParameters.{{paramname}}.value"
+                    <input type="number" name="system.mainParameters.{{paramname}}.value" class="flexshrink"
                            value="{{paramObj.value}}" data-dtype="Number" placeholder="0"/>
                         </div>
                   <!-- </div> -->
                   <!-- <div class="resource-content flexrow flex-center flex-between"> -->
                    <div class="resource-content flexrow flex-right flex-between">
-                    <div></div>
-                    <label class="resource-label grid-start-2 text-opaque align-right">{{localize "HVPUNOFFICIAL.Value"}}</label>
-                    <label class="resource-label grid-start-3 text-opaque align-right">{{localize "HVPUNOFFICIAL.Sum"}}</label>
+                    <div class="flexlarge"> </div>
+                    <label class="resource-label flexshrink text-opaque align-right">{{localize "HVPUNOFFICIAL.Value"}}</label>
+                    <label class="resource-label flexshrink text-opaque align-right">{{localize "HVPUNOFFICIAL.Sum"}}</label>
                   </div>
                     {{!--#each skills as |skill key|}}
                       <label for="system.skills.{{key}}.value" class="resource-label">{{localize "HVPUNOFFICIAL.SkillsEndurance"}}</label>
@@ -42,7 +42,7 @@
                       <label for="system.skills.{{skillOneObj.key}}.value" class="resource-label rollable">{{skillOneObj.label}}</label>
                       <input type="number" name="system.skills.{{skillOneObj.key}}.value"
                              value="{{skillOneObj.value}}" data-dtype="Number" placeholder="0"/>
-                      <input type="number" name="system.skills.{{skillOneObj.key}}.total"
+                      <input type="number" name="system.skills.{{skillOneObj.key}}.total" class="flexshrink"
                              value="{{skillOneObj.modified_value}}"
                              data-dtype="Number"
                              placeholder="0"
@@ -51,10 +51,10 @@
                     <div class="resource-content flexrow flex-center flex-between">
                       <label for="system.skills.{{skillTwoObj.key}}.value" class="resource-label rollable">
                           {{skillTwoObj.label}}</label>
-                      <input type="number" name="system.skills.{{skillTwoObj.key}}.value"
+                      <input type="number" name="system.skills.{{skillTwoObj.key}}.value" class="flexshrink"
                              value="{{skillTwoObj.value}}" data-dtype="Number" placeholder="0"/>
 
-                      <input type="number" name="system.skills.{{skillTwoObj.key}}.total"
+                      <input type="number" name="system.skills.{{skillTwoObj.key}}.total" class="flexshrink"
                              value="{{skillTwoObj.modified_value}}"
                              data-dtype="Number"
                              placeholder="0"
@@ -63,9 +63,9 @@
                     <div class="resource-content flexrow flex-right flex-between">
                       <label for="system.skills.{{skillThreeObj.key}}.value" class="resource-label rollable">
                           {{skillThreeObj.label}}</label>
-                      <input type="number" name="system.skills.{{skillThreeObj.key}}.value"
+                      <input type="number" name="system.skills.{{skillThreeObj.key}}.value" class="flexshrink"
                              value="{{skillThreeObj.value}}" data-dtype="Number" placeholder="0"/>
-                      <input type="number" name="system.skills.{{skillThreeObj.key}}.total"
+                      <input type="number" name="system.skills.{{skillThreeObj.key}}.total" class="flexshrink"
                              value="{{skillThreeObj.modified_value}}"
                              data-dtype="Number"
                              placeholder="0"
