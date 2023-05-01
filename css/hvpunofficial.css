@@ -40,6 +40,9 @@
 .window-app {
   font-family: "Roboto", sans-serif;
 }
+.character {
+    background-color: lightgrey;
+}
 
 .rollable:hover, .rollable:focus {
   color: #000;
@@ -531,6 +534,7 @@
   width: 25px;
   height: 25px;
   font-size: 14px;
+  background-color: beige;
 }
 
 
