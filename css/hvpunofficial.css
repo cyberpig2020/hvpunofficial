@@ -380,6 +380,7 @@
   font-weight: bold;
   min-width: 50px;
   width: fit-content;
+  margin: 5px;
 }
 
 .hvpunofficial .items-header {
@@ -538,7 +539,8 @@
 .hvpunofficial .parameters input[type="number"] {
   text-align: center;
   border: 1px solid var(--theme-color);
-  width: 25px;
+  min-width: 25px;
+  width: fit-content;
   height: 25px;
   font-size: 14px;
   background-color: beige;
