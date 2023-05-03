@@ -40,6 +40,7 @@
 .window-app {
   font-family: "Roboto", sans-serif;
 }
+
 .character {
     background-color: lightgrey;
 }
@@ -301,6 +302,12 @@
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-bottom: 10px;
+}
+
+.hvpunofficial .secondaryparamters {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: beige;
 }
 
 .hvpunofficial .sheet-header {
