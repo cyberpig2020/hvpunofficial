@@ -58,32 +58,32 @@ export class HvpunofficialActor extends Actor {
 
     //count maximums
     //convert undefined or null to 0.
-    systemData.secondaryParameters.potential.max = (Number(systemData.mainParameters.verve.value) ?? 0 +
-                                               Number(systemData.secondaryParameters.potential.bonus) ?? 0);
+    systemData.secondaryParameters.potential.max = (Number(systemData.mainParameters.verve.value) +
+                                               Number(systemData.secondaryParameters.potential.bonus));
     console.log('DEBUG: _prepareCharacterData potential.max');
     console.log(Number(systemData.mainParameters.verve.value) ?? 0);
     console.log(Number(systemData.secondaryParameters.potential.bonus) ?? 0);
     console.log(systemData.secondaryParameters.potential.max);
-    systemData.secondaryParameters.shifts.max = (Number(systemData.mainParameters.verve.value) ?? 0 +
-                                           Number(systemData.secondaryParameters.shifts.bonus) ?? 0);
+    systemData.secondaryParameters.shifts.max = (Number(systemData.mainParameters.verve.value)  +
+                                           Number(systemData.secondaryParameters.shifts.bonus));
     console.log('DEBUG: _prepareCharacterData shifts.max');
     console.log(systemData.secondaryParameters.shifts.max);
-    systemData.secondaryParameters.athletic.max = (Number(systemData.mainParameters.bodyBuild.value) ?? 0 +
-                                                 Number(systemData.mainParameters.dexterity.value) ?? 0 +
-                                                 Number(systemData.secondaryParameters.athletic.bonus) ?? 0);
-    systemData.secondaryParameters.appearance.max = (Number(systemData.mainParameters.bodyBuild.value) ?? 0 +
-                                                     Number(systemData.mainParameters.verve.value) ?? 0 +
-                                                     Number(systemData.secondaryParameters.appearance.bonus) ?? 0);
-    systemData.secondaryParameters.ether.max = (5 * Number(systemData.mainParameters.intelligence.value) ?? 0 +
-                                                Number(systemData.secondaryParameters.ether.bonus) ?? 0);
+    systemData.secondaryParameters.athletic.max = (Number(systemData.mainParameters.bodyBuild.value) +
+                                                 Number(systemData.mainParameters.dexterity.value) +
+                                                 Number(systemData.secondaryParameters.athletic.bonus));
+    systemData.secondaryParameters.appearance.max = (Number(systemData.mainParameters.bodyBuild.value) +
+                                                     Number(systemData.mainParameters.verve.value) +
+                                                     Number(systemData.secondaryParameters.appearance.bonus));
+    systemData.secondaryParameters.ether.max = (5 * Number(systemData.mainParameters.intelligence.value) +
+                                                Number(systemData.secondaryParameters.ether.bonus));
     console.log('DEBUG: _prepareCharacterData ether.max');
     console.log(systemData.secondaryParameters.ether.max);
-    systemData.secondaryParameters.concentration.max = (Number(systemData.mainParameters.verve.value) ?? 0 +
-                                                      Number(systemData.mainParameters.cool.value) ?? 0 +
-                                                      Number(systemData.secondaryParameters.concentration.bonus) ?? 0);
+    systemData.secondaryParameters.concentration.max = (Number(systemData.mainParameters.verve.value) +
+                                                      Number(systemData.mainParameters.cool.value) +
+                                                      Number(systemData.secondaryParameters.concentration.bonus));
 
-    systemData.secondaryParameters.vitality.max = (5 * Number(systemData.mainParameters.bodyBuild.value ?? 0) + 15 +
-                                                 Number(systemData.secondaryParameters.vitality.bonus) ?? 0);
+    systemData.secondaryParameters.vitality.max = (5 * Number(systemData.mainParameters.bodyBuild.value) + 15 +
+                                                 Number(systemData.secondaryParameters.vitality.bonus));
     // Loop through ability scores, and add their modifiers to our sheet output.
     //for (let [key, ability] of Object.entries(systemData.abilities)) {
       // Calculate the modifier using d20 rules.
