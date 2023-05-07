@@ -176,16 +176,12 @@ export class HvpunofficialActorSheet extends ActorSheet {
     // Click Skill Item
 
     html.find('.skill .skill-name').click((ev) => {
-      const div = $(ev.currentTarget).parent()
+      const div = $(ev.currentTarget).parent();
       const skillName = div.find('.skill-name').val();
       const skillValue = div.find('.skill-value').attr('value');
       const skillTotal = div.find('.skill-total').attr('value');
 
-      this._onRollAttributeSkill(
-        name: skillName,
-        skill_level: skillValue,
-        attribute: skillTotal
-      );
+      this._onRollAttributeSkill(skillName, skillValue, skillTotal);
     })
 
     html.find('.attribute .attribute-name').click((ev) => {
@@ -193,11 +189,7 @@ export class HvpunofficialActorSheet extends ActorSheet {
       const attributeName = div.find('.attribute-name').val();
       const attributeValue = div.find('.attribute-value').attr('value');
 
-      this._onRollAttributeSkill(
-        name: attributeName,
-        skill_level: 0,
-        attribute: attributeValue
-      );
+      this._onRollAttributeSkill(attributeName, 0, attributeValue);
     })
 
 
