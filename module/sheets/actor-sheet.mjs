@@ -174,11 +174,6 @@ export class HvpunofficialActorSheet extends ActorSheet {
 
     // * SKILLS LISTENERS [clic, right-click, value change, tag ]
     // Click Skill Item
-    //<div class="resource-content flexrow flex-center flex-between">
-    //<label for="system.skills.shortWeapon.value" class="resource-label rollable">Broń krótka</label>
-    //<input type="number" name="system.skills.shortWeapon.value" value="0" data-dtype="Number" placeholder="0" class="flexshrink">
-    //<input type="number" name="system.skills.shortWeapon.total" class="flexshrink" value="7" data-dtype="Number" placeholder="0" readonly="">
-    //</div>
 
     html.find('.skill .skill-name').click((ev) => {
       const div = $(ev.currentTarget).parent();
@@ -189,9 +184,8 @@ export class HvpunofficialActorSheet extends ActorSheet {
       this._onRollAttributeSkill(
         name: skillName,
         skill_level: skillValue,
-        attribute: skillTotal;
-
-      )
+        attribute: skillTotal
+      );
     })
 
     html.find('.attribute .attribute-name').click((ev) => {
