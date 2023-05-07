@@ -228,7 +228,7 @@ export class HvpunofficialActorSheet extends ActorSheet {
    */
   _onRollAttributeSkill(name, skill_level, attribute) {
     game.hvpunofficial.DialogH2d20.createDialog({
-      rollName: skillName,
+      rollName: name,
       attribute: attribute,
       skill: skill_level,
       actor: this.actor
