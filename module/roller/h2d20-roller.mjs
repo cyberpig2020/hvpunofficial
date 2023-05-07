@@ -42,7 +42,7 @@ export class HeroicRoller2D20 {
                     reroll = false, shifts = false, switch_dices = false,
                     item = null, actor = null } = {}) {
 
-        let modifier = 0;
+
         let success = false;
         let roll_result = 0;
         successTreshold = 0;
