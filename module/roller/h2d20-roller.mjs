@@ -1,9 +1,9 @@
 export class HeroicRoller2D20 {
-    dicesRolled = [];
-    successTreshold = 0;
-    complicationTreshold = 15;
-    successes = 0;
-    shifts = false
+    //dicesRolled = [];
+    //successTreshold = 0;
+    //complicationTreshold = 15;
+    //successes = 0;
+    //shifts = false
 
 
     static async rollHd20({ rollname = "Roll Heroic2D20", attribute = 0, skill_level = 0, modifier = 0, complication = 15,
@@ -27,7 +27,7 @@ export class HeroicRoller2D20 {
             modifier: modifier,
             attribute: attribute,
             skill_level: skill_level,
-            reroll = reroll,
+            reroll: reroll,
             shifts: shifts,
             switch_dices: switch_dices,
             item: item,
@@ -40,7 +40,7 @@ export class HeroicRoller2D20 {
                     attribute = 0, skill_level = 0, modifier = 0,
                     complicationTreshold = 15,
                     reroll = false, shifts = false, switch_dices = false,
-                    item = null, actor = null }) {
+                    item = null, actor = null } = {}) {
 
         let modifier = 0;
         let success = false;
@@ -85,9 +85,8 @@ export class HeroicRoller2D20 {
             helpRollResult: helpRoll.result,
             successTreshold: successTreshold,
             complicationTreshold: complicationTreshold,
-            dicesRolled: dicesRolled,
             success: success,
-            reroll = reroll,
+            reroll: reroll,
             shifts: shifts,
             switch_dices: switch_dices,
             item: item,
@@ -95,12 +94,12 @@ export class HeroicRoller2D20 {
         });
     }
 
-    static async switchRollH2D20({parseHd20Roll({rollname = "Roll Heroic2D20",
+    static async switchRollH2D20({rollname = "Roll Heroic2D20",
                     heroicRoll = null, helpRoll = null,
                     attribute = 0, skill_level = 0, modifier = 0,
                     complicationTreshold = 15,
                     reroll = false, shifts = false, switch_dices = true,
-                    item = null, actor = null }) {
+                    item = null, actor = null } = {} ) {
 
 
            await HeroicRoller2D20.parseHd20Roll({
@@ -111,7 +110,7 @@ export class HeroicRoller2D20 {
             modifier: modifier,
             attribute: attribute,
             skill_level: skill_level,
-            reroll = reroll,
+            reroll: reroll,
             shifts: shifts,
             switch_dices: switch_dices,
             item: item,
@@ -119,12 +118,12 @@ export class HeroicRoller2D20 {
         });
     }
 
-    static async shiftRollH2d20({parseHd20Roll({rollname = "Roll Heroic2D20",
+    static async shiftRollH2d20({rollname = "Roll Heroic2D20",
                     heroicRoll = null, helpRoll = null,
                     attribute = 0, skill_level = 0, modifier = 0,
                     complicationTreshold = 15,
                     reroll = false, shifts = true, switch_dices = false,
-                    item = null, actor = null }) {
+                    item = null, actor = null } = {}) {
 
 
            await HeroicRoller2D20.parseHd20Roll({
@@ -135,7 +134,7 @@ export class HeroicRoller2D20 {
             modifier: modifier,
             attribute: attribute,
             skill_level: skill_level,
-            reroll = reroll,
+            reroll: reroll,
             shifts: shifts,
             switch_dices: switch_dices,
             item: item,
@@ -143,7 +142,7 @@ export class HeroicRoller2D20 {
         });
     }
 
-    }
+
 
     //static async rerollD20
     static async rerollHd20({ rollname = "Roll Heroic2D20", attribute = 0, skill_level = 0, modifier = 0, complication = 15,
