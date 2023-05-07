@@ -176,7 +176,7 @@ export class HvpunofficialActorSheet extends ActorSheet {
     // Click Skill Item
 
     html.find('.skill .skill-name').click((ev) => {
-      const div = $(ev.currentTarget).parent();
+      const div = $(ev.currentTarget).parent()
       const skillName = div.find('.skill-name').val();
       const skillValue = div.find('.skill-value').attr('value');
       const skillTotal = div.find('.skill-total').attr('value');
@@ -196,11 +196,12 @@ export class HvpunofficialActorSheet extends ActorSheet {
       this._onRollAttributeSkill(
         name: attributeName,
         skill_level: 0,
-        attribute: attributeValue;
-
-      )
+        attribute: attributeValue
+      );
     })
-  }
+
+
+  } //end of activeListeners
 
   /**
    * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset

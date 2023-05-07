@@ -44,21 +44,21 @@
       </div>
       <div class="resources grid grid-3col">
         <div class="resource flex-group-center">
-          <label for="system.exp.current" class="resource-label text-opaque">{{localize ""HVPUNOFFICIAL.CharacterExpCurrent""}}</label>
+          <label for="system.exp.free" class="resource-label text-opaque">{{localize ""HVPUNOFFICIAL.CharacterExpCurrent""}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.system.exp.current" value="{{system.exp.current}}" data-dtype="Number"/>
+          <input type="text" name="system.exp.free" value="{{system.exp.free}}" data-dtype="Number"/>
           </div>
         </div>
         <div class="resource flex-group-center">
           <label for="system.exp.spent" class="resource-label text-opaque">{{localize ""HVPUNOFFICIAL.CharacterExpSpent""}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.system.exp.spent" value="{{system.exp.spent}}" data-dtype="Number"/>
+          <input type="text" name="system.exp.spent" value="{{system.exp.spent}}" data-dtype="Number"/>
           </div>
         </div>
         <div class="resource flex-group-center">
           <label for="system.exp.total" class="resource-label text-opaque">{{localize ""HVPUNOFFICIAL.CharacterExpTotal""}}</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.system.exp.total" value="{{sum system.exp.spent system.exp.current}}" data-dtype="Number"/>
+          <input type="text" name="system.exp.total" value="{{sum system.exp.spent system.exp.current}}" data-dtype="Number" readonly/>
           </div>
         </div>
       </div>
