@@ -26,8 +26,8 @@ export class DialogH2d20 extends Dialog {
                     skill_level: skill,
                     item: this.item,
                     actor: this.actor });
-        }
-        )
+        })
+    }
 
     static async createDialog({
         rollName = "Roll Heroic D20",
@@ -59,5 +59,5 @@ export class DialogH2d20 extends Dialog {
             });
             d.render(true);
         }
-    }
+    
 }
