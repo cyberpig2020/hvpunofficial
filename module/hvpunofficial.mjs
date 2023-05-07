@@ -13,7 +13,7 @@ import { BOILERPLATE } from "./helpers/config.mjs";
 //import { Roller2D20 } from './roller/h2d20-roller.mjs'
 import { HeroicRoller2D20 } from './roller/h2d20-roller.mjs'
 import { DialogH2d20 } from './roller/dialogH2d20.js'
-import { DieDamage } from './roller/damageDie.js'
+
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
