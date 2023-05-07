@@ -151,5 +151,10 @@
   "HVPUNOFFICIAL.SpellRequirements": "Wymagania",
   "HVPUNOFFICIAL.SpellRange": "Zasięg",
   "HVPUNOFFICIAL.SpellLevel": "Poziom trudności",
-  "HVPUNOFFICIAL.SpellDescription": "Działanie"
+  "HVPUNOFFICIAL.SpellDescription": "Działanie",
+
+  "HVPUNOFFICIAL.ResultSuccess": "Sukces",
+  "HVPUNOFFICIAL.ResultFail": "Porażka",
+  "HVPUNOFFICIAL.ResultReroll": "Przerzut",
+  "HVPUNOFFICIAL.ResultShifts": "Przesunięcie"
 }

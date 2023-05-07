@@ -1,4 +1,5 @@
 // Import document classes.
+// Import document classes.
 import { HvpunofficialActor } from "./documents/actor.mjs";
 import { HvpunofficialItem } from "./documents/item.mjs";
 // Import sheet classes.
@@ -7,6 +8,12 @@ import { HvpunofficialItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { BOILERPLATE } from "./helpers/config.mjs";
+
+//Import rolling classes
+//import { Roller2D20 } from './roller/h2d20-roller.mjs'
+import { HeroicRoller2D20 } from './roller/h2d20-roller.mjs'
+import { DialogH2d20 } from './roller/dialogH2d20.js'
+import { DieDamage } from './roller/damageDie.js'
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -19,7 +26,9 @@ Hooks.once('init', async function() {
   game.hvpunofficial = {
     HvpunofficialActor,
     HvpunofficialItem,
-    rollItemMacro
+    rollItemMacro,
+    HeroicRoller2D20,
+    DialogH2d20
   };
 
   // Add custom constants for configuration.
@@ -47,6 +56,106 @@ Hooks.once('init', async function() {
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
 });
+
+Hooks.on('renderChatMessage', (message, html, data) => {
+  let rrlBtn = html.find('.reroll-button')
+  if (rrlBtn.length > 0) {
+    rrlBtn[0].setAttribute('data-messageId', message.id)
+    rrlBtn.click((el) => {
+
+        let hvpunofficialRoll = message.flags.hvpunofficialroll
+
+        if (hvpunofficialRoll.diceFace == 'd20') {
+            HeroicRoller2D20.rerollHd20({
+                rollname: hvpunofficialRoll.rollname,
+                attribute: hvpunofficialRoll.attribute,
+                skill_level: hvpunofficialRoll.skill_level,
+                modifier: hvpunofficialRoll.modifier,
+                complication: hvpunofficialRoll.complication,
+                fatum: hvpunofficialRoll.fatum,
+                reroll: true,
+                shifts: hvpunofficialRoll.shifts,
+                switch_dices: hvpunofficialRoll.switch_dices,
+                item: hvpunofficialRoll.item,
+                actor: hvpunofficialRoll.actor});
+
+
+        } else if (hvpunofficialRoll.diceFace == 'd6') {
+          HeroicRoller2D20.rerollD6({
+            rollname: hvpunofficialRoll.rollname,
+            rerollIndexes: rerollIndex,
+            dicesRolled: hvpunofficialRoll.dicesRolled,
+            weapon: message.flags.weapon,
+          })
+        } else {
+          ui.notifications.notify('No dice face reckognized')
+        }
+      }
+    })
+  }
+
+  let switchBtn = html.find('.switch-button');
+  if (switchBtn.length > 0) {
+    switchBtn[0].setAttribute('data-messageId', message.id);
+    switchBtn.click((el) => {
+
+        let hvpunofficialRoll = message.flags.hvpunofficialroll
+
+
+            HeroicRollerH2D20.switchRollH2D20({
+                rollname: hvpunofficialRoll.rollname,
+                attribute: hvpunofficialRoll.attribute,
+                skill_level: hvpunofficialRoll.skill_level,
+                modifier: hvpunofficialRoll.modifier,
+                complication: hvpunofficialRoll.complication,
+                fatum: hvpunofficialRoll.fatum,
+                reroll: hvpunofficialRoll.reroll,
+                shifts: hvpunofficialRoll.shifts,
+                switch_dices: true,
+                item: hvpunofficialRoll.item,
+                actor: hvpunofficialRoll.actor});
+    }
+  }
+
+  let shiftBtn = html.find('.shift-button');
+  if (shiftBtn.length > 0) {
+    shiftBtn[0].setAttribute('data-messageId', message.id);
+    shiftBtn.click((el) => {
+
+        let hvpunofficialRoll = message.flags.hvpunofficialroll
+        HeroicRollerH2D20.shiftRollH2D20({
+                rollname: hvpunofficialRoll.rollname,
+                attribute: hvpunofficialRoll.attribute,
+                skill_level: hvpunofficialRoll.skill_level,
+                modifier: hvpunofficialRoll.modifier,
+                complication: hvpunofficialRoll.complication,
+                fatum: hvpunofficialRoll.fatum,
+                reroll: hvpunofficialRoll.reroll,
+                shifts: true,
+                switch_dices: hvpunofficialRoll.switch_dices,
+                item: hvpunofficialRoll.item,
+                actor: hvpunofficialRoll.actor});
+    }
+  }
+
+
+  let addBtn = html.find('.add-button')
+  if (addBtn.length > 0) {
+    addBtn[0].setAttribute('data-messageId', message.id)
+    addBtn.click((ev) => {
+      let hvpunofficialRoll = message.flags.hvpunofficialroll
+      let weapon = message.flags.weapon
+      let actor = message.flags.actor
+      game.hvpunofficial.DialogD6.createDialog({
+        rollname: hvpunofficialRoll.rollname,
+        diceNum: 1,
+        hvpunofficialRoll: hvpunofficialRoll,
+        weapon: weapon,
+        actor: actor
+      })
+    })
+  }
+})
 
 /* -------------------------------------------- */
 /*  Handlebars Helpers                          */
@@ -91,7 +200,32 @@ Handlebars.registerHelper("sum", function () {
   return sum;
 });
 
-
+Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
+    switch (operator) {
+      case '==':
+        return v1 == v2 ? options.fn(this) : options.inverse(this)
+      case '===':
+        return v1 === v2 ? options.fn(this) : options.inverse(this)
+      case '!=':
+        return v1 != v2 ? options.fn(this) : options.inverse(this)
+      case '!==':
+        return v1 !== v2 ? options.fn(this) : options.inverse(this)
+      case '<':
+        return v1 < v2 ? options.fn(this) : options.inverse(this)
+      case '<=':
+        return v1 <= v2 ? options.fn(this) : options.inverse(this)
+      case '>':
+        return v1 > v2 ? options.fn(this) : options.inverse(this)
+      case '>=':
+        return v1 >= v2 ? options.fn(this) : options.inverse(this)
+      case '&&':
+        return v1 && v2 ? options.fn(this) : options.inverse(this)
+      case '||':
+        return v1 || v2 ? options.fn(this) : options.inverse(this)
+      default:
+        return options.inverse(this)
+    }
+  });
 
 /* -------------------------------------------- */
 /*  Ready Hook                                  */

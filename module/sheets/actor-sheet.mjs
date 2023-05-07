@@ -172,15 +172,40 @@ export class HvpunofficialActorSheet extends ActorSheet {
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
 
-    // Drag events for macros.
-    if (this.actor.isOwner) {
-      let handler = ev => this._onDragStart(ev);
-      html.find('li.item').each((i, li) => {
-        if (li.classList.contains("inventory-header")) return;
-        li.setAttribute("draggable", true);
-        li.addEventListener("dragstart", handler, false);
-      });
-    }
+    // * SKILLS LISTENERS [clic, right-click, value change, tag ]
+    // Click Skill Item
+    //<div class="resource-content flexrow flex-center flex-between">
+    //<label for="system.skills.shortWeapon.value" class="resource-label rollable">Broń krótka</label>
+    //<input type="number" name="system.skills.shortWeapon.value" value="0" data-dtype="Number" placeholder="0" class="flexshrink">
+    //<input type="number" name="system.skills.shortWeapon.total" class="flexshrink" value="7" data-dtype="Number" placeholder="0" readonly="">
+    //</div>
+
+    html.find('.skill .skill-name').click((ev) => {
+      const div = $(ev.currentTarget).parent();
+      const skillName = div.find('.skill-name').val();
+      const skillValue = div.find('.skill-value').attr('value');
+      const skillTotal = div.find('.skill-total').attr('value');
+
+      this._onRollAttributeSkill(
+        name: skillName,
+        skill_level: skillValue,
+        attribute: skillTotal;
+
+      )
+    })
+
+    html.find('.attribute .attribute-name').click((ev) => {
+      const div = $(ev.currentTarget).parent();
+      const attributeName = div.find('.attribute-name').val();
+      const attributeValue = div.find('.attribute-value').attr('value');
+
+      this._onRollAttributeSkill(
+        name: attributeName,
+        skill_level: 0,
+        attribute: attributeValue;
+
+      )
+    })
   }
 
   /**
@@ -209,7 +234,19 @@ export class HvpunofficialActorSheet extends ActorSheet {
     // Finally, create the item!
     return await Item.create(itemData, {parent: this.actor});
   }
-
+  /**
+   * Handle clickable rolls for skills.
+   * @param {Event} event   The originating click event
+   * @private
+   */
+  _onRollAttributeSkill(name, skill_level, attribute) {
+    game.hvpunofficial.DialogH2d20.createDialog({
+      rollName: skillName,
+      attribute: attribute,
+      skill: skill_level,
+      actor: this.actor
+    });
+  }
   /**
    * Handle clickable rolls.
    * @param {Event} event   The originating click event

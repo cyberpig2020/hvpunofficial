@@ -49,7 +49,7 @@
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. --}}
 
-        <div class="resource flexrow flex-group-center">
+        <div class="resource flexrow flex-group-center flex-between">
           <label class="resource-label text-opaque flexlarge">
               {{localize "HVPUNOFFICIAL.SecondaryParametersVitality"}}</label>
           {{!-- <div class="resource-content flexrow flex-center flex-between"> --}}
@@ -69,7 +69,7 @@
           <label for="system.exp.current" class="resource-label text-opaque flexlarge">
               {{localize "HVPUNOFFICIAL.CharacterExpCurrent"}}</label>
           <input type="number"
-                 name="system.system.exp.current"
+                 name="system.exp.current"
                  value="{{system.exp.free}}"
                  data-dtype="Number"
                  placeholder="0"
@@ -77,7 +77,7 @@
           <label for="system.exp.spent" class="resource-label text-opaque flexlarge">
               {{localize "HVPUNOFFICIAL.CharacterExpSpent"}}</label>
           <input type="number"
-                 name="system.system.exp.spent"
+                 name="system.exp.spent"
                  value="{{system.exp.spent}}"
                  data-dtype="Number"
                  placeholder="0"
@@ -85,9 +85,10 @@
           <label for="system.exp.total" class="resource-label text-opaque flexlarge">
               {{localize "HVPUNOFFICIAL.CharacterExpTotal"}}</label>
           <input type="number"
-                 name="system.system.exp.total"
+                 name="system.exp.total"
                  value="{{sum system.exp.spent system.exp.free}}"
-                 data-dtype="Number"/>
+                 data-dtype="Number"
+                 readonly/>
           </div>
         </div>
       </div>
