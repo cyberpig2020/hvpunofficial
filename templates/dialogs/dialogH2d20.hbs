@@ -13,6 +13,10 @@
             <p class="title-label">{{localize "HVPUNOFFICIAL.TestLvl"}}</p>
             <input type="number" name="complication" value="{{complication}}">
         </div>
+        <div class="resource flexrow flex-group-left red">
+            <p class="title-label">{{localize "HVPUNOFFICIAL.RollModifier"}}</p>
+            <input type="number" name="modifier" value="{{modifier}}">
+        </div>
         <div class="resource flexrow flex-group-left green">
             <p class="title-label">{{localize "HVPUNOFFICIAL.fatum"}}</p>
             <input type="checkbox" name="fatum" {{#ifCond fatum '==' true}}checked{{/ifCond}}>

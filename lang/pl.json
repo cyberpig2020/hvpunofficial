@@ -156,5 +156,6 @@
   "HVPUNOFFICIAL.ResultSuccess": "Sukces",
   "HVPUNOFFICIAL.ResultFail": "Porażka",
   "HVPUNOFFICIAL.ResultReroll": "Przerzut",
-  "HVPUNOFFICIAL.ResultShifts": "Przesunięcie"
+  "HVPUNOFFICIAL.ResultShifts": "Przesunięcie",
+  "HVPUNOFFICIAL.RollModifier": "Modyfikator"
 }

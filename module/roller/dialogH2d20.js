@@ -1,12 +1,13 @@
 export class DialogH2d20 extends Dialog {
 
-    constructor(rollName, attribute, skill, fatum, complication, actor, item, modifier, dialogData = {}, options = {}) {
+    constructor(rollName, attribute, skill, fatum, complication, actor, item, modifier = 0, dialogData = {}, options = {}) {
         super(dialogData, options);
         this.rollName = rollName;
         this.attribute = attribute;
         this.skill = skill;
-        this.fatum = tag;
+        this.fatum = false;
         this.complication = complication;
+        this.modifier = modifier;
         this.actor = actor;
         this.item = item;
         this.options.classes = ["dice-icon"];
@@ -19,11 +20,15 @@ export class DialogH2d20 extends Dialog {
         html.on('click', '.roll', (event) => {
             let attr = html.find('[name="attribute"]').val();
             let skill = html.find('[name="skill"]').val();
+            let modifier = html.find('[name="modifier"]').val();
+            let fatum = html.find('[name="fatum"]').is(":checked");
 
             game.hvpunofficail.HeroicRoller2D20.rollHd20({
                     rollname: this.rollName,
                     attribute: attr,
                     skill_level: skill,
+                    modifier: modifier,
+                    fatum: fatum,
                     item: this.item,
                     actor: this.actor });
         })
