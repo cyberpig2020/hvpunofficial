@@ -63,7 +63,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
     rrlBtn[0].setAttribute('data-messageId', message.id)
     rrlBtn.click((el) => {
 
-        let hvpunofficialRoll = message.flags.hvpunofficialroll
+        let hvpunofficialRoll = message.flags.hvpunofficialroll;
 
         if (hvpunofficialRoll.diceFace == 'd20') {
             HeroicRoller2D20.rerollHd20({
@@ -85,13 +85,12 @@ Hooks.on('renderChatMessage', (message, html, data) => {
             rollname: hvpunofficialRoll.rollname,
             rerollIndexes: rerollIndex,
             dicesRolled: hvpunofficialRoll.dicesRolled,
-            weapon: message.flags.weapon,
-          })
+            weapon: message.flags.weapon});
         } else {
           ui.notifications.notify('No dice face reckognized')
         }
       }
-    })
+    )
   }
 
   let switchBtn = html.find('.switch-button');
@@ -114,7 +113,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
                 switch_dices: true,
                 item: hvpunofficialRoll.item,
                 actor: hvpunofficialRoll.actor});
-    }
+    })
   }
 
   let shiftBtn = html.find('.shift-button');
@@ -135,7 +134,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
                 switch_dices: hvpunofficialRoll.switch_dices,
                 item: hvpunofficialRoll.item,
                 actor: hvpunofficialRoll.actor});
-    }
+    })
   }
 
 
