@@ -59,5 +59,5 @@ export class DialogH2d20 extends Dialog {
             });
             d.render(true);
         }
-    
+
 }
