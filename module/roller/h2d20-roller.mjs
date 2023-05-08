@@ -1,7 +1,7 @@
 export class HeroicRoller2D20 {
     //dicesRolled = [];
-    //successTreshold = 0;
-    //complicationTreshold = 15;
+    //successThreshold = 0;
+    //complicationThreshold = 15;
     //successes = 0;
     //shifts = false
 
@@ -13,8 +13,8 @@ export class HeroicRoller2D20 {
         let rollFromula = fatum ? '1d10' : '1d20';
         let heroicRoll = new Roll(rollFromula);
         let helpRoll = new Roll(rollFromula);
-        //let successTreshold = parseInt(attribute) + parseInt(modifier);
-        let complicationTreshold = parseInt(complication);
+        //let successThreshold = parseInt(attribute) + parseInt(modifier);
+        let complicationThreshold = parseInt(complication);
 
         await heroicRoll.evaluate({ async: true });
         await helpRoll.evaluate({ async: true });
@@ -23,7 +23,7 @@ export class HeroicRoller2D20 {
             rollname: rollname,
             heroicRoll: heroicRoll,
             helpRoll: helpRoll,
-            complicationTreshold: complicationTreshold,
+            complicationThreshold: complicationThreshold,
             modifier: modifier,
             attribute: attribute,
             skill_level: skill_level,
@@ -38,19 +38,19 @@ export class HeroicRoller2D20 {
     static async parseHd20Roll({rollname = "Roll Heroic2D20",
                     heroicRoll = null, helpRoll = null,
                     attribute = 0, skill_level = 0, modifier = 0,
-                    complicationTreshold = 15,
+                    complicationThreshold = 15,
                     reroll = false, shifts = false, switch_dices = false,
                     item = null, actor = null } = {}) {
 
 
         let success = false;
         let roll_result = 0;
-        let successTreshold = 0;
+        let successThreshold = 0;
 
         if (heroicRoll.result === 1) {
             success = false;
             critical = true;
-            successTreshold = 1;
+            successThreshold = 1;
         }
         else if (heroicRoll.result === 20) {
             success = true;
@@ -73,8 +73,8 @@ export class HeroicRoller2D20 {
                 actor.secondaryParameters.shifts.value--;
             }
 
-            successTreshold = roll_result + attribute + skill_level + modifier;
-            if (successTreshold >= complicationTreshold) {
+            successThreshold = roll_result + attribute + skill_level + modifier;
+            if (successThreshold >= complicationThreshold) {
                 success = true;
             }
         };
@@ -83,8 +83,8 @@ export class HeroicRoller2D20 {
             rollname: rollname,
             heroicRollResult: heroicRoll.result,
             helpRollResult: helpRoll.result,
-            successTreshold: successTreshold,
-            complicationTreshold: complicationTreshold,
+            successThreshold: successThreshold,
+            complicationThreshold: complicationThreshold,
             success: success,
             reroll: reroll,
             shifts: shifts,
@@ -97,7 +97,7 @@ export class HeroicRoller2D20 {
     static async switchRollH2D20({rollname = "Roll Heroic2D20",
                     heroicRoll = null, helpRoll = null,
                     attribute = 0, skill_level = 0, modifier = 0,
-                    complicationTreshold = 15,
+                    complicationThreshold = 15,
                     reroll = false, shifts = false, switch_dices = true,
                     item = null, actor = null } = {} ) {
 
@@ -106,7 +106,7 @@ export class HeroicRoller2D20 {
             rollname: '${rollname} switched',
             heroicRoll: heroicRoll,
             helpRoll: helpRoll,
-            complicationTreshold: complicationTreshold,
+            complicationThreshold: complicationThreshold,
             modifier: modifier,
             attribute: attribute,
             skill_level: skill_level,
@@ -121,7 +121,7 @@ export class HeroicRoller2D20 {
     static async shiftRollH2d20({rollname = "Roll Heroic2D20",
                     heroicRoll = null, helpRoll = null,
                     attribute = 0, skill_level = 0, modifier = 0,
-                    complicationTreshold = 15,
+                    complicationThreshold = 15,
                     reroll = false, shifts = true, switch_dices = false,
                     item = null, actor = null } = {}) {
 
@@ -130,7 +130,7 @@ export class HeroicRoller2D20 {
             rollname: '${rollname} shifted',
             heroicRoll: heroicRoll,
             helpRoll: helpRoll,
-            complicationTreshold: complicationTreshold,
+            complicationThreshold: complicationThreshold,
             modifier: modifier,
             attribute: attribute,
             skill_level: skill_level,
@@ -163,8 +163,8 @@ export class HeroicRoller2D20 {
     }
 
     //static async sendToChat
-    static async sendToChat({ rollname = "Roll Heroic2D20", heroicRoll = null, helpRoll = null,
-                    successTreshold = 0, complicationThreshold = 15, success = false,
+    static async sendToChat({ rollname = "Roll Heroic2D20", heroicRollResult = 0, helpRollResult = 0,
+                    successThreshold = 0, complicationThreshold = 15, success = false,
                     attribute = 0, skill_level = 0, modifier = 0,
                     reroll = false, shifts = false, switch_dices = false,
                     item = null, actor = null } = {}) {
@@ -174,10 +174,10 @@ export class HeroicRoller2D20 {
         let rollData = {
             rollname: rollname,
             complicationThreshold: complicationThreshold,
-            successTreshold: successTreshold,
-            heroicRoll: heroicRoll.result,
-            helpRoll: helpRoll.result,
-            successes: (successTreshold - complicationThreshold),
+            successThreshold: successThreshold,
+            heroicRoll: heroicRollResult,
+            helpRoll: helpRollResult,
+            successes: (successThreshold - complicationThreshold),
             reroll: reroll,
             shifts: shifts,
             switch_dices: switch_dices,
@@ -196,8 +196,9 @@ export class HeroicRoller2D20 {
         hvpunofficialRoll.modifier = modifier;
         hvpunofficialRoll.attribute = attribute;
         hvpunofficialRoll.skill_level = skill_level;
-        hvpunofficialRoll.successTreshold = successTreshold;
-        hvpunofficialRoll.complicationTreshold = complicationTreshold;
+        hvpunofficialRoll.successThreshold = successThreshold;
+
+        hvpunofficialRoll.complicationThreshold = complicationThreshold;
         hvpunofficialRoll.diceFace = "d20";
         hvpunofficialRoll.item = item;
         hvpunofficialRoll.actor = actor;

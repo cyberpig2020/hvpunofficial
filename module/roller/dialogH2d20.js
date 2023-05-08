@@ -1,12 +1,12 @@
 export class DialogH2d20 extends Dialog {
 
-    constructor(rollName, attribute, skill, fatum, complicationTreshold, actor, item, modifier = 0, dialogData = {}, options = {}) {
+    constructor(rollName, attribute, skill, fatum, complicationThreshold, actor, item, modifier = 0, dialogData = {}, options = {}) {
         super(dialogData, options);
         this.rollName = rollName;
         this.attribute = attribute;
         this.skill = skill;
         this.fatum = false;
-        this.complicationTreshold = complicationTreshold;
+        this.complicationThreshold = complicationThreshold;
         this.modifier = modifier;
         this.actor = actor;
         this.item = item;
@@ -40,7 +40,7 @@ export class DialogH2d20 extends Dialog {
         attribute = 0,
         skill = 0,
         modifier = 0,
-        complicationTreshold = 15,
+        complicationThreshold = 15,
         actor=null, item=null } = {}) {
 
             let dialogData = {}
@@ -49,13 +49,13 @@ export class DialogH2d20 extends Dialog {
             dialogData.fatum = fatum;
             dialogData.skill = skill;
             dialogData.modifier = modifier;
-            dialogData.complicationTreshold = complicationTreshold;
+            dialogData.complicationThreshold = complicationThreshold;
             dialogData.actor = actor;
             dialogData.item = item;
 
             const html = await renderTemplate("systems/hvpunofficial/templates/dialogs/dialogH2d20.hbs", dialogData);
 
-            let d = new DialogH2d20(rollName, attribute, skill, fatum, complicationTreshold, actor, item, modifier, {
+            let d = new DialogH2d20(rollName, attribute, skill, fatum, complicationThreshold, actor, item, modifier, {
                 title: rollName,
                 content: html,
                 buttons: {
