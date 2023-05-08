@@ -10,7 +10,7 @@ export class HeroicRoller2D20 {
                         fatum = false, reroll = false, shifts = false, switch_dices = false,
                         item = null, actor = null } = {}) {
 
-        let rollFromula = fatum ? '$1d10' : '$1d20';
+        let rollFromula = fatum ? '1d10' : '1d20';
         let heroicRoll = new Roll(rollFromula);
         let helpRoll = new Roll(rollFromula);
         //let successTreshold = parseInt(attribute) + parseInt(modifier);
@@ -45,7 +45,7 @@ export class HeroicRoller2D20 {
 
         let success = false;
         let roll_result = 0;
-        successTreshold = 0;
+        let successTreshold = 0;
 
         if (heroicRoll.result === 1) {
             success = false;
@@ -164,20 +164,20 @@ export class HeroicRoller2D20 {
 
     //static async sendToChat
     static async sendToChat({ rollname = "Roll Heroic2D20", heroicRoll = null, helpRoll = null,
-                    successTreshold = 0, complicationTreshold = 15, success = false,
+                    successTreshold = 0, complicationThreshold = 15, success = false,
                     attribute = 0, skill_level = 0, modifier = 0,
                     reroll = false, shifts = false, switch_dices = false,
                     item = null, actor = null } = {}) {
 
         //let successesNum = Roller2D20.getNumOfSuccesses(dicesRolled);
-        //let complicationsNum = Roller2D20.getNumOfComplications(dicesRolled);
+        //let complicationThresholdNum = Roller2D20.getNumOfComplications(dicesRolled);
         let rollData = {
             rollname: rollname,
-            complications: complications,
+            complicationThreshold: complicationThreshold,
             successTreshold: successTreshold,
             heroicRoll: heroicRoll.result,
             helpRoll: helpRoll.result,
-            successes: (successTreshold - complications),
+            successes: (successTreshold - complicationThreshold),
             reroll: reroll,
             shifts: shifts,
             switch_dices: switch_dices,

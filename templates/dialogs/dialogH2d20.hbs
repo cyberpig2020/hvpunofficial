@@ -1,17 +1,19 @@
 <div class="hvpunofficial dialog">
-    <div class="flexrow ">
+    <div class="flexcol ">
         <div class="resource flexrow flex-group-left">
-            <p class="title-label">{{localize "HVPUNOFFICIAL.parameter"}}</p>
+            <h2 class="roll-name">{{localize "HVPUNOFFICIAL.RollName"}}: <strong>{{rollName}}</strong></h2>
+
+        </div>
+        <div class="resource flexrow flex-group-left">
+            <p class="title-label">{{localize "HVPUNOFFICIAL.TestParameter"}}</p>
             <input type="number" name="attribute" value="{{attribute}}">
         </div>
-        <div class="resource flexrow flex-group-left tile">
-            <p class="title-label">{{localize "HVPUNOFFICIAL.Skill"}}</p>
-            <input type="number" name="skill" value="{{skill}}">
-        </div>
+
+        <input type="hidden" name="skill" value="{{skill}}">
 
         <div class="resource flexrow flex-group-left red">
             <p class="title-label">{{localize "HVPUNOFFICIAL.TestLvl"}}</p>
-            <input type="number" name="complication" value="{{complication}}">
+            <input type="number" name="complication" value="{{complicationTreshold}}">
         </div>
         <div class="resource flexrow flex-group-left red">
             <p class="title-label">{{localize "HVPUNOFFICIAL.RollModifier"}}</p>

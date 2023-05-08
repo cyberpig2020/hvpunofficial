@@ -157,5 +157,7 @@
   "HVPUNOFFICIAL.ResultFail": "Porażka",
   "HVPUNOFFICIAL.ResultReroll": "Przerzut",
   "HVPUNOFFICIAL.ResultShifts": "Przesunięcie",
-  "HVPUNOFFICIAL.RollModifier": "Modyfikator"
+  "HVPUNOFFICIAL.RollModifier": "Modyfikator",
+  "HVPUNOFFICIAL.TestParameter": "Testowana cecha",
+  "HVPUNOFFICIAL.RollName": "Rzut"
 }

@@ -3,12 +3,12 @@
         <h2>{{rollname}}</h2>
         {{#ifCond successes '>' 0}}
         <p class="success-plaq">{{localize "HVPUNOFFICIAL.ResultSuccess"}}: {{successes}}
-            <span class="versus">&nbsp;&nbsp;&nbsp; {{successTreshold}} vs {{complication}}</span></p>
+            <span class="versus">&nbsp;&nbsp;&nbsp; {{successTreshold}} vs {{complicationTreshold}}</span></p>
         {{/ifCond}}
 
         {{#ifCond successes '<' 0}}
         <p class="fail-plaq">{{localize "HVPUNOFFICIAL.ResultFail"}}: {{successes}}
-            <span class="versus">&nbsp;&nbsp;&nbsp; {{successTreshold}} vs {{complication}}</span></p>
+            <span class="versus">&nbsp;&nbsp;&nbsp; {{successTreshold}} vs {{complicationTreshold}}</span></p>
         {{/ifCond}}
 
         <div class="dices-result {{#if reroll}} reroll{{/if}} {{#if critical}} critical{{/if}}">

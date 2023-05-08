@@ -1,12 +1,12 @@
 export class DialogH2d20 extends Dialog {
 
-    constructor(rollName, attribute, skill, fatum, complication, actor, item, modifier = 0, dialogData = {}, options = {}) {
+    constructor(rollName, attribute, skill, fatum, complicationTreshold, actor, item, modifier = 0, dialogData = {}, options = {}) {
         super(dialogData, options);
         this.rollName = rollName;
         this.attribute = attribute;
         this.skill = skill;
         this.fatum = false;
-        this.complication = complication;
+        this.complicationTreshold = complicationTreshold;
         this.modifier = modifier;
         this.actor = actor;
         this.item = item;
@@ -23,7 +23,7 @@ export class DialogH2d20 extends Dialog {
             let modifier = html.find('[name="modifier"]').val();
             let fatum = html.find('[name="fatum"]').is(":checked");
 
-            game.hvpunofficail.HeroicRoller2D20.rollHd20({
+            game.hvpunofficial.HeroicRoller2D20.rollHd20({
                     rollname: this.rollName,
                     attribute: attr,
                     skill_level: skill,
@@ -39,22 +39,23 @@ export class DialogH2d20 extends Dialog {
         fatum = false,
         attribute = 0,
         skill = 0,
-        complication = 15,
+        modifier = 0,
+        complicationTreshold = 15,
         actor=null, item=null } = {}) {
 
             let dialogData = {}
             dialogData.rollName = rollName;
             dialogData.attribute = attribute;
-            dialogData.fatum = fatum
+            dialogData.fatum = fatum;
             dialogData.skill = skill;
             dialogData.modifier = modifier;
-            dialogData.complication = complication;
+            dialogData.complicationTreshold = complicationTreshold;
             dialogData.actor = actor;
             dialogData.item = item;
 
             const html = await renderTemplate("systems/hvpunofficial/templates/dialogs/dialogH2d20.hbs", dialogData);
 
-            let d = new DialogH2d20(rollName, attribute, skill, fatum, complication, actor, item, modifier, {
+            let d = new DialogH2d20(rollName, attribute, skill, fatum, complicationTreshold, actor, item, modifier, {
                 title: rollName,
                 content: html,
                 buttons: {
