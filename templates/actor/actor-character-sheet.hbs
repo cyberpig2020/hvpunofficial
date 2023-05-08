@@ -49,20 +49,20 @@
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. --}}
 
-        <div class="resource flexrow flex-group-center flex-between">
+        <div class="resource flexrow flex-group-left flex-between">
           <label class="resource-label text-opaque flexlarge">
               {{localize "HVPUNOFFICIAL.SecondaryParametersVitality"}}</label>
           {{!-- <div class="resource-content flexrow flex-center flex-between"> --}}
-          <span>{{system.secondaryParameters.vitality.value}} / {{system.secondaryParameters.vitality.max}}</span>>
+          <span>{{system.secondaryParameters.vitality.value}} / {{system.secondaryParameters.vitality.max}}</span>
           <label class="resource-label text-opaque flexlarge">
               {{localize "HVPUNOFFICIAL.SecondaryParametersPotential"}}</label>
           {{!-- <div class="resource-content flexrow flex-center flex-between"> --}}
-          <span> {{system.secondaryParameters.potential.value}} / {{system.secondaryParameters.potential.max}} </span>>
+          <span> {{system.secondaryParameters.potential.value}} / {{system.secondaryParameters.potential.max}} </span>
 
             <label class="resource-label text-opaque flexlarge">
               {{localize "HVPUNOFFICIAL.SecondaryParametersShifts"}}</label>
           {{!-- <div class="resource-content flexrow flex-center flex-between"> --}}
-          <span> {{system.secondaryParameters.shifts.value}} / {{system.secondaryParameters.shifts.max}} </span>>
+          <span> {{system.secondaryParameters.shifts.value}} / {{system.secondaryParameters.shifts.max}} </span>
         </div>
 
         <div class="resource flexrow flex-between flex-group-center">
