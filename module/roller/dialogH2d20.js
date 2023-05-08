@@ -47,12 +47,14 @@ export class DialogH2d20 extends Dialog {
             dialogData.attribute = attribute;
             dialogData.fatum = fatum
             dialogData.skill = skill;
+            dialogData.modifier = modifier;
             dialogData.complication = complication;
             dialogData.actor = actor;
             dialogData.item = item;
+
             const html = await renderTemplate("systems/hvpunofficial/templates/dialogs/dialogH2d20.hbs", dialogData);
 
-            let d = new DialogH2d20(rollName, attribute, skill, fatum, complication, actor, item, {
+            let d = new DialogH2d20(rollName, attribute, skill, fatum, complication, actor, item, modifier, {
                 title: rollName,
                 content: html,
                 buttons: {
