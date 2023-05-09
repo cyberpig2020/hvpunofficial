@@ -74,7 +74,7 @@ export class HeroicRoller2D20 {
             }
 
             successThreshold = Number(roll_result) + Number(attribute) + Number(modifier);
-            console.log(Number(roll_result),Number(attribute),Number(modifier)),'=',successThreshold)
+            console.log(Number(roll_result),Number(attribute),Number(modifier),'=',successThreshold);
             if (successThreshold >= complicationThreshold) {
                 success = true;
             }
