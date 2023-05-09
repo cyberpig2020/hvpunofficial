@@ -104,6 +104,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
             HeroicRoller2D20.switchRollH2D20({
                 rollname: hvpunofficialRoll.rollname,
                 attribute: hvpunofficialRoll.attribute,
+                heroicRoll: hvpunofficialRoll.heroicRoll,
                 skill_level: hvpunofficialRoll.skill_level,
                 modifier: hvpunofficialRoll.modifier,
                 complication: hvpunofficialRoll.complication,
@@ -116,7 +117,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
     })
   }
 
-  let shiftBtn = html.find('.shift-button');
+  let shiftBtn = html.find('.shifts-button');
   if (shiftBtn.length > 0) {
     shiftBtn[0].setAttribute('data-messageId', message.id);
     shiftBtn.click((el) => {

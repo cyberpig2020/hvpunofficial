@@ -47,12 +47,12 @@ export class HeroicRoller2D20 {
         let roll_result = 0;
         let successThreshold = 0;
 
-        if (heroicRoll.result === 1) {
+        if (heroicRoll.result == 1) {
             success = false;
             critical = true;
             successThreshold = 1;
         }
-        else if (heroicRoll.result === 20) {
+        else if (heroicRoll.result == 20) {
             success = true;
             critical = true;
         }
@@ -73,7 +73,8 @@ export class HeroicRoller2D20 {
                 actor.secondaryParameters.shifts.value--;
             }
 
-            successThreshold = roll_result + attribute + skill_level + modifier;
+            successThreshold = Number(roll_result) + Number(attribute) + Number(modifier);
+            console.log(Number(roll_result),Number(attribute),Number(modifier)),'=',successThreshold)
             if (successThreshold >= complicationThreshold) {
                 success = true;
             }
@@ -81,8 +82,8 @@ export class HeroicRoller2D20 {
 
         await HeroicRoller2D20.sendToChat({
             rollname: rollname,
-            heroicRollResult: heroicRoll.result,
-            helpRollResult: helpRoll.result,
+            heroicRoll: heroicRoll,
+            helpRoll: helpRoll,
             successThreshold: successThreshold,
             complicationThreshold: complicationThreshold,
             success: success,
@@ -163,7 +164,7 @@ export class HeroicRoller2D20 {
     }
 
     //static async sendToChat
-    static async sendToChat({ rollname = "Roll Heroic2D20", heroicRollResult = 0, helpRollResult = 0,
+    static async sendToChat({ rollname = "Roll Heroic2D20", heroicRoll = 0, helpRoll = 0,
                     successThreshold = 0, complicationThreshold = 15, success = false,
                     attribute = 0, skill_level = 0, modifier = 0,
                     reroll = false, shifts = false, switch_dices = false,
@@ -175,8 +176,8 @@ export class HeroicRoller2D20 {
             rollname: rollname,
             complicationThreshold: complicationThreshold,
             successThreshold: successThreshold,
-            heroicRoll: heroicRollResult,
-            helpRoll: helpRollResult,
+            heroicRoll: heroicRoll.result,
+            helpRoll: helpRoll.result,
             successes: (successThreshold - complicationThreshold),
             reroll: reroll,
             shifts: shifts,
