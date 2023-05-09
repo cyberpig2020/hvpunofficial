@@ -101,7 +101,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
         let hvpunofficialRoll = message.flags.hvpunofficialroll
 
 
-            HeroicRollerH2D20.switchRollH2D20({
+            HeroicRoller2D20.switchRollH2D20({
                 rollname: hvpunofficialRoll.rollname,
                 attribute: hvpunofficialRoll.attribute,
                 skill_level: hvpunofficialRoll.skill_level,
@@ -122,7 +122,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
     shiftBtn.click((el) => {
 
         let hvpunofficialRoll = message.flags.hvpunofficialroll
-        HeroicRollerH2D20.shiftRollH2D20({
+        HeroicRoller2D20.shiftRollH2D20({
                 rollname: hvpunofficialRoll.rollname,
                 attribute: hvpunofficialRoll.attribute,
                 skill_level: hvpunofficialRoll.skill_level,

@@ -1,28 +1,25 @@
 <div class="hvpunofficial-chat-message" data-item-id="{{item._id}}">
-    <div class="content">
-        <h2>{{rollname}}</h2>
+    <p class="content">
+        <h2>{{rollName}}</h2>
         {{#ifCond successes '>' 0}}
         <p class="success-plaq">{{localize "HVPUNOFFICIAL.ResultSuccess"}}: {{successes}}
-            <span class="versus">&nbsp;&nbsp;&nbsp; {{successTreshold}} vs {{complicationTreshold}}</span></p>
         {{/ifCond}}
-
         {{#ifCond successes '<' 0}}
         <p class="fail-plaq">{{localize "HVPUNOFFICIAL.ResultFail"}}: {{successes}}
-            <span class="versus">&nbsp;&nbsp;&nbsp; {{successTreshold}} vs {{complicationTreshold}}</span></p>
         {{/ifCond}}
+    &nbsp;&nbsp;&nbsp; {{successThreshold}} vs {{complicationThreshold}}</p>
 
-        <div class="dices-result {{#if reroll}} reroll{{/if}} {{#if critical}} critical{{/if}}">
-            <div class="dice-icon heroic-dice {{#unless switch_dices}}big-dice-icon{{/unless}}">heroicRoll</div>
+        <span class="dices-result {{#if reroll}} reroll{{/if}} {{#if critical}} critical{{/if}}">
+            <span class="dice-icon heroic-dice {{#unless switch_dices}}big-dice-icon{{/unless}}">{{heroicRoll}}</span>
             {{#unless switch_dices}}
-                <button class="button switch-button"> <-> </button>
+                <button class="button switch-button flexshrink"> <-> </button>
             {{/unless}}
-            <div class="dice-icon help-dice {{#if switch_dices}}big-dice-icon{{/if}}">helpRoll</div>
+                <span class="dice-icon help-dice {{#if switch_dices}}big-dice-icon{{/if}}">{{helpRoll}}</span>
             {{#unless shifts}}
-                <button class="button shifts-button">{{localize "HVPUNOFFICIAL.ResultShifts"}}</button>
+                <button class="button shifts-button flexshrink">{{localize "HVPUNOFFICIAL.ResultShifts"}}</button>
             {{/unless}}
-        </div>
-        {{#unless reroll}}
-            <button class="button reroll-button">{{localize "HVPUNOFFICIAL.ResultReroll"}}</button>
-        {{/unless}}
-    </div>
+            {{#unless reroll}}
+                <button class="button reroll-button flexshrink">{{localize "HVPUNOFFICIAL.ResultReroll"}}</button>
+            {{/unless}}
+        </span>
 </div>
