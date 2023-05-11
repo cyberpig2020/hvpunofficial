@@ -42,10 +42,13 @@ export class HeroicRoller2D20 {
                     reroll = false, shifts = false, switch_dices = false,
                     item = null, actor = null } = {}) {
 
-        console.log("Parse roll:skill_level:", skill_level)
+        console.log("Parse roll:skill_level:", skill_level, heroicRoll, helpRoll)
         let success = false;
-        let roll_result = 0;
+        let roll_result = heroicRoll.result;
         let successThreshold = 0;
+        if (switch_dices) {
+            roll_result = helpRoll.result;
+        }
 
         if (heroicRoll.result == 1) {
             success = false;
@@ -56,29 +59,23 @@ export class HeroicRoller2D20 {
             success = true;
             critical = true;
         }
-        else {
-            roll_result = heroicRoll.result;
-            if (switch_dices) {
-                roll_result = helpRoll.result;
-            }
 
-            if(heroicRoll.result == helpRoll.result){
+        if(heroicRoll.result == helpRoll.result){
                 roll_result += skill_level
-            }
+        }
 
-            if (shifts) {
-                roll_result = heroicRoll.result + actor.system.secondaryParameters.shifts.value;
+        if (shifts) {
+                roll_result += actor.system.secondaryParameters.shifts.value;
                 roll_result = Math.min(roll_result, 20);
                 roll_result = Math.max(roll_result, 1);
+        }
 
-            }
-
-            successThreshold = Number(roll_result) + Number(attribute) + Number(modifier);
-            console.log(Number(roll_result),Number(attribute),Number(modifier),'=',successThreshold);
-            if (successThreshold >= complicationThreshold) {
+        successThreshold = Number(roll_result) + Number(attribute) + Number(modifier);
+        console.log(Number(roll_result),Number(attribute),Number(modifier),'=',successThreshold);
+        if (successThreshold >= complicationThreshold) {
                 success = true;
-            }
-        };
+        }
+    };
 
         await HeroicRoller2D20.sendToChat({
             rollname: rollname,
@@ -116,7 +113,7 @@ export class HeroicRoller2D20 {
             skill_level: skill_level,
             reroll: reroll,
             shifts: shifts,
-            switch_dices: switch_dices,
+            switch_dices: true,
             item: item,
             actor: actor
         });
@@ -140,7 +137,7 @@ export class HeroicRoller2D20 {
             attribute: attribute,
             skill_level: skill_level,
             reroll: reroll,
-            shifts: shifts,
+            shifts: true,
             switch_dices: switch_dices,
             item: item,
             actor: actor
@@ -152,7 +149,7 @@ export class HeroicRoller2D20 {
 
     //static async rerollD20
     static async rerollHd20({ rollname = "Roll Heroic2D20", attribute = 0, skill_level = 0, modifier = 0, complication = 15,
-                        fatum = false, reroll = false, shifts = false, switch_dices = false,
+                        fatum = false, reroll = true, shifts = false, switch_dices = false,
                         item = null, actor = null } = {}) {
 
         await HeroicRoller2D20.rollHd20({ rollname: `${rollname} re-roll`,
@@ -208,7 +205,7 @@ export class HeroicRoller2D20 {
         hvpunofficialRoll.diceFace = "d20";
         hvpunofficialRoll.item = item;
         hvpunofficialRoll.actor = actor;
-        console.log("Heroic roll", hvpunofficialRoll.heroicRoll);
+        console.log("Heroic roll", hvpunofficialRoll);
         let chatData = {
             user: game.user.id,
             speaker: ChatMessage.getSpeaker({

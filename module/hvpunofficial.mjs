@@ -73,7 +73,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
                 modifier: hvpunofficialRoll.modifier,
                 complication: hvpunofficialRoll.complication,
                 fatum: hvpunofficialRoll.fatum,
-                reroll: true,
+                reroll: hvpunofficialRoll.reroll,
                 shifts: hvpunofficialRoll.shifts,
                 switch_dices: hvpunofficialRoll.switch_dices,
                 item: hvpunofficialRoll.item,
@@ -100,7 +100,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
 
         let hvpunofficialRoll = message.flags.hvpunofficialroll
 
-        console.log(hvpunofficialRoll);
+        console.log("switch:hvpunofficialRoll", hvpunofficialRoll);
 
             HeroicRoller2D20.switchRollH2D20({
                 rollname: hvpunofficialRoll.rollname,
@@ -113,7 +113,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
                 fatum: hvpunofficialRoll.fatum,
                 reroll: hvpunofficialRoll.reroll,
                 shifts: hvpunofficialRoll.shifts,
-                switch_dices: true,
+                switch_dices: hvpunofficialRoll.switch_dices,
                 item: hvpunofficialRoll.item,
                 actor: hvpunofficialRoll.actor});
     })
@@ -125,7 +125,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
     shiftBtn.click((el) => {
 
         let hvpunofficialRoll = message.flags.hvpunofficialroll;
-        console.log(hvpunofficialRoll);
+        console.log("shiftd:hvpunofficialRoll", hvpunofficialRoll);
 
         HeroicRoller2D20.shiftRollH2D20({
                 rollname: hvpunofficialRoll.rollname,
@@ -137,7 +137,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
                 complication: hvpunofficialRoll.complication,
                 fatum: hvpunofficialRoll.fatum,
                 reroll: hvpunofficialRoll.reroll,
-                shifts: true,
+                shifts: hvpunofficialRoll.shifts,
                 switch_dices: hvpunofficialRoll.switch_dices,
                 item: hvpunofficialRoll.item,
                 actor: hvpunofficialRoll.actor});
