@@ -75,7 +75,7 @@ export class HeroicRoller2D20 {
         if (successThreshold >= complicationThreshold) {
                 success = true;
         }
-    };
+
 
         await HeroicRoller2D20.sendToChat({
             rollname: rollname,
