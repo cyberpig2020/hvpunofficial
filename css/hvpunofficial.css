@@ -690,22 +690,22 @@
   margin-right: 1px;
   background-repeat: no-repeat;
   background-size: 28px 28px;
-  font-size: 16px;
   color: white;
   font-weight: bold;
   text-align: center;
 }
 .hvpunofficial-chat-message .content .big-dice-icon {
-    background-size: 150% 150%;
-    mix-blend-mode: lighten;
+    border-bottom: solid 2px white;
 }
 
 .hvpunofficial-chat-message .content .help-dice {
+    font-size: 18px;
     background-image: url(../assets/chat/unchosen_dice.webp);
 }
 
 .hvpunofficial-chat-message .content .heroic-dice {
-    background-image: url(../assets/chat/chosen_dice.webp);
+    font-size: 22px;
+    background-image: url(../assets/chat/heroic_dice.webp);
 }
 
 
@@ -720,6 +720,7 @@
   margin: 2px;
 }
 .hvpunofficial-chat-message .content .button {
+  width: fit-content;
   background-color: lightgrey; /* Green */
   border: none;
   color: black;
