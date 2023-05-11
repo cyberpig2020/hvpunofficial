@@ -122,7 +122,7 @@ export class HeroicRoller2D20 {
         });
     }
 
-    static async shiftRollH2d20({rollname = "Roll Heroic2D20",
+    static async shiftRollH2D20({rollname = "Roll Heroic2D20",
                     heroicRoll = null, helpRoll = null,
                     attribute = 0, skill_level = 0, modifier = 0,
                     complicationThreshold = 15,

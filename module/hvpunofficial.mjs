@@ -102,10 +102,11 @@ Hooks.on('renderChatMessage', (message, html, data) => {
 
         console.log(hvpunofficialRoll);
 
-            HeroicRoller2D20.switchRollH2d20({
+            HeroicRoller2D20.switchRollH2D20({
                 rollname: hvpunofficialRoll.rollname,
                 attribute: hvpunofficialRoll.attribute,
                 heroicRoll: hvpunofficialRoll.heroicRoll,
+                helpRoll: hvpunofficialRoll.helpRoll,
                 skill_level: hvpunofficialRoll.skill_level,
                 modifier: hvpunofficialRoll.modifier,
                 complication: hvpunofficialRoll.complication,
@@ -126,8 +127,10 @@ Hooks.on('renderChatMessage', (message, html, data) => {
         let hvpunofficialRoll = message.flags.hvpunofficialroll;
         console.log(hvpunofficialRoll);
 
-        HeroicRoller2D20.shiftRollH2d20({
+        HeroicRoller2D20.shiftRollH2D20({
                 rollname: hvpunofficialRoll.rollname,
+                heroicRoll: hvpunofficialRoll.heroicRoll,
+                helpRoll: hvpunofficialRoll.helpRoll,
                 attribute: hvpunofficialRoll.attribute,
                 skill_level: hvpunofficialRoll.skill_level,
                 modifier: hvpunofficialRoll.modifier,
