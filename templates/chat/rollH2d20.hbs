@@ -1,5 +1,5 @@
 <div class="hvpunofficial-chat-message" data-item-id="{{item._id}}">
-    <p class="content">
+    <div class="content">
         <h2>{{rollName}}</h2>
         {{#ifCond successes '>' 0}}
         <p class="success-plaq">{{localize "HVPUNOFFICIAL.ResultSuccess"}}: {{successes}}
@@ -9,7 +9,8 @@
         {{/ifCond}}
     &nbsp;&nbsp;&nbsp; {{successThreshold}} vs {{complicationThreshold}}</p>
 
-        <span class="dices-result {{#if reroll}} reroll{{/if}} {{#if critical}} critical{{/if}}">
+        <div class="dices-result {{#if reroll}} reroll{{/if}} {{#if critical}} critical{{/if}}">
+            <p>
             <span class="dice-icon heroic-dice {{#unless switch_dices}}big-dice-icon{{/unless}}">{{heroicRoll}}</span>
             {{#unless switch_dices}}
                 <button class="button switch-button flexshrink"> <-> </button>
@@ -21,5 +22,7 @@
             {{#unless reroll}}
                 <button class="button reroll-button flexshrink">{{localize "HVPUNOFFICIAL.ResultReroll"}}</button>
             {{/unless}}
-        </span>
+                </p>
+        </div>
+    </div>
 </div>
