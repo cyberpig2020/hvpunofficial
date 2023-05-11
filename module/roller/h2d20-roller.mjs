@@ -67,10 +67,10 @@ export class HeroicRoller2D20 {
             }
 
             if (shifts) {
-                roll_result = heroicRoll.result + actor.secondaryParameters.shifts.value
-                roll_result = Math.min(roll_result, 20)
-                roll_result = Math.max(roll_result, 1)
-                actor.secondaryParameters.shifts.value--;
+                roll_result = heroicRoll.result + actor.system.secondaryParameters.shifts.value;
+                roll_result = Math.min(roll_result, 20);
+                roll_result = Math.max(roll_result, 1);
+
             }
 
             successThreshold = Number(roll_result) + Number(attribute) + Number(modifier);
@@ -120,6 +120,7 @@ export class HeroicRoller2D20 {
             item: item,
             actor: actor
         });
+        actor.system.secondaryParameters.potential.value--;
     }
 
     static async shiftRollH2D20({rollname = "Roll Heroic2D20",
@@ -144,6 +145,7 @@ export class HeroicRoller2D20 {
             item: item,
             actor: actor
         });
+        actor.system.secondaryParameters.shifts.value--;
     }
 
 
