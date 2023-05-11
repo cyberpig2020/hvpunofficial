@@ -687,25 +687,34 @@
   min-width: 28px;
   line-height: 28px;
   float: left;
-  margin-right: 1px;
+  margin: 5px;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-size: 28px 28px;
   color: white;
   font-weight: bold;
   text-align: center;
 }
 .hvpunofficial-chat-message .content .big-dice-icon {
-    border-bottom: solid 2px white;
+    border-bottom: solid 5px purple;
 }
 
 .hvpunofficial-chat-message .content .help-dice {
     font-size: 18px;
+    margin: 5px;
     background-image: url(../assets/chat/unchosen_dice.webp);
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
 }
 
 .hvpunofficial-chat-message .content .heroic-dice {
     font-size: 22px;
     background-image: url(../assets/chat/heroic_dice.webp);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    margin: 5px;
 }
 
 
@@ -724,11 +733,11 @@
   background-color: lightgrey; /* Green */
   border: none;
   color: black;
-  padding: 20px;
+  padding: 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
   margin: 4px 2px;
   cursor: pointer;
 }
