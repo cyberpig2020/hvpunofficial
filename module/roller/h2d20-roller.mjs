@@ -42,7 +42,7 @@ export class HeroicRoller2D20 {
                     reroll = false, shifts = false, switch_dices = false,
                     item = null, actor = null } = {}) {
 
-
+        console.log("Parse roll:skill_level:", skill_level)
         let success = false;
         let roll_result = 0;
         let successThreshold = 0;
@@ -87,6 +87,9 @@ export class HeroicRoller2D20 {
             successThreshold: successThreshold,
             complicationThreshold: complicationThreshold,
             success: success,
+            attribute: attribute,
+            skill_level: skill_level,
+            modifier: modifier,
             reroll: reroll,
             shifts: shifts,
             switch_dices: switch_dices,
@@ -203,7 +206,7 @@ export class HeroicRoller2D20 {
         hvpunofficialRoll.diceFace = "d20";
         hvpunofficialRoll.item = item;
         hvpunofficialRoll.actor = actor;
-
+        console.log("Heroic roll", hvpunofficialRoll.heroicRoll);
         let chatData = {
             user: game.user.id,
             speaker: ChatMessage.getSpeaker({

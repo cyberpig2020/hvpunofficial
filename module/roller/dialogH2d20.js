@@ -22,6 +22,8 @@ export class DialogH2d20 extends Dialog {
             let skill = html.find('[name="skill"]').val();
             let modifier = html.find('[name="modifier"]').val();
             let fatum = html.find('[name="fatum"]').is(":checked");
+            console.log("ROLL: ","rollname:", this.rollName, " attribute:", attr, " skill_level:", skill,
+                    " modifier:", modifier," fatum:", fatum," item:", this.item," actor:", this.actor)
 
             game.hvpunofficial.HeroicRoller2D20.rollHd20({
                     rollname: this.rollName,

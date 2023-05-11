@@ -100,8 +100,9 @@ Hooks.on('renderChatMessage', (message, html, data) => {
 
         let hvpunofficialRoll = message.flags.hvpunofficialroll
 
+        console.logs(hvpunofficialRoll);
 
-            HeroicRoller2D20.switchRollH2D20({
+            HeroicRoller2D20.switchRollH2d20({
                 rollname: hvpunofficialRoll.rollname,
                 attribute: hvpunofficialRoll.attribute,
                 heroicRoll: hvpunofficialRoll.heroicRoll,
@@ -122,8 +123,10 @@ Hooks.on('renderChatMessage', (message, html, data) => {
     shiftBtn[0].setAttribute('data-messageId', message.id);
     shiftBtn.click((el) => {
 
-        let hvpunofficialRoll = message.flags.hvpunofficialroll
-        HeroicRoller2D20.shiftRollH2D20({
+        let hvpunofficialRoll = message.flags.hvpunofficialroll;
+        console.logs(hvpunofficialRoll);
+
+        HeroicRoller2D20.shiftRollH2d20({
                 rollname: hvpunofficialRoll.rollname,
                 attribute: hvpunofficialRoll.attribute,
                 skill_level: hvpunofficialRoll.skill_level,
